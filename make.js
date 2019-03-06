@@ -80,7 +80,7 @@ function realOutPut (fileName, tree) {
   fs.writeFileSync(`./public/temp/${fileName}/index.html`, htmlTemple)
 }
 
-function ratioOutPut (fileName, tree) {
+function ratioOutPut (fileName, tree, psd) {
   const bodyWidth = psd.header.cols
   const bodyHeight = psd.header.rows
   let domHtml = ``
@@ -131,7 +131,7 @@ function make (mode, fileName) {
       break
     }
     case 'ratio': {
-      ratioOutPut(fileName, tree)
+      ratioOutPut(fileName, tree, psd)
       break
     }
   }

@@ -26,7 +26,7 @@ app.post('/uploads', upload.any(), function (request, response, next) {
   // 判断文件是否合规
   if (file) {
     
-    make('real', file.filename)
+    make('ratio', file.filename)
     response.json({err: 0, id: file.filename})
   } else {
     response.json({err: 1})
