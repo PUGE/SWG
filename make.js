@@ -100,6 +100,13 @@ function ratioOutPut (fileName, tree, document, htmlTemple) {
   for (let ind in tree) {
     
     const element = tree[ind]
+    
+    // console.log(element)
+    // if (element.layer.name == '向左滑动，预见未来 （打开音乐效果更佳）') {
+    //   console.log(element.layer.name, ind)
+    //   console.log(element)
+    // }
+    
     // 跳过空图层
     if (element.layer.height === 0 || element.layer.width === 0 || element.layer.visible == false) {
       continue
@@ -142,6 +149,7 @@ function make (mode, fileName) {
 
   const tree = psd.tree().descendants()
   // 获取画布信息
+  console.log(psd.tree().export())
   const document = psd.tree().export().document
   console.log(`图层个数: ${tree.length}`)
   switch (mode) {
