@@ -70,7 +70,8 @@ function realOutPut (fileName, tree) {
       `height: ${element.height}px`,
       `left: ${element.left}px`,
       `top: ${element.top}px`,
-      `z-index: ${tree.length - ind}`
+      `z-index: ${tree.length - ind}`,
+      `opacity: ${(element.layer.opacity / 255).toFixed(4)}`
     ]
     domHtml += `<div class="swg object-${ind}" style="${styleList.join('; ')};"></div>\r\n    `
     // 导出图片
@@ -92,13 +93,14 @@ function ratioOutPut (fileName, tree, psd) {
     if (element.layer.height === 0 || element.layer.width === 0) {
       continue
     }
-
+    console.log(element)
     const styleList = [
       'position: absolute',
       `background-image: url(./object-${ind}.png)`,
       `left: ${getRatio(element.left, bodyWidth)}%`,
       `top: ${getRatio(element.top, bodyHeight)}%`,
-      `z-index: ${tree.length - ind}`
+      `z-index: ${tree.length - ind}`,
+      `opacity: ${(element.layer.opacity / 255).toFixed(4)}`
     ]
     styleList.push(`width: ${getRatio(element.width, bodyWidth)}%`, `height: ${getRatio(element.height, bodyHeight)}%`)
     domHtml += `<div class="swg object-${ind}"></div>\r\n    `
