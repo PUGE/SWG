@@ -61,7 +61,13 @@ body {
 #dnd {
   width: 400px;
   text-align: center;
-  padding: 20px;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 236px;
 }
 #dnd .dnd-container {
   height: 120px;

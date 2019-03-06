@@ -22,7 +22,7 @@ app.use(express.static('public'))
 
 app.post('/uploads', upload.any(), function (request, response, next) {
   const file = request.files[0]
-  console.log(file)
+  // console.log(file)
   // 判断文件是否合规
   if (file) {
     

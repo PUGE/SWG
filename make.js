@@ -15,6 +15,10 @@ let htmlTemple = `
         height: 100%;
         margin: 0;
       }
+      .main-box {
+        overflow: hidden;
+        position: relative;
+      }
       .swg:hover {
         background-color: rgba(0, 0, 0, 0.20);
       }
@@ -54,8 +58,9 @@ function getRatio (num, total) {
 }
 
 
-function realOutPut (fileName, tree) {
-  let domHtml = ``
+function realOutPut (fileName, tree, document) {
+  let domHtml = `<div class="main-box" style="width: ${document.width}px; height: ${document.height}px;">`
+  let styleData = `<style type="text/css">\r\n      `
   for (let ind in tree) {
     const element = tree[ind]
     // 跳过空图层
@@ -70,21 +75,27 @@ function realOutPut (fileName, tree) {
       `height: ${element.height}px`,
       `left: ${element.left}px`,
       `top: ${element.top}px`,
+      `bottom: ${element.bottom}px`,
+      `right: ${element.right}px`,
       `z-index: ${tree.length - ind}`,
       `opacity: ${(element.layer.opacity / 255).toFixed(4)}`
     ]
-    domHtml += `<div class="swg object-${ind}" style="${styleList.join('; ')};"></div>\r\n    `
+    domHtml += `<div class="swg object-${ind}""></div>\r\n    `
+    styleData += `.object-${ind} {${styleList.join('; ')};}\r\n      `
     // 导出图片
     element.layer.image.saveAsPng(`./public/temp/${fileName}/object-${ind}.png`)
   }
+  domHtml += `</div>`
+  styleData += `\r\n    </style>`
   htmlTemple = htmlTemple.replace(`<!-- page-output -->`, domHtml)
+  htmlTemple = htmlTemple.replace(`<!-- css-output -->`, styleData)
   fs.writeFileSync(`./public/temp/${fileName}/index.html`, htmlTemple)
 }
 
-function ratioOutPut (fileName, tree, psd) {
-  const bodyWidth = psd.header.cols
-  const bodyHeight = psd.header.rows
-  let domHtml = ``
+function ratioOutPut (fileName, tree, document) {
+  const bodyWidth = document.width
+  const bodyHeight = document.height
+  let domHtml = `<div class="main-box" style="width: 100%; height: 100%">`
   let styleData = `<style type="text/css">\r\n      `
   for (let ind in tree) {
     
@@ -93,12 +104,14 @@ function ratioOutPut (fileName, tree, psd) {
     if (element.layer.height === 0 || element.layer.width === 0) {
       continue
     }
-    console.log(element)
+    // console.log(element, ind)
     const styleList = [
       'position: absolute',
       `background-image: url(./object-${ind}.png)`,
       `left: ${getRatio(element.left, bodyWidth)}%`,
       `top: ${getRatio(element.top, bodyHeight)}%`,
+      `right: ${getRatio(element.right, bodyWidth)}%`,
+      `bottom: ${getRatio(element.bottom, bodyHeight)}%`,
       `z-index: ${tree.length - ind}`,
       `opacity: ${(element.layer.opacity / 255).toFixed(4)}`
     ]
@@ -111,7 +124,7 @@ function ratioOutPut (fileName, tree, psd) {
   }
 
   styleData += `\r\n    </style>`
-
+  domHtml += `</div>`
   htmlTemple = htmlTemple.replace(`<!-- page-output -->`, domHtml)
   htmlTemple = htmlTemple.replace(`<!-- css-output -->`, styleData)
   fs.writeFileSync(`./public/temp/${fileName}/index.html`, htmlTemple)
@@ -126,14 +139,17 @@ function make (mode, fileName) {
   psd.parse()
 
   const tree = psd.tree().descendants()
+  // 获取画布信息
+  const document = psd.tree().export().document
   switch (mode) {
     // 真实输出
     case 'real': {
-      realOutPut(fileName, tree)
+      
+      realOutPut(fileName, tree, document)
       break
     }
     case 'ratio': {
-      ratioOutPut(fileName, tree, psd)
+      ratioOutPut(fileName, tree, document)
       break
     }
   }
