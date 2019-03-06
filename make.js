@@ -3,7 +3,7 @@ const fs = require('fs')
 var PSD = require('psd');
 
 
-let htmlTemple = `
+let temple = `
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -58,13 +58,13 @@ function getRatio (num, total) {
 }
 
 
-function realOutPut (fileName, tree, document) {
+function realOutPut (fileName, tree, document, htmlTemple) {
   let domHtml = `<div class="main-box" style="width: ${document.width}px; height: ${document.height}px;">`
   let styleData = `<style type="text/css">\r\n      `
   for (let ind in tree) {
     const element = tree[ind]
     // 跳过空图层
-    if (element.layer.height === 0 || element.layer.width === 0) {
+    if (element.layer.height === 0 || element.layer.width === 0 || element.layer.visible == false) {
       continue
     }
     
@@ -92,7 +92,7 @@ function realOutPut (fileName, tree, document) {
   fs.writeFileSync(`./public/temp/${fileName}/index.html`, htmlTemple)
 }
 
-function ratioOutPut (fileName, tree, document) {
+function ratioOutPut (fileName, tree, document, htmlTemple) {
   const bodyWidth = document.width
   const bodyHeight = document.height
   let domHtml = `<div class="main-box" style="width: 100%; height: 100%">`
@@ -101,9 +101,10 @@ function ratioOutPut (fileName, tree, document) {
     
     const element = tree[ind]
     // 跳过空图层
-    if (element.layer.height === 0 || element.layer.width === 0) {
+    if (element.layer.height === 0 || element.layer.width === 0 || element.layer.visible == false) {
       continue
     }
+    // console.log(element)
     // console.log(element, ind)
     const styleList = [
       'position: absolute',
@@ -132,6 +133,7 @@ function ratioOutPut (fileName, tree, document) {
 
 
 function make (mode, fileName) {
+  let htmlTemple = temple
   creatDirIfNotExist('./public/temp')
   creatDirIfNotExist(`./public/temp/${fileName}`)
   // 读取图层
@@ -141,15 +143,16 @@ function make (mode, fileName) {
   const tree = psd.tree().descendants()
   // 获取画布信息
   const document = psd.tree().export().document
+  console.log(`图层个数: ${tree.length}`)
   switch (mode) {
     // 真实输出
     case 'real': {
       
-      realOutPut(fileName, tree, document)
+      realOutPut(fileName, tree, document, htmlTemple)
       break
     }
     case 'ratio': {
-      ratioOutPut(fileName, tree, document)
+      ratioOutPut(fileName, tree, document, htmlTemple)
       break
     }
   }
