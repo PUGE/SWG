@@ -8,6 +8,7 @@ let temple = `
 <html lang="zh-CN">
   <head>
     <title>Soulless Web Pages</title>
+    <meta charset="UTF-8">
     <!-- *head* -->
     <style type="text/css">
       html, body {
@@ -117,7 +118,7 @@ function ratioOutPut (fileName, tree, groupList) {
       'width: 100%',
       'height: 100%',
     )
-    styleData = `.root {${styleList.join('; ')};}`
+    styleData = `.root {${styleList.join('; ')};}\r\n      `
     domHtml = `<div class="swg root">`
   } else {
     // 如果不是根节点 会有上下左右位置
@@ -130,7 +131,7 @@ function ratioOutPut (fileName, tree, groupList) {
       `width: ${getRatio(tree.width, document.width)}%`,
       `height: ${getRatio(tree.height, document.height)}%`,
     )
-    styleData = `.swg-${groupList.join('-')} {${styleList.join('; ')};}`
+    styleData = `.swg-${groupList.join('-')} {${styleList.join('; ')};}\r\n      `
     domHtml = `<div class="swg swg-${groupList.join('-')} item-${itemIndex}">`
   }
   
@@ -189,7 +190,7 @@ function ratioOutPut (fileName, tree, groupList) {
         )
         // 判断是否有文字对齐方式
         if (elementInfo.text.font.alignment[0]) {
-          styleList.push(`text-align: ${elementInfo.text.font.alignment[0]}}`)
+          styleList.push(`text-align: ${elementInfo.text.font.alignment[0]}`)
         }
         domHtml += `<div class="swg swg-${groupListCopy.join('-')} text item-${ind}">${elementInfo.text.value}</div>\r\n    `
       } else {
