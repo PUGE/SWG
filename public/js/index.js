@@ -1,6 +1,6 @@
 $.fn.dragAndDrop = function(p){
   var parameters = {
-    'supported' : ['audio/wav','audio/mp3'],
+    'supported' : [''],
     'size' : 5,
     'uploadFile' : 'uploads',
     'sizeAlert' : '文件大小超过限制!',
@@ -82,7 +82,7 @@ $.fn.dragAndDrop = function(p){
           return false; 
         }
 
-        if(files[0].size > parameters.size*1038336 ){
+        if(files[0].size > parameters.size*60 * 1024 * 1024 ){
           alert(parameters.sizeAlert);
           return false; 
         }
