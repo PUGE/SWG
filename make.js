@@ -15,7 +15,7 @@ let temple = `
         height: 100%;
         margin: 0;
       }
-      .main-box {
+      .root {
         overflow: hidden;
         position: relative;
       }
@@ -104,7 +104,6 @@ function ratioOutPut (fileName, tree, groupList) {
 
   // 根节点和子节点通用样式
   let styleList = [
-    
     `z-index: ${-itemIndex}`
   ]
 
@@ -115,7 +114,7 @@ function ratioOutPut (fileName, tree, groupList) {
     styleList.push(
       'position: relative',
       'width: 100%',
-      'height: 100%'
+      'height: 100%',
     )
     styleData = `.root {${styleList.join('; ')};}`
     domHtml = `<div class="swg root">`
@@ -136,16 +135,17 @@ function ratioOutPut (fileName, tree, groupList) {
   
   for (let ind in chil) {
     const element = chil[ind]
+    const elementInfo = element.export()
     let groupListCopy = JSON.parse(JSON.stringify(groupList))
     groupListCopy.push(ind)
     // console.log(element.name)
-    // if (element.name == '场景1-黑白云') {
-    //   console.log(element.type, ind)
-    //   console.log(element)
-    // }
+    if (element.name == '改革1') {
+      console.log(element.type, element.text)
+      console.log(element.export())
+    }
     
     // 跳过空图层
-    if (element.layer.visible == false) {
+    if (elementInfo.visible == false) {
       console.log(`有不可见图层: ${element.name}`)
       continue
     }
@@ -159,28 +159,47 @@ function ratioOutPut (fileName, tree, groupList) {
       domHtml += outPut.html
       styleData += outPut.style
     } else {
-      if (element.layer.height === 0 || element.layer.width === 0) {
+      if (elementInfo.height === 0 || elementInfo.width === 0) {
         console.log(`图层为空: ${element.name}`)
         continue
       }
-      // console.log(element.name, element.layer.left, element.parent.left)
+      // console.log(element.name, elementInfo.left, element.parent.left)
       console.log(`处理图层: ${element.name}`)
-      const styleList = [
+      let styleList = [
         'position: absolute',
-        `background-image: url(./${groupListCopy.join('-')}.png)`,
-        `left: ${getRatio(element.layer.left - element.parent.left, element.parent.width)}%`,
-        `top: ${getRatio(element.layer.top - element.parent.top, element.parent.height)}%`,
-        `right: ${getRatio(element.parent.right - element.layer.right, element.parent.width)}%`,
-        `bottom: ${getRatio(element.parent.bottom - element.layer.bottom, element.parent.height)}%`,
-        `opacity: ${(element.layer.opacity / 255).toFixed(4)}`,
+        `left: ${getRatio(elementInfo.left - element.parent.left, element.parent.width)}%`,
+        `top: ${getRatio(elementInfo.top - element.parent.top, element.parent.height)}%`,
+        `right: ${getRatio(element.parent.right - elementInfo.right, element.parent.width)}%`,
+        `bottom: ${getRatio(element.parent.bottom - elementInfo.bottom, element.parent.height)}%`,
+        `opacity: ${elementInfo.opacity}`,
         `z-index: ${-ind}`
       ]
-      styleList.push(`width: ${getRatio(element.layer.width, element.parent.width)}%`, `height: ${getRatio(element.layer.height, element.parent.height)}%`)
-      domHtml += `<div class="swg swg-${groupListCopy.join('-')} item-${ind}"></div>\r\n    `
+      styleList.push(`width: ${getRatio(elementInfo.width, element.parent.width)}%`, `height: ${getRatio(elementInfo.height, element.parent.height)}%`)
+      // 判断是否是文字
+      if (elementInfo.text) {
+        const color = elementInfo.text.font.colors[0]
+        console.log('发现文字样式:')
+        console.log(elementInfo.text)
+        // 文字的样式
+        styleList.push(
+          `font-family: '${elementInfo.text.font.name}'`,
+          `font-size: ${elementInfo.text.font.sizes[0]}px`,
+          `color: rgba(${color[0]}, ${color[1]}, ${color[2]}, ${(color[3] / 255).toFixed(2)})`
+        )
+        // 判断是否有文字对齐方式
+        if (elementInfo.text.font.alignment[0]) {
+          styleList.push(`text-align: ${elementInfo.text.font.alignment[0]}}`)
+        }
+        domHtml += `<div class="swg swg-${groupListCopy.join('-')} text item-${ind}">${elementInfo.text.value}</div>\r\n    `
+      } else {
+        // 什么都不是那就输出成图片吧
+        styleList.push(`background-image: url(./${groupListCopy.join('-')}.png)`)
+        domHtml += `<div class="swg swg-${groupListCopy.join('-')} item-${ind}"></div>\r\n    `
+      }
       styleData += `.swg-${groupListCopy.join('-')} {${styleList.join('; ')};}\r\n      `
   
       // 导出图片
-      // console.log(element.layer.image)
+      // console.log(elementInfo.image)
       if (element.layer.image) {
         element.layer.image.saveAsPng(`./public/temp/${fileName}/${groupListCopy.join('-')}.png`)
       }
