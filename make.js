@@ -92,35 +92,49 @@ function realOutPut (fileName, tree, document, htmlTemple) {
   fs.writeFileSync(`./public/temp/${fileName}/index.html`, htmlTemple)
 }
 
-function ratioOutPut (fileName, tree, document, groupList) {
+function ratioOutPut (fileName, tree, groupList) {
+  const document = tree.parent
+  const isRoot = tree.isRoot()
   const chil = tree.children()
-  const itemIndex = parseInt(groupList[groupList.length - 1])
+  const itemIndex = groupList.length > 0 ? parseInt(groupList[groupList.length - 1]) : 0
   // const parent = tree
 
-  // console.log(tree.left, document.right, bodyWidth, bodyHeight)
+  // 初始化html存储字段
   let domHtml = ''
-  // 判断是不是根节点
-  if (groupList.length === 0) {
-    // console.log(tree)
-    domHtml = `<div class="swg swg-${groupList.join('-')} root">`
-  } else {
-    domHtml = `<div class="swg swg-${groupList.join('-')} item-${itemIndex}">`
-  }
-  // console.log(chil.length, itemIndex)
-  // console.log(tree.left, document.left)
-  const styleList = [
-    'position: absolute',
-    `left: ${getRatio(tree.left - document.left, document.width)}%`,
-    `top: ${getRatio(tree.top - document.top, document.height)}%`,
-    `right: ${getRatio(document.right - tree.right, document.width)}%`,
-    `bottom: ${getRatio(document.bottom - tree.bottom, document.height)}%`,
-    `width: ${getRatio(tree.width, document.width)}%`,
-    `height: ${getRatio(tree.height, document.height)}%`,
+
+  // 根节点和子节点通用样式
+  let styleList = [
+    
     `z-index: ${-itemIndex}`
   ]
-  let styleData = `.swg-${groupList.join('-')} {${styleList.join('; ')};}`
+
+  // 初始化样式临时存储字段
+  let styleData = ``
+  
+  if (isRoot) {
+    styleList.push(
+      'position: relative',
+      'width: 100%',
+      'height: 100%'
+    )
+    styleData = `.root {${styleList.join('; ')};}`
+    domHtml = `<div class="swg root">`
+  } else {
+    // 如果不是根节点 会有上下左右位置
+    styleList.push(
+      'position: absolute',
+      `left: ${getRatio(tree.left - document.left, document.width)}%`,
+      `top: ${getRatio(tree.top - document.top, document.height)}%`,
+      `right: ${getRatio(document.right - tree.right, document.width)}%`,
+      `bottom: ${getRatio(document.bottom - tree.bottom, document.height)}%`,
+      `width: ${getRatio(tree.width, document.width)}%`,
+      `height: ${getRatio(tree.height, document.height)}%`,
+    )
+    styleData = `.swg-${groupList.join('-')} {${styleList.join('; ')};}`
+    domHtml = `<div class="swg swg-${groupList.join('-')} item-${itemIndex}">`
+  }
+  
   for (let ind in chil) {
-    
     const element = chil[ind]
     let groupListCopy = JSON.parse(JSON.stringify(groupList))
     groupListCopy.push(ind)
@@ -140,7 +154,7 @@ function ratioOutPut (fileName, tree, document, groupList) {
       // 递归处理子节点
       // console.log(element.height, element.left)
       console.log(`递归处理组: ${element.name}`)
-      const outPut = ratioOutPut(fileName, element, element.parent, groupListCopy)
+      const outPut = ratioOutPut(fileName, element, groupListCopy)
       // console.log(outPut)
       domHtml += outPut.html
       styleData += outPut.style
@@ -149,7 +163,7 @@ function ratioOutPut (fileName, tree, document, groupList) {
         console.log(`图层为空: ${element.name}`)
         continue
       }
-      console.log(element.name, element.layer.left, element.parent.left)
+      // console.log(element.name, element.layer.left, element.parent.left)
       console.log(`处理图层: ${element.name}`)
       const styleList = [
         'position: absolute',
@@ -203,16 +217,14 @@ function make (mode, fileName) {
       break
     }
     case 'ratio': {
-      domHtml += `<div class="main-box" style="width: 100%; height: 100%">`
       styleData += `<style type="text/css">\r\n      `
-      const outPut = ratioOutPut(fileName, psd.tree(), document, [])
+      const outPut = ratioOutPut(fileName, psd.tree(), [])
       domHtml += outPut.html
       styleData += outPut.style
       break
     }
   }
   styleData += `\r\n    </style>`
-  domHtml += `</div>`
   htmlTemple = htmlTemple.replace(`<!-- page-output -->`, domHtml)
   htmlTemple = htmlTemple.replace(`<!-- css-output -->`, styleData)
   fs.writeFileSync(`./public/temp/${fileName}/index.html`, htmlTemple)
