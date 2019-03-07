@@ -14,6 +14,7 @@ let temple = `
         width: 100%;
         height: 100%;
         margin: 0;
+        font-size: 24px;
       }
       .root {
         overflow: hidden;
@@ -183,7 +184,7 @@ function ratioOutPut (fileName, tree, groupList) {
         // 文字的样式
         styleList.push(
           `font-family: '${elementInfo.text.font.name}'`,
-          `font-size: ${elementInfo.text.font.sizes[0]}px`,
+          `font-size: ${(elementInfo.text.font.sizes[0] / 24).toFixed(2)}rem`,
           `color: rgba(${color[0]}, ${color[1]}, ${color[2]}, ${(color[3] / 255).toFixed(2)})`
         )
         // 判断是否有文字对齐方式

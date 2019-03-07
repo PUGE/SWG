@@ -2,9 +2,8 @@ $.fn.dragAndDrop = function(p){
   var parameters = {
     'supported' : [''],
     'size' : 5,
-    'uploadFile' : 'uploads',
+    'uploadFile' : 'uploads?sdsd=ss',
     'sizeAlert' : '文件大小超过限制!',
-    'formatAlert' : '不支持的文件格式!',
     'done' : function (msg) {
       console.info('upload done');
     },
@@ -12,21 +11,20 @@ $.fn.dragAndDrop = function(p){
       console.info('upload fail');
     },
     'onProgress' : function(progress){
-      console.info(Math.round(progress * 100)+'%');
+      console.info(Math.round(progress * 100) + '%');
     }
   };
 
   $.extend(parameters,p);
 
-  function upload(fd){
+  function upload(fd) {
     $.ajax({
       type: 'POST',
       url: parameters.uploadFile,
       data: fd,
       processData: false,
       contentType: false,
-      xhr: function()
-      {
+      xhr: function() {
         var xhr = new window.XMLHttpRequest();
         xhr.upload.addEventListener("progress", function(evt){
           if (evt.lengthComputable) {
@@ -49,8 +47,8 @@ $.fn.dragAndDrop = function(p){
 
     $this.find('input[type="file"]').on('change',function(){
       fd = new FormData();
-      fd.append('data', $(this)[0].files[0]);
-      upload(fd); 
+      fd.append('data', $(this)[0].files[0])
+      upload(fd)
     });
 
 
@@ -67,39 +65,40 @@ $.fn.dragAndDrop = function(p){
         e.stopImmediatePropagation();
         $this.removeClass('hover');
       },
-      drop : function(e){
-        e.preventDefault();
+      // 拖放文件事件
+      drop : function(e) {
+        e.preventDefault()
 
-        $this.removeClass('hover');
+        $this.removeClass('hover')
 
-        var files = e.originalEvent.dataTransfer.files;
+        var files = e.originalEvent.dataTransfer.files
 
         fd = new FormData();
-        fd.append('data', files[0]);
-        console.log(files)
-        if($.inArray(files[0].type, parameters.supported) < 0){
-          alert(parameters.formatAlert);
-          return false; 
+        fd.append('data', files[0])
+        if(files[0].name.lastIndexOf('.psd') + 4 !== files[0].name.length){
+          alert('只允许上传psd文件!')
+          return false
         }
 
-        if(files[0].size > parameters.size*60 * 1024 * 1024 ){
-          alert(parameters.sizeAlert);
-          return false; 
+        if(files[0].size > parameters.size * 60 * 1024 * 1024 ){
+          alert('上传文件的大小超出限制!')
+          return false
         }
 
         upload(fd)
       }
-    });
-  });
+    })
+  })
 }
 
 $('#dnd').dragAndDrop({
   'done' : function(msg){
     $('#dnd .start, #dnd .error,#dnd progress').hide();
-    $('#dnd .done').show();
-    console.info(msg)
+    $('#dnd .done').show()
     if (msg.err == 0) {
       window.location.href = '/temp/' + msg.id
+    } else {
+      alert('服务端返回错误的结果!')
     }
   }, 
   'error' : function() {
