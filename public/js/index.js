@@ -2,7 +2,7 @@ $.fn.dragAndDrop = function(p){
   var parameters = {
     'supported' : [''],
     'size' : 5,
-    'uploadFile' : 'uploads?sdsd=ss',
+    'uploadFile' : 'uploads?mode=real',
     'sizeAlert' : '文件大小超过限制!',
     'done' : function (msg) {
       console.info('upload done');

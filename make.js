@@ -60,38 +60,124 @@ function getRatio (num, total) {
 }
 
 
-function realOutPut (fileName, tree, document, htmlTemple) {
-  let domHtml = `<div class="main-box" style="width: ${document.width}px; height: ${document.height}px;">`
-  let styleData = `<style type="text/css">\r\n      `
-  for (let ind in tree) {
-    const element = tree[ind]
+function realOutPut (fileName, tree, groupList) {
+  const document = tree.parent
+  const isRoot = tree.isRoot()
+  const chil = tree.children()
+  const itemIndex = groupList.length > 0 ? parseInt(groupList[groupList.length - 1]) : 0
+  // const parent = tree
+
+  // 初始化html存储字段
+  let domHtml = ''
+
+  // 根节点和子节点通用样式
+  let styleList = [
+    `z-index: ${-itemIndex}`
+  ]
+
+  // 初始化样式临时存储字段
+  let styleData = ``
+  
+  if (isRoot) {
+    styleList.push(
+      'position: relative',
+      `width: ${tree.width}px`,
+      `height: ${tree.height}px`,
+    )
+    styleData = `.root {${styleList.join('; ')};}\r\n      `
+    domHtml = `<div class="swg root">`
+  } else {
+    // 如果不是根节点 会有上下左右位置
+    styleList.push(
+      'position: absolute',
+      `left: ${tree.left - document.left}px`,
+      `top: ${tree.top - document.top}px`,
+      `right: ${document.right - tree.right}px`,
+      `bottom: ${document.bottom - tree.bottom}px`,
+      `width: ${tree.width}px`,
+      `height: ${tree.height}px`,
+    )
+    styleData = `.swg-${groupList.join('-')} {${styleList.join('; ')};}\r\n      `
+    domHtml = `<div class="swg swg-${groupList.join('-')} item-${itemIndex}">`
+  }
+  
+  for (let ind in chil) {
+    const element = chil[ind]
+    const elementInfo = element.export()
+    let groupListCopy = JSON.parse(JSON.stringify(groupList))
+    groupListCopy.push(ind)
+    // console.log(element.name)
+    // if (element.name == '改革1') {
+    //   console.log(element.type, element.text)
+    //   console.log(element.export())
+    // }
+    
     // 跳过空图层
-    if (element.height === 0 || element.width === 0 || element.visible == false) {
+    if (elementInfo.visible == false) {
+      console.log(`有不可见图层: ${element.name}`)
       continue
     }
-    
-    const styleList = [
-      'position: absolute',
-      `background-image: url(./object-${ind}.png)`,
-      `width: ${element.width}px`,
-      `height: ${element.height}px`,
-      `left: ${element.left}px`,
-      `top: ${element.top}px`,
-      `bottom: ${element.bottom}px`,
-      `right: ${element.right}px`,
-      `z-index: ${tree.length - ind}`,
-      `opacity: ${(element.opacity / 255).toFixed(4)}`
-    ]
-    domHtml += `<div class="swg object-${ind}""></div>\r\n    `
-    styleData += `.object-${ind} {${styleList.join('; ')};}\r\n      `
-    // 导出图片
-    element.image.saveAsPng(`./public/temp/${fileName}/object-${ind}.png`)
+    // 判断是否为组
+    if (element.type === 'group') {
+      // 递归处理子节点
+      // console.log(element.height, element.left)
+      console.log(`递归处理组: ${element.name}`)
+      const outPut = realOutPut(fileName, element, groupListCopy)
+      // console.log(outPut)
+      domHtml += outPut.html
+      styleData += outPut.style
+    } else {
+      if (elementInfo.height === 0 || elementInfo.width === 0) {
+        console.log(`图层为空: ${element.name}`)
+        continue
+      }
+      // console.log(element.name, elementInfo.left, element.parent.left)
+      console.log(`处理图层: ${element.name}`)
+      let styleList = [
+        'position: absolute',
+        `left: ${elementInfo.left - element.parent.left}px`,
+        `top: ${elementInfo.top - element.parent.top}px`,
+        `right: ${element.parent.right - elementInfo.right}px`,
+        `bottom: ${element.parent.bottom - elementInfo.bottom}px`,
+        `opacity: ${elementInfo.opacity}`,
+        `z-index: ${-ind}`
+      ]
+      styleList.push(`width: ${elementInfo.width}px`, `height: ${elementInfo.height}px`)
+      // 判断是否是文字
+      if (elementInfo.text) {
+        const color = elementInfo.text.font.colors[0]
+        console.log('发现文字样式:')
+        // console.log(elementInfo.text)
+        // 文字的样式
+        styleList.push(
+          `font-family: '${elementInfo.text.font.name}'`,
+          `font-size: ${(elementInfo.text.font.sizes[0] / 24).toFixed(2)}rem`,
+          `color: rgba(${color[0]}, ${color[1]}, ${color[2]}, ${(color[3] / 255).toFixed(2)})`
+        )
+        // 判断是否有文字对齐方式
+        if (elementInfo.text.font.alignment[0]) {
+          styleList.push(`text-align: ${elementInfo.text.font.alignment[0]}`)
+        }
+        domHtml += `<div class="swg swg-${groupListCopy.join('-')} text item-${ind}">${elementInfo.text.value}</div>\r\n    `
+      } else {
+        // 什么都不是那就输出成图片吧
+        styleList.push(`background-image: url(./${groupListCopy.join('-')}.png)`)
+        domHtml += `<div class="swg swg-${groupListCopy.join('-')} item-${ind}"></div>\r\n    `
+      }
+      styleData += `.swg-${groupListCopy.join('-')} {${styleList.join('; ')};}\r\n      `
+  
+      // 导出图片
+      // console.log(elementInfo.image)
+      if (element.layer.image) {
+        element.layer.image.saveAsPng(`./public/temp/${fileName}/${groupListCopy.join('-')}.png`)
+      }
+    }
   }
   domHtml += `</div>`
-  styleData += `\r\n    </style>`
-  htmlTemple = htmlTemple.replace(`<!-- page-output -->`, domHtml)
-  htmlTemple = htmlTemple.replace(`<!-- css-output -->`, styleData)
-  fs.writeFileSync(`./public/temp/${fileName}/index.html`, htmlTemple)
+  return {
+    html: domHtml,
+    style: styleData
+  }
 }
 
 function ratioOutPut (fileName, tree, groupList) {
@@ -141,10 +227,10 @@ function ratioOutPut (fileName, tree, groupList) {
     let groupListCopy = JSON.parse(JSON.stringify(groupList))
     groupListCopy.push(ind)
     // console.log(element.name)
-    if (element.name == '改革1') {
-      console.log(element.type, element.text)
-      console.log(element.export())
-    }
+    // if (element.name == '改革1') {
+    //   console.log(element.type, element.text)
+    //   console.log(element.export())
+    // }
     
     // 跳过空图层
     if (elementInfo.visible == false) {
@@ -181,7 +267,7 @@ function ratioOutPut (fileName, tree, groupList) {
       if (elementInfo.text) {
         const color = elementInfo.text.font.colors[0]
         console.log('发现文字样式:')
-        console.log(elementInfo.text)
+        // console.log(elementInfo.text)
         // 文字的样式
         styleList.push(
           `font-family: '${elementInfo.text.font.name}'`,
@@ -228,13 +314,17 @@ function make (mode, fileName) {
   // console.log(psd.tree().children()[0])
   const document = psd.tree().export().document
   console.log(`图层个数: ${treeLength}`)
+  console.log(`输出模式: ${mode}`)
 
   let domHtml = ``
   let styleData = ``
   switch (mode) {
     // 真实输出
     case 'real': {
-      realOutPut(fileName, psd.tree().children(), document, htmlTemple)
+      styleData += `<style type="text/css">\r\n      `
+      const outPut = realOutPut(fileName, psd.tree(), [])
+      domHtml += outPut.html
+      styleData += outPut.style
       break
     }
     case 'ratio': {

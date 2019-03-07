@@ -23,10 +23,16 @@ app.use(express.static('public'))
 app.post('/uploads', upload.any(), function (request, response, next) {
   const file = request.files[0]
   // console.log(file)
+  console.log(request.query)
+  // 判断是否传递来了模式
+  if (!request.query.mode) {
+    response.json({err: 1, message: '没有传递参数mode!'})
+    return
+  }
   // 判断文件是否合规
   if (file) {
     
-    make('ratio', file.filename)
+    make(request.query.mode, file.filename)
     response.json({err: 0, id: file.filename})
   } else {
     response.json({err: 1})
