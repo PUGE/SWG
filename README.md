@@ -8,3 +8,7 @@ Soulless Web Pages - PSD generates web pages
 3. 支持生成铺满窗口的自适应页面
 4. 支持导出文字
 5. 重复图层只导出一个文件
+
+
+已知问题:
+1. 不支持效果-颜色叠加

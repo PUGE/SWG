@@ -48,7 +48,7 @@ function realOutPut (fileName, node, groupList, outText) {
     const elementInfo = element.export()
     let groupListCopy = JSON.parse(JSON.stringify(groupList))
     groupListCopy.push(ind)
-    // console.log(element.name)
+    console.log(element)
     // if (element.name == '改革1') {
     //   console.log(element.type, element.text)
     //   console.log(element.export())
@@ -88,7 +88,6 @@ function realOutPut (fileName, node, groupList, outText) {
     ]
 
     // 判断是否 配置了输出文字 并且此图层是文字
-    console.log(outText)
     if (outText && elementInfo.text) {
       [styleList, domHtml] = textOutPut(elementInfo.text, styleList, domHtml, groupListCopy)
     } else {
