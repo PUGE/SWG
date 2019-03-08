@@ -1,6 +1,7 @@
 'use strict'
 const fs = require('fs')
-var PSD = require('psd');
+var PSD = require('psd')
+
 
 
 let temple = `
@@ -37,16 +38,6 @@ let temple = `
   </body>
 </html>
 `
-// 运行模式
-// const mode = 'real'
-// const mode = 'ratio'
-
-function checkBG (info) {
-  if (info.left === 0 && info.top === 0 && info.right === info.width && info.bottom === info.height) {
-    return true
-  }
-  return false
-}
 
 // 如果目录不存在则创建目录
 function creatDirIfNotExist (path) {
@@ -60,12 +51,12 @@ function getRatio (num, total) {
 }
 
 
-function realOutPut (fileName, tree, groupList, outText) {
-  const document = tree.parent
-  const isRoot = tree.isRoot()
-  const chil = tree.children()
+function realOutPut (fileName, node, groupList, outText) {
+  const nodeParent = node.parent
+  const isRoot = node.isRoot()
+  const chil = node.children()
   const itemIndex = groupList.length > 0 ? parseInt(groupList[groupList.length - 1]) : 0
-  // const parent = tree
+  // const parent = node
 
   // 初始化html存储字段
   let domHtml = ''
@@ -81,8 +72,8 @@ function realOutPut (fileName, tree, groupList, outText) {
   if (isRoot) {
     styleList.push(
       'position: relative',
-      `width: ${tree.width}px`,
-      `height: ${tree.height}px`,
+      `width: ${node.width}px`,
+      `height: ${node.height}px`,
     )
     styleData = `.root {${styleList.join('; ')};}\r\n      `
     domHtml = `<div class="swg root">`
@@ -90,12 +81,12 @@ function realOutPut (fileName, tree, groupList, outText) {
     // 如果不是根节点 会有上下左右位置
     styleList.push(
       'position: absolute',
-      `left: ${tree.left - document.left}px`,
-      `top: ${tree.top - document.top}px`,
-      `right: ${document.right - tree.right}px`,
-      `bottom: ${document.bottom - tree.bottom}px`,
-      `width: ${tree.width}px`,
-      `height: ${tree.height}px`,
+      `left: ${node.left - nodeParent.left}px`,
+      `top: ${node.top - nodeParent.top}px`,
+      `right: ${nodeParent.right - node.right}px`,
+      `bottom: ${nodeParent.bottom - node.bottom}px`,
+      `width: ${node.width}px`,
+      `height: ${node.height}px`,
     )
     styleData = `.swg-${groupList.join('-')} {${styleList.join('; ')};}\r\n      `
     domHtml = `<div class="swg swg-${groupList.join('-')} item-${itemIndex}">`
@@ -180,42 +171,46 @@ function realOutPut (fileName, tree, groupList, outText) {
   }
 }
 
-function ratioOutPut (fileName, tree, groupList, outText) {
-  const document = tree.parent
-  const isRoot = tree.isRoot()
-  const chil = tree.children()
-  const itemIndex = groupList.length > 0 ? parseInt(groupList[groupList.length - 1]) : 0
-  // const parent = tree
+function ratioOutPut (fileName, node, groupList, outText) {
+  // 当前节点的父节点
+  const nodeParent = node.parent
+  // 当前节点的子节点列表
+  const chil = node.children()
 
   // 初始化html存储字段
   let domHtml = ''
+  // 初始化样式临时存储字段
+  let styleData = ``
+  // 文件缓存
+  const fileTemp = {}
+  // 当前节点ID
+  const itemIndex = groupList.length > 0 ? parseInt(groupList[groupList.length - 1]) : 0
+
+  
 
   // 根节点和子节点通用样式
   let styleList = [
     `z-index: ${-itemIndex}`
   ]
 
-  // 初始化样式临时存储字段
-  let styleData = ``
   
-  if (isRoot) {
-    styleList.push(
-      'position: relative',
-      'width: 100%',
-      'height: 100%',
-    )
+  
+  // 判断是否为根节点
+  if (node.isRoot()) {
+    // 根节点样式
+    styleList.push('position: relative', 'width: 100%','height: 100%')
     styleData = `.root {${styleList.join('; ')};}\r\n      `
     domHtml = `<div class="swg root">`
   } else {
     // 如果不是根节点 会有上下左右位置
     styleList.push(
       'position: absolute',
-      `left: ${getRatio(tree.left - document.left, document.width)}%`,
-      `top: ${getRatio(tree.top - document.top, document.height)}%`,
-      `right: ${getRatio(document.right - tree.right, document.width)}%`,
-      `bottom: ${getRatio(document.bottom - tree.bottom, document.height)}%`,
-      `width: ${getRatio(tree.width, document.width)}%`,
-      `height: ${getRatio(tree.height, document.height)}%`,
+      `left: ${getRatio(node.left - nodeParent.left, nodeParent.width)}%`,
+      `top: ${getRatio(node.top - nodeParent.top, nodeParent.height)}%`,
+      `right: ${getRatio(nodeParent.right - node.right, nodeParent.width)}%`,
+      `bottom: ${getRatio(nodeParent.bottom - node.bottom, nodeParent.height)}%`,
+      `width: ${getRatio(node.width, nodeParent.width)}%`,
+      `height: ${getRatio(node.height, nodeParent.height)}%`,
     )
     styleData = `.swg-${groupList.join('-')} {${styleList.join('; ')};}\r\n      `
     domHtml = `<div class="swg swg-${groupList.join('-')} item-${itemIndex}">`
@@ -226,11 +221,7 @@ function ratioOutPut (fileName, tree, groupList, outText) {
     const elementInfo = element.export()
     let groupListCopy = JSON.parse(JSON.stringify(groupList))
     groupListCopy.push(ind)
-    // console.log(element.name)
-    // if (element.name == '改革1') {
-    //   console.log(element.type, element.text)
-    //   console.log(element.export())
-    // }
+
     
     // 跳过空图层
     if (elementInfo.visible == false) {
@@ -247,12 +238,30 @@ function ratioOutPut (fileName, tree, groupList, outText) {
       domHtml += outPut.html
       styleData += outPut.style
     } else {
+
       if (elementInfo.height === 0 || elementInfo.width === 0) {
         console.log(`图层为空: ${element.name}`)
         continue
       }
+
+
       // console.log(element.name, elementInfo.left, element.parent.left)
       console.log(`处理图层: ${element.name}`)
+
+      // 从文件缓存中取出是否以前生成过此图层
+      const layerId = "" + element.layer.image.obj.numPixels + element.layer.image.obj.length + element.layer.image.obj.opacity
+      if (fileTemp[layerId] === undefined) {
+        fileTemp[layerId] = `${groupListCopy.join('-')}`
+        // 导出图片
+        if (element.layer.image) {
+          const imagePath = `./public/temp/${fileName}/${groupListCopy.join('-')}.png`
+          element.layer.image.saveAsPng(imagePath)
+          console.log(`保存图片: ${imagePath}`)
+        }
+      } else {
+        console.log(`图层 [${element.name}] 与文件 [${fileTemp[layerId]}] 重复,智能忽略!`)
+      }
+
       let styleList = [
         'position: absolute',
         `left: ${getRatio(elementInfo.left - element.parent.left, element.parent.width)}%`,
@@ -281,16 +290,12 @@ function ratioOutPut (fileName, tree, groupList, outText) {
         domHtml += `<div class="swg swg-${groupListCopy.join('-')} text item-${ind}">${elementInfo.text.value}</div>\r\n    `
       } else {
         // 什么都不是那就输出成图片吧
-        styleList.push(`background-image: url(./${groupListCopy.join('-')}.png)`)
+        styleList.push(`background-image: url(./${fileTemp[layerId]}.png)`)
         domHtml += `<div class="swg swg-${groupListCopy.join('-')} item-${ind}"></div>\r\n    `
       }
       styleData += `.swg-${groupListCopy.join('-')} {${styleList.join('; ')};}\r\n      `
   
-      // 导出图片
-      // console.log(elementInfo.image)
-      if (element.layer.image) {
-        element.layer.image.saveAsPng(`./public/temp/${fileName}/${groupListCopy.join('-')}.png`)
-      }
+      
     }
   }
   domHtml += `</div>`
@@ -302,7 +307,6 @@ function ratioOutPut (fileName, tree, groupList, outText) {
 
 
 function make (query, fileName) {
-  console.log(query)
   let htmlTemple = temple
   creatDirIfNotExist('./public/temp')
   creatDirIfNotExist(`./public/temp/${fileName}`)
@@ -311,9 +315,7 @@ function make (query, fileName) {
   psd.parse()
 
   const treeLength = psd.tree().descendants().length
-  // 获取画布信息
-  // console.log(psd.tree().children()[0])
-  const document = psd.tree().export().document
+
   console.log(`图层个数: ${treeLength}`)
   console.log(`输出模式: ${query.mode}`)
 
