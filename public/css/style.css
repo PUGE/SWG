@@ -23,6 +23,7 @@ html {
   line-height: 1;
 }
 
+
 ol, ul {
   list-style: none;
 }
@@ -132,4 +133,68 @@ body {
 }
 #dnd button:last-of-type {
   background: #4bc5c3;
+}
+
+/* 单选复选框 */
+
+input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+label {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  padding-left: 25px;
+  padding-right: 10px;
+  height: 25px;
+  line-height: 29px;
+  cursor: pointer;
+}
+label::before {
+  content: " ";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #8e44ad;
+  border-radius: 4px;
+  z-index: -1;
+}
+input[type="radio"] + label::before {
+  border-radius: 10px;
+}
+/* Checked */
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+  padding-left: 15px;
+  color: #fff;
+}
+input[type="checkbox"]:checked + label::before,
+input[type="radio"]:checked + label::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #8e44ad;
+  border-radius: 5px;
+}
+/* Transition */
+label,
+label::before {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+
+.control {
+  color: #8e44ad;
+}
+
+.control .title {
+  font-size: 1.2rem;
+  margin: 10px 0;
 }

@@ -18,9 +18,12 @@ $.fn.dragAndDrop = function(p){
   $.extend(parameters,p);
 
   function upload(fd) {
+    // 获取选择模式
+    var mode = $("input[name='rb']:checked").val()
+    var outText = document.getElementById('outText').checked
     $.ajax({
       type: 'POST',
-      url: parameters.uploadFile,
+      url: 'uploads?mode=' + mode + '&outText=' + outText,
       data: fd,
       processData: false,
       contentType: false,
@@ -96,7 +99,10 @@ $('#dnd').dragAndDrop({
     $('#dnd .start, #dnd .error,#dnd progress').hide();
     $('#dnd .done').show()
     if (msg.err == 0) {
-      window.location.href = '/temp/' + msg.id
+      setTimeout(() => {
+        window.location.href = '/temp/' + msg.id
+      }, 500)
+      
     } else {
       alert('服务端返回错误的结果!')
     }

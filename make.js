@@ -60,7 +60,7 @@ function getRatio (num, total) {
 }
 
 
-function realOutPut (fileName, tree, groupList) {
+function realOutPut (fileName, tree, groupList, outText) {
   const document = tree.parent
   const isRoot = tree.isRoot()
   const chil = tree.children()
@@ -143,8 +143,8 @@ function realOutPut (fileName, tree, groupList) {
         `z-index: ${-ind}`
       ]
       styleList.push(`width: ${elementInfo.width}px`, `height: ${elementInfo.height}px`)
-      // 判断是否是文字
-      if (elementInfo.text) {
+      // 判断是否 配置了输出文字 并且此图层是文字
+      if (outText && elementInfo.text) {
         const color = elementInfo.text.font.colors[0]
         console.log('发现文字样式:')
         // console.log(elementInfo.text)
@@ -180,7 +180,7 @@ function realOutPut (fileName, tree, groupList) {
   }
 }
 
-function ratioOutPut (fileName, tree, groupList) {
+function ratioOutPut (fileName, tree, groupList, outText) {
   const document = tree.parent
   const isRoot = tree.isRoot()
   const chil = tree.children()
@@ -263,8 +263,8 @@ function ratioOutPut (fileName, tree, groupList) {
         `z-index: ${-ind}`
       ]
       styleList.push(`width: ${getRatio(elementInfo.width, element.parent.width)}%`, `height: ${getRatio(elementInfo.height, element.parent.height)}%`)
-      // 判断是否是文字
-      if (elementInfo.text) {
+      // 判断是否 配置了输出文字 并且此图层是文字
+      if (outText && elementInfo.text) {
         const color = elementInfo.text.font.colors[0]
         console.log('发现文字样式:')
         // console.log(elementInfo.text)
@@ -301,7 +301,7 @@ function ratioOutPut (fileName, tree, groupList) {
 }
 
 
-function make (mode, fileName) {
+function make (query, fileName) {
   let htmlTemple = temple
   creatDirIfNotExist('./public/temp')
   creatDirIfNotExist(`./public/temp/${fileName}`)
@@ -314,22 +314,22 @@ function make (mode, fileName) {
   // console.log(psd.tree().children()[0])
   const document = psd.tree().export().document
   console.log(`图层个数: ${treeLength}`)
-  console.log(`输出模式: ${mode}`)
+  console.log(`输出模式: ${query.mode}`)
 
   let domHtml = ``
   let styleData = ``
-  switch (mode) {
+  switch (query.mode) {
     // 真实输出
     case 'real': {
       styleData += `<style type="text/css">\r\n      `
-      const outPut = realOutPut(fileName, psd.tree(), [])
+      const outPut = realOutPut(fileName, psd.tree(), [], query.outText)
       domHtml += outPut.html
       styleData += outPut.style
       break
     }
     case 'ratio': {
       styleData += `<style type="text/css">\r\n      `
-      const outPut = ratioOutPut(fileName, psd.tree(), [])
+      const outPut = ratioOutPut(fileName, psd.tree(), [], query.outText)
       domHtml += outPut.html
       styleData += outPut.style
       break

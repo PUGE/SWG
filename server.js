@@ -31,8 +31,7 @@ app.post('/uploads', upload.any(), function (request, response, next) {
   }
   // 判断文件是否合规
   if (file) {
-    
-    make(request.query.mode, file.filename)
+    make(request.query, file.filename)
     response.json({err: 0, id: file.filename})
   } else {
     response.json({err: 1})
