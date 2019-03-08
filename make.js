@@ -302,6 +302,7 @@ function ratioOutPut (fileName, tree, groupList, outText) {
 
 
 function make (query, fileName) {
+  console.log(query)
   let htmlTemple = temple
   creatDirIfNotExist('./public/temp')
   creatDirIfNotExist(`./public/temp/${fileName}`)
@@ -322,14 +323,14 @@ function make (query, fileName) {
     // 真实输出
     case 'real': {
       styleData += `<style type="text/css">\r\n      `
-      const outPut = realOutPut(fileName, psd.tree(), [], query.outText)
+      const outPut = realOutPut(fileName, psd.tree(), [], JSON.parse(query.outText))
       domHtml += outPut.html
       styleData += outPut.style
       break
     }
     case 'ratio': {
       styleData += `<style type="text/css">\r\n      `
-      const outPut = ratioOutPut(fileName, psd.tree(), [], query.outText)
+      const outPut = ratioOutPut(fileName, psd.tree(), [], JSON.parse(query.outText))
       domHtml += outPut.html
       styleData += outPut.style
       break
