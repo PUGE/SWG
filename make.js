@@ -4,6 +4,7 @@ const PSD = require('psd')
 
 const { ratioOutPut }  = require('./mode/ratio')
 const { realOutPut }  = require('./mode/real')
+const { phoneOutPut }  = require('./mode/phone')
 
 
 
@@ -38,6 +39,10 @@ let temple = `
   <body>
     <!-- page-output -->
     <!-- script-output -->
+    <script>
+      var clientWidth = document.body.clientWidth
+      var clientHeight = document.body.clientHeight
+    </script>
   </body>
 </html>
 `
@@ -79,6 +84,15 @@ function make (query, fileName) {
       const outPut = ratioOutPut(fileName, psd.tree(), [], JSON.parse(query.outText))
       domHtml += outPut.html
       styleData += outPut.style
+      break
+    }
+    case 'phone': {
+      styleData += `<style type="text/css">\r\n      `
+      const outPut = phoneOutPut(fileName, psd.tree(), [], JSON.parse(query.outText))
+      domHtml += outPut.html
+      styleData += outPut.style
+      // 手机页面有自己的js代码
+      // htmlTemple = htmlTemple.replace(`<!-- script-output -->`, scriptData)
       break
     }
   }
