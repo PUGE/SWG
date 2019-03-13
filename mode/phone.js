@@ -25,10 +25,18 @@ function phoneOutPut (fileName, node, groupList, outText) {
   // 判断是否为根节点
   if (node.isRoot()) {
     // 根节点样式
-    styleList.push('position: relative', 'width: 100%','height: 100%')
-    styleData = `.root {${styleList.join('; ')};}\r\n      `
-    domHtml = `<div class="swg root">`
+    styleList.push(
+      'position: relative',
+      `width: ${node.width}px`,
+      `height: ${node.height}px`,
+    )
+    styleData = `.root {${styleList.join('; ')};position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}\r\n      `
+    domHtml = `<div class="swg root" id="root">`
   } else {
+    const WC = node.width - node.left - node.right
+    const HC = node.height - node.top - node.bottom
+    // 是背景吗
+    const isBG = WC == 0 && HC == 0
     // 如果不是根节点 会有上下左右位置
     styleList.push(
       'position: absolute',
@@ -40,7 +48,7 @@ function phoneOutPut (fileName, node, groupList, outText) {
       `height: ${getRatio(node.height, nodeParent.height)}%`,
     )
     styleData = `.swg-${groupList.join('-')} {${styleList.join('; ')};}\r\n      `
-    domHtml = `<div class="swg swg-${groupList.join('-')} item-${itemIndex}">`
+    domHtml = `<div class="swg swg-${groupList.join('-')} item-${itemIndex} ${isBG ? 'bg' : ''}">`
   }
   
   for (let ind in childrenNodeList) {
@@ -74,6 +82,10 @@ function phoneOutPut (fileName, node, groupList, outText) {
     const layerId = getLayerID(element.layer)
     fileTemp = cacheFile(layerId, element, fileTemp, groupListCopy, fileName)
 
+    const WC = node.width - node.left - node.right
+    const HC = node.height - node.top - node.bottom
+    // 是背景吗
+    const isBG = WC == 0 && HC == 0
     // 生成样式
     let styleList = [
       'position: absolute',
@@ -94,7 +106,7 @@ function phoneOutPut (fileName, node, groupList, outText) {
     } else {
       // 什么都不是那就输出成图片吧
       styleList.push(`background-image: url(./${fileTemp[layerId]}.png)`)
-      domHtml += `<div class="swg swg-${groupListCopy.join('-')} item-${ind}"></div>\r\n    `
+      domHtml += `<div class="swg swg-${groupListCopy.join('-')} item-${ind} ${isBG ? 'bg' : ''}"></div>\r\n    `
     }
     styleData += `.swg-${groupListCopy.join('-')} {${styleList.join('; ')};}\r\n      `
   }
