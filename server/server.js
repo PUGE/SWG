@@ -4,6 +4,9 @@ const multer  = require('multer')
 const {make}  = require('./make')
 const app        = express()
 
+var fs = require('fs');
+var archiver = require('archiver')
+
 // 只允许上传psd
 const fileFilter = (request, file, callback) => {
   if (!file.originalname.match(/\.(psd|PSD)$/)) {
@@ -36,6 +39,21 @@ app.post('/uploads', upload.any(), function (request, response, next) {
   } else {
     response.json({err: 1})
   }
+})
+
+app.get('/down', function(request, response, next){
+  console.log(request.query)
+  const output = fs.createWriteStream(`../public/temp/${request.query.id}.zip`)
+  const archive = archiver('zip')
+
+  archive.on('error', function(err) {
+    throw err
+  })
+
+  archive.pipe(output);
+  archive.directory(`../public/temp/${request.query.id}`, false)
+  archive.finalize()
+  response.send('{"err":0}')
 })
 
 

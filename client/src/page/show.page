@@ -1,0 +1,54 @@
+<template>
+  <div class="show-box">
+    <iframe @name="show" src="#"></iframe>
+    <div class="down" @click="down">下载代码</div>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+    },
+    created: () => {
+      $dom('show').src = './temp/' + ozzx.state.showId
+      $dom('show').style.display = 'block'
+    },
+    down: () => {
+      const httpRequest = new XMLHttpRequest()
+      httpRequest.open('GET', 'down?id=' + ozzx.state.showId, true)
+      httpRequest.send()
+      /**
+       * 获取数据后的处理程序
+       */
+      httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+          const res = JSON.parse(httpRequest.responseText)
+          if (res.err === 0) {
+            window.open(`./temp/${ozzx.state.showId}.zip`)
+          }
+        }
+      }
+    }
+  }
+</script>
+
+
+<style lang="less">
+.iframe {
+  display: none;
+}
+.show-box, iframe {
+  width: 100%;
+  height: 100%;
+}
+.down {
+  position: fixed;
+  right: 10px;
+  background-color: blueviolet;
+  bottom: 10px;
+  line-height: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
+</style>

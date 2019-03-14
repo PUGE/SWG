@@ -101,10 +101,11 @@ $('#dnd').dragAndDrop({
     $('#dnd .start, #dnd .error,#dnd progress').hide();
     $('#dnd .done').show()
     if (msg.err == 0) {
-      setTimeout(() => {
-        window.location.href = '/temp/' + msg.id
-      }, 500)
-      
+      // setTimeout(() => {
+      //   window.location.href = '/temp/' + msg.id
+      // }, 500)
+      ozzx.state.showId = msg.id
+      $go('show', 'moveToLeft', 'moveFromRight')
     } else {
       alert('服务端返回错误的结果!')
     }

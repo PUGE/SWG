@@ -42,10 +42,13 @@ var pageArg=getarg(window.location.href);// 从配置项中取出程序入口
 var page=pageArg?pageArg.split('&')[0]:ozzx.entry;if(page){var entryDom=document.getElementById('ox-'+page);if(entryDom){// 显示主页面
 entryDom.style.display='block';window.ozzx.activePage=page;// 更改$data链接
 $data=ozzx.script[page].data;runPageFunction(page,entryDom);}else{console.error('入口文件设置错误,错误值为: ',entryDom);}}else{console.error('未设置程序入口!');}};// url发生改变事件
-window.onhashchange=function(e){var oldUrlParam=getarg(e.oldURL);var newUrlParam=getarg(e.newURL);// 如果没有跳转到任何页面则跳转到主页
+window.onhashchange=function(e){var oldUrlParam=getarg(e.oldURL);// 如果旧页面不存在则为默认页面
+if(!oldUrlParam)oldUrlParam=ozzx.entry;var newUrlParam=getarg(e.newURL);// 如果没有跳转到任何页面则跳转到主页
 if(newUrlParam===undefined){newUrlParam=ozzx.entry;}// 如果没有发生页面跳转则不需要进行操作
 // 切换页面特效
-switchPage(oldUrlParam,newUrlParam);};window.ozzx={script:{"home":{"data":{},"created":function created(){}},"show":{}},tool:{},entry:"home",state:{}};// 便捷的获取工具方法
+switchPage(oldUrlParam,newUrlParam);};window.ozzx={script:{"home":{"data":{},"created":function created(){}},"show":{"data":{},"created":function created(){$dom('show').src='./temp/'+ozzx.state.showId;$dom('show').style.display='block';},"down":function down(){var httpRequest=new XMLHttpRequest();httpRequest.open('GET','down?id='+ozzx.state.showId,true);httpRequest.send();/**
+       * 获取数据后的处理程序
+       */httpRequest.onreadystatechange=function(){if(httpRequest.readyState==4&&httpRequest.status==200){var res=JSON.parse(httpRequest.responseText);if(res.err===0){window.open("./temp/".concat(ozzx.state.showId,".zip"));}}};}}},tool:{},entry:"home",state:{}};// 便捷的获取工具方法
 var $tool=ozzx.tool;var $data={};function switchPage(oldUrlParam,newUrlParam){var oldPage=oldUrlParam.split('&')[0];var newPage=newUrlParam.split('&')[0];// 查找页面跳转前的page页(dom节点)
 // console.log(oldUrlParam)
 // 如果源地址获取不到 那么一般是因为源页面为首页
