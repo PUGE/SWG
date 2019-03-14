@@ -25,6 +25,8 @@
           const res = JSON.parse(httpRequest.responseText)
           if (res.err === 0) {
             window.open(`./temp/${ozzx.state.showId}.zip`)
+          } else {
+            alert(res.message)
           }
         }
       }

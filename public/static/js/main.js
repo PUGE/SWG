@@ -107,7 +107,7 @@ $('#dnd').dragAndDrop({
       ozzx.state.showId = msg.id
       $go('show', 'moveToLeft', 'moveFromRight')
     } else {
-      alert('服务端返回错误的结果!')
+      alert(msg.message)
     }
   }, 
   'error' : function() {

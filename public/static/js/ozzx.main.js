@@ -48,7 +48,7 @@ if(newUrlParam===undefined){newUrlParam=ozzx.entry;}// 如果没有发生页面�
 // 切换页面特效
 switchPage(oldUrlParam,newUrlParam);};window.ozzx={script:{"home":{"data":{},"created":function created(){}},"show":{"data":{},"created":function created(){$dom('show').src='./temp/'+ozzx.state.showId;$dom('show').style.display='block';},"down":function down(){var httpRequest=new XMLHttpRequest();httpRequest.open('GET','down?id='+ozzx.state.showId,true);httpRequest.send();/**
        * 获取数据后的处理程序
-       */httpRequest.onreadystatechange=function(){if(httpRequest.readyState==4&&httpRequest.status==200){var res=JSON.parse(httpRequest.responseText);if(res.err===0){window.open("./temp/".concat(ozzx.state.showId,".zip"));}}};}}},tool:{},entry:"home",state:{}};// 便捷的获取工具方法
+       */httpRequest.onreadystatechange=function(){if(httpRequest.readyState==4&&httpRequest.status==200){var res=JSON.parse(httpRequest.responseText);if(res.err===0){window.open("./temp/".concat(ozzx.state.showId,".zip"));}else{alert(res.message);}}};}}},tool:{},entry:"home",state:{}};// 便捷的获取工具方法
 var $tool=ozzx.tool;var $data={};function switchPage(oldUrlParam,newUrlParam){var oldPage=oldUrlParam.split('&')[0];var newPage=newUrlParam.split('&')[0];// 查找页面跳转前的page页(dom节点)
 // console.log(oldUrlParam)
 // 如果源地址获取不到 那么一般是因为源页面为首页
