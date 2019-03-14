@@ -10,6 +10,7 @@ Soulless Web Pages - PSD generates web pages
 5. 重复图层只导出一个图片
 6. 支持生成手机H5页面(背景铺满，页面内容居中)
 7. 支持多种图片模式(div背景, img标签)
+8. 支持下载代码
 
 
 已知问题:
