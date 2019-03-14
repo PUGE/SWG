@@ -1,3 +1,5 @@
+const { textOutPut }  = require('./tool')
+
 function getOutPut (elementInfo, styleList, domHtml, groupList, fileName, ind, node, query) {
   const WC = node.width - node.left - node.right
   const HC = node.height - node.top - node.bottom

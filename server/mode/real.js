@@ -1,6 +1,6 @@
 'use strict'
 const { getOutPut } = require('../lib/output')
-const { isEmptyLayer, getLayerID, cacheFile, textOutPut }  = require('../lib/tool')
+const { isEmptyLayer, getLayerID, cacheFile }  = require('../lib/tool')
 
 function realOutPut (fileName, node, groupList, query) {
   const nodeParent = node.parent
@@ -49,7 +49,7 @@ function realOutPut (fileName, node, groupList, query) {
     const elementInfo = element.export()
     let groupListCopy = JSON.parse(JSON.stringify(groupList))
     groupListCopy.push(ind)
-    console.log(element)
+    // console.log(element)
     // if (element.name == '改革1') {
     //   console.log(element.type, element.text)
     //   console.log(element.export())

@@ -1,28 +1,52 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
+<template>
+  <div class="home">
+    <div id="dnd">
+      <form enctype="multipart/form-data" method="post">
+        <div class="dnd-container">
+          <div class="start"></div>   
+          <div class="done"></div>   
+          <div class="error"></div>
+          <progress max="100" value="50"></progress>
+        </div>
+        <p>选择或者拖拽PSD文件 (建议不要过大)</p>
+        <button class="dndAlternative">选择</button>
+        <input type="file" name="upload" accept="*.psd">
+      </form>
+    </div>
+    <div class="control">
+      <div class="title">生成模式</div>
+      <input type="radio" name="rb" id="m1" value="real" checked/>
+      <label for="m1">真实还原</label>
+      <input type="radio" name="rb" id="m2" value="ratio" />
+      <label for="m2">铺满全屏</label>
+      <input type="radio" name="rb" id="m3" value="phone" />
+      <label for="m3">手机模式</label>
+      <input type="radio" name="rb" id="m4" value="phone2" />
+      <label for="m4">手机模式2</label>
+      <div class="title">图片形式</div>
+      <input type="radio" name="output" id="o1" value="background" checked/>
+      <label for="o1">背景模式</label>
+      <input type="radio" name="output" id="o2" value="img"/>
+      <label for="o2">图片标签</label>
+      <div class="title">其它配置</div>
+      <input type="checkbox" name="cb" id="outText" />
+      <label for="outText">导出文字</label>
+    </div>
+  </div>
+</template>
 
-html {
-  line-height: 1;
-}
+<script>
+  module.exports = {
+    data: {
+    },
+    created: () => {
+      
+    }
+  }
+</script>
 
+
+<style lang="less">
 
 ol, ul {
   list-style: none;
@@ -208,3 +232,4 @@ label::before {
   margin: 10px 0;
   color: white;
 }
+</style>
