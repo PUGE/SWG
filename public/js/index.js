@@ -20,10 +20,12 @@ $.fn.dragAndDrop = function(p){
   function upload(fd) {
     // 获取选择模式
     var mode = $("input[name='rb']:checked").val()
+    // 输出模式
+    var output = $("input[name='output']:checked").val()
     var outText = document.getElementById('outText').checked
     $.ajax({
       type: 'POST',
-      url: 'uploads?mode=' + mode + '&outText=' + outText,
+      url: 'uploads?mode=' + mode + '&outText=' + outText + '&output=' + output,
       data: fd,
       processData: false,
       contentType: false,
@@ -95,7 +97,7 @@ $.fn.dragAndDrop = function(p){
 }
 
 $('#dnd').dragAndDrop({
-  'done' : function(msg){
+  'done' : function(msg) {
     $('#dnd .start, #dnd .error,#dnd progress').hide();
     $('#dnd .done').show()
     if (msg.err == 0) {

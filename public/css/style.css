@@ -63,7 +63,7 @@ body, html {
 }
 
 #dnd {
-  width: 400px;
+  width: 300px;
   text-align: center;
   margin: auto;
   position: absolute;
@@ -153,13 +153,15 @@ label {
   padding-left: 25px;
   padding-right: 10px;
   height: 25px;
-  line-height: 29px;
+  line-height: 25px;
   cursor: pointer;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 label::before {
   content: " ";
   position: absolute;
-  top: 6px;
+  top: 3px;
   left: 0;
   display: block;
   width: 15px;
@@ -195,9 +197,14 @@ label::before {
 
 .control {
   color: #8e44ad;
+  padding: 10px;
 }
 
 .control .title {
   font-size: 1.2rem;
+  line-height: 2rem;
+  background-color: mediumturquoise;
+  padding: 0 10px;
   margin: 10px 0;
+  color: white;
 }

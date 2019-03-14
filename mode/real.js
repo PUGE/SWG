@@ -1,7 +1,8 @@
 'use strict'
-const { isEmptyLayer, getLayerID, cacheFile, textOutPut }  = require('./tool')
+const { getOutPut } = require('../lib/output')
+const { isEmptyLayer, getLayerID, cacheFile, textOutPut }  = require('../lib/tool')
 
-function realOutPut (fileName, node, groupList, outText) {
+function realOutPut (fileName, node, groupList, query) {
   const nodeParent = node.parent
   const childrenNodeList = node.children()
   // 文件缓存
@@ -62,7 +63,7 @@ function realOutPut (fileName, node, groupList, outText) {
       // 递归处理子节点
       // console.log(element.height, element.left)
       console.log(`递归处理组: ${element.name}`)
-      const outPut = realOutPut(fileName, element, groupListCopy, outText)
+      const outPut = realOutPut(fileName, element, groupListCopy, query)
       // console.log(outPut)
       domHtml += outPut.html
       styleData += outPut.style
@@ -87,14 +88,9 @@ function realOutPut (fileName, node, groupList, outText) {
       `height: ${elementInfo.height}px`
     ]
 
-    // 判断是否 配置了输出文字 并且此图层是文字
-    if (outText && elementInfo.text) {
-      [styleList, domHtml] = textOutPut(elementInfo.text, styleList, domHtml, groupListCopy)
-    } else {
-      // 什么都不是那就输出成图片吧
-      styleList.push(`background-image: url(./${fileTemp[layerId]}.png)`)
-      domHtml += `<div class="swg swg-${groupListCopy.join('-')} item-${ind}"></div>\r\n    `
-    }
+    const outPutData = getOutPut(elementInfo, styleList, domHtml, groupListCopy, fileTemp[layerId], ind, node, query)
+    styleList = outPutData[0]
+    domHtml = outPutData[1]
     styleData += `.swg-${groupListCopy.join('-')} {${styleList.join('; ')};}\r\n      `
   }
   domHtml += `</div>`

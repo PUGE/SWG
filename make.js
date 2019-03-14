@@ -73,41 +73,88 @@ function make (query, fileName) {
     // 真实输出
     case 'real': {
       styleData += `<style type="text/css">\r\n      `
-      const outPut = realOutPut(fileName, psd.tree(), [], JSON.parse(query.outText))
+      const outPut = realOutPut(fileName, psd.tree(), [], query)
       domHtml += outPut.html
       styleData += outPut.style
       break
     }
     case 'ratio': {
       styleData += `<style type="text/css">\r\n      `
-      const outPut = ratioOutPut(fileName, psd.tree(), [], JSON.parse(query.outText))
+      const outPut = ratioOutPut(fileName, psd.tree(), [], query)
       domHtml += outPut.html
       styleData += outPut.style
       break
     }
     case 'phone': {
       styleData += `<style type="text/css">\r\n      `
-      const outPut = phoneOutPut(fileName, psd.tree(), [], JSON.parse(query.outText))
+      const outPut = phoneOutPut(fileName, psd.tree(), [], query)
       domHtml += outPut.html
       styleData += outPut.style
       // 手机页面有自己的js代码
       styleData += `\r\n.bg{ position: fixed;background-size: 100%; }`
       htmlTemple = htmlTemple.replace(`<!-- script-output -->`, `
         <script>
-          var clientWidth = document.body.clientWidth
-          var clientHeight = document.body.clientHeight
-          var root = document.getElementById('root')
-          var rootWidth = root.offsetWidth
-          var rootHeight = root.offsetHeight
-          console.log(clientWidth / clientHeight)
-          console.log(rootWidth / rootHeight)
-          console.log(clientWidth / clientHeight - rootWidth / rootHeight)
-          var CRW = clientWidth / rootWidth
-          var CRH = clientHeight / rootHeight
-          console.log(CRW, CRH)
-          var min = CRW > CRH ? CRH : CRW
-          root.style.width = rootWidth * min + 'px'
-          root.style.height = rootHeight * min + 'px'
+          
+          function getSize () {
+            var clientWidth = document.body.clientWidth
+            var clientHeight = document.body.clientHeight
+            var root = document.getElementById('root')
+            var rootWidth = root.offsetWidth
+            var rootHeight = root.offsetHeight
+            console.log(clientWidth / clientHeight)
+            console.log(rootWidth / rootHeight)
+            console.log(clientWidth / clientHeight - rootWidth / rootHeight)
+            var CRW = clientWidth / rootWidth
+            var CRH = clientHeight / rootHeight
+            console.log(CRW, CRH)
+            var min = CRW > CRH ? CRH : CRW
+            root.style.width = rootWidth * min + 'px'
+            root.style.height = rootHeight * min + 'px'
+            root.style.opacity = 1
+          }
+          window.onload = function() {
+            getSize()
+          }
+          window.onresize = function() {
+            getSize()
+          }
+        </script>
+      `)
+      break
+    }
+    case 'phone2': {
+      styleData += `<style type="text/css">\r\n      `
+      const outPut = phoneOutPut(fileName, psd.tree(), [], query)
+      domHtml += outPut.html
+      styleData += outPut.style
+      // 手机页面有自己的js代码
+      htmlTemple = htmlTemple.replace(`<!-- script-output -->`, `
+        <script>
+          
+          function getSize () {
+            var clientWidth = document.body.clientWidth
+            var clientHeight = document.body.clientHeight
+            var root = document.getElementById('root')
+            var rootWidth = root.offsetWidth
+            var rootHeight = root.offsetHeight
+            console.log(clientWidth / clientHeight)
+            console.log(rootWidth / rootHeight)
+            console.log(clientWidth / clientHeight - rootWidth / rootHeight)
+            var CRW = clientWidth / rootWidth
+            var CRH = clientHeight / rootHeight
+            console.log(CRW, CRH)
+            var min = CRW > CRH ? CRH : CRW
+            min = min * 0.8
+            root.style.width = rootWidth * min + 'px'
+            root.style.height = rootHeight * min + 'px'
+            root.style.opacity = 1
+          }
+          window.onload = function() {
+            getSize()
+          }
+          window.onresize = function() {
+            getSize()
+          }
         </script>
       `)
       break

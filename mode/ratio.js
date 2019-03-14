@@ -1,8 +1,9 @@
 'use strict'
-const { getRatio, isEmptyLayer, getLayerID, cacheFile, textOutPut }  = require('./tool')
+const { getOutPut } = require('../lib/output')
+const { getRatio, isEmptyLayer, getLayerID, cacheFile }  = require('../lib/tool')
 
 
-function ratioOutPut (fileName, node, groupList, outText) {
+function ratioOutPut (fileName, node, groupList, query) {
   // 当前节点的父节点
   const nodeParent = node.parent
   // 当前节点的子节点列表
@@ -59,7 +60,7 @@ function ratioOutPut (fileName, node, groupList, outText) {
       // 递归处理子节点
       // console.log(element.height, element.left)
       console.log(`递归处理组: ${element.name}`)
-      const outPut = ratioOutPut(fileName, element, groupListCopy, outText)
+      const outPut = ratioOutPut(fileName, element, groupListCopy, query)
       // console.log(outPut)
       domHtml += outPut.html
       styleData += outPut.style
@@ -87,15 +88,9 @@ function ratioOutPut (fileName, node, groupList, outText) {
       `height: ${getRatio(elementInfo.height, element.parent.height)}%`
     ]
 
-    // 判断是否 配置了输出文字 并且此图层是文字
-    if (outText && elementInfo.text) {
-      [styleList, domHtml] = textOutPut(elementInfo.text, styleList, domHtml, groupListCopy)
-      
-    } else {
-      // 什么都不是那就输出成图片吧
-      styleList.push(`background-image: url(./${fileTemp[layerId]}.png)`)
-      domHtml += `<div class="swg swg-${groupListCopy.join('-')} item-${ind}"></div>\r\n    `
-    }
+    const outPutData = getOutPut(elementInfo, styleList, domHtml, groupListCopy, fileTemp[layerId], ind, node, query)
+    styleList = outPutData[0]
+    domHtml = outPutData[1]
     styleData += `.swg-${groupListCopy.join('-')} {${styleList.join('; ')};}\r\n      `
   }
   domHtml += `</div>`

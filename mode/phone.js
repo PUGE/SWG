@@ -1,8 +1,9 @@
 'use strict'
-const { getRatio, isEmptyLayer, getLayerID, cacheFile, textOutPut }  = require('./tool')
+const { getOutPut } = require('../lib/output')
+const { getRatio, isEmptyLayer, getLayerID, cacheFile }  = require('../lib/tool')
 
 
-function phoneOutPut (fileName, node, groupList, outText) {
+function phoneOutPut (fileName, node, groupList, query) {
   // 当前节点的父节点
   const nodeParent = node.parent
   // 当前节点的子节点列表
@@ -30,7 +31,8 @@ function phoneOutPut (fileName, node, groupList, outText) {
       `width: ${node.width}px`,
       `height: ${node.height}px`,
     )
-    styleData = `.root {${styleList.join('; ')};position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}\r\n      `
+    // 因为手机页面需要计算的原因所以用js控制显示
+    styleData = `.root {${styleList.join('; ')};position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;opacity: 0;}\r\n      `
     domHtml = `<div class="swg root" id="root">`
   } else {
     const WC = node.width - node.left - node.right
@@ -67,7 +69,7 @@ function phoneOutPut (fileName, node, groupList, outText) {
       // 递归处理子节点
       // console.log(element.height, element.left)
       console.log(`递归处理组: ${element.name}`)
-      const outPut = phoneOutPut(fileName, element, groupListCopy, outText)
+      const outPut = phoneOutPut(fileName, element, groupListCopy, query)
       // console.log(outPut)
       domHtml += outPut.html
       styleData += outPut.style
@@ -81,11 +83,6 @@ function phoneOutPut (fileName, node, groupList, outText) {
     // 从文件缓存中取出是否以前生成过此图层
     const layerId = getLayerID(element.layer)
     fileTemp = cacheFile(layerId, element, fileTemp, groupListCopy, fileName)
-
-    const WC = node.width - node.left - node.right
-    const HC = node.height - node.top - node.bottom
-    // 是背景吗
-    const isBG = WC == 0 && HC == 0
     // 生成样式
     let styleList = [
       'position: absolute',
@@ -98,17 +95,12 @@ function phoneOutPut (fileName, node, groupList, outText) {
       `width: ${getRatio(elementInfo.width, element.parent.width)}%`,
       `height: ${getRatio(elementInfo.height, element.parent.height)}%`
     ]
-
-    // 判断是否 配置了输出文字 并且此图层是文字
-    if (outText && elementInfo.text) {
-      [styleList, domHtml] = textOutPut(elementInfo.text, styleList, domHtml, groupListCopy)
-      
-    } else {
-      // 什么都不是那就输出成图片吧
-      styleList.push(`background-image: url(./${fileTemp[layerId]}.png)`)
-      domHtml += `<div class="swg swg-${groupListCopy.join('-')} item-${ind} ${isBG ? 'bg' : ''}"></div>\r\n    `
-    }
+    
+    const outPutData = getOutPut(elementInfo, styleList, domHtml, groupListCopy, fileTemp[layerId], ind, node, query)
+    styleList = outPutData[0]
+    domHtml = outPutData[1]
     styleData += `.swg-${groupListCopy.join('-')} {${styleList.join('; ')};}\r\n      `
+    
   }
   domHtml += `</div>`
   return {

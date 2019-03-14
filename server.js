@@ -40,6 +40,6 @@ app.post('/uploads', upload.any(), function (request, response, next) {
 })
 
 
-app.listen(8080, () => {
+app.listen(8080, '0.0.0.0', () => {
   console.log('localhost:8080')
 })
