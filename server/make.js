@@ -56,10 +56,10 @@ function creatDirIfNotExist (path) {
 
 function make (query, fileName) {
   let htmlTemple = temple
-  creatDirIfNotExist('./public/temp')
-  creatDirIfNotExist(`./public/temp/${fileName}`)
+  creatDirIfNotExist('../public/temp')
+  creatDirIfNotExist(`../public/temp/${fileName}`)
   // 读取图层
-  const psd = PSD.fromFile(`./uploads/${fileName}`)
+  const psd = PSD.fromFile(`../uploads/${fileName}`)
   psd.parse()
 
   const treeLength = psd.tree().descendants().length
@@ -163,7 +163,7 @@ function make (query, fileName) {
   styleData += `\r\n    </style>`
   htmlTemple = htmlTemple.replace(`<!-- page-output -->`, domHtml)
   htmlTemple = htmlTemple.replace(`<!-- css-output -->`, styleData)
-  fs.writeFileSync(`./public/temp/${fileName}/index.html`, htmlTemple)
+  fs.writeFileSync(`../public/temp/${fileName}/index.html`, htmlTemple)
 }
 
 

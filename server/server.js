@@ -13,10 +13,10 @@ const fileFilter = (request, file, callback) => {
   callback(null, true)
 }
 
-const upload = multer({ dest: 'uploads/', fileFilter })
+const upload = multer({ dest: '../uploads/', fileFilter })
 
 app.use(cors())
-app.use(express.static('public'))
+app.use(express.static('../public'))
 
 
 
@@ -36,7 +36,6 @@ app.post('/uploads', upload.any(), function (request, response, next) {
   } else {
     response.json({err: 1})
   }
-  
 })
 
 

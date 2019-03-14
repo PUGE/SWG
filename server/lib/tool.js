@@ -29,7 +29,7 @@ function cacheFile (layerId, element, fileTemp, groupList, fileName) {
     fileTemp[layerId] = `${groupList.join('-')}`
     // 导出图片
     if (element.layer.image) {
-      const imagePath = `./public/temp/${fileName}/${groupList.join('-')}.png`
+      const imagePath = `../public/temp/${fileName}/${groupList.join('-')}.png`
       element.layer.image.saveAsPng(imagePath)
       console.log(`保存图片: ${imagePath}`)
     }
