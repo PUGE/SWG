@@ -1,6 +1,6 @@
 <template>
   <div class="show-box">
-    <iframe @name="show" src="#"></iframe>
+    <iframe @name="show"></iframe>
     <div class="down" @click="down">下载代码</div>
   </div>
 </template>
