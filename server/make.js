@@ -94,19 +94,18 @@ function make (query, fileName) {
       styleData += `\r\n.bg{ position: fixed;background-size: 100%; }`
       htmlTemple = htmlTemple.replace(`<!-- script-output -->`, `
         <script>
-          
           function getSize () {
             var clientWidth = document.body.clientWidth
             var clientHeight = document.body.clientHeight
             var root = document.getElementById('root')
             var rootWidth = root.offsetWidth
             var rootHeight = root.offsetHeight
-            console.log(clientWidth / clientHeight)
-            console.log(rootWidth / rootHeight)
-            console.log(clientWidth / clientHeight - rootWidth / rootHeight)
+            // console.log(clientWidth / clientHeight)
+            // console.log(rootWidth / rootHeight)
+            // console.log(clientWidth / clientHeight - rootWidth / rootHeight)
             var CRW = clientWidth / rootWidth
             var CRH = clientHeight / rootHeight
-            console.log(CRW, CRH)
+            // console.log(CRW, CRH)
             var min = CRW > CRH ? CRH : CRW
             root.style.width = rootWidth * min + 'px'
             root.style.height = rootHeight * min + 'px'
@@ -137,12 +136,12 @@ function make (query, fileName) {
             var root = document.getElementById('root')
             var rootWidth = root.offsetWidth
             var rootHeight = root.offsetHeight
-            console.log(clientWidth / clientHeight)
-            console.log(rootWidth / rootHeight)
-            console.log(clientWidth / clientHeight - rootWidth / rootHeight)
+            // console.log(clientWidth / clientHeight)
+            // console.log(rootWidth / rootHeight)
+            // console.log(clientWidth / clientHeight - rootWidth / rootHeight)
             var CRW = clientWidth / rootWidth
             var CRH = clientHeight / rootHeight
-            console.log(CRW, CRH)
+            // console.log(CRW, CRH)
             var min = CRW > CRH ? CRH : CRW
             root.style.width = rootWidth * min + 'px'
             root.style.height = rootHeight * min + 'px'

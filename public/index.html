@@ -15,36 +15,36 @@
     <!-- 页面区域 -->
     <div class="ox-home ox" id="ox-home" style="display: none;"><div class="home">
     <div id="dnd">
-      <form enctype="multipart/form-data" method="post">
+      <form enctype="multipart/form-data" method="post" @name="uploadBox">
         <div class="dnd-container">
-          <div class="start"></div>   
-          <div class="done"></div>   
-          <div class="error"></div>
-          <progress max="100" value="50"></progress>
+          <div class="start" @name="stareIcon"></div>   
+          <div class="done" @name="doneIcon"></div>   
+          <progress max="100" value="0" @name="progress"></progress>
         </div>
         <p>选择或者拖拽PSD文件 (建议不要过大)</p>
-        <button class="dndAlternative">选择</button>
-        <input type="file" name="upload" accept="*.psd">
+        <button class="dndAlternative" @click="uploadFile">选择</button>
+        <input type="file" name="upload" accept="*.psd" @name="uploadInput">
       </form>
     </div>
     <div class="control">
       <div class="title">生成模式</div>
-      <input type="radio" name="rb" id="m1" value="real" checked="">
+      <input type="radio" name="rb" id="m1" value="real" @click="changeModle" checked="">
       <label for="m1">真实还原</label>
-      <input type="radio" name="rb" id="m2" value="ratio">
+      <input type="radio" name="rb" id="m2" value="ratio" @click="changeModle">
       <label for="m2">铺满全屏</label>
-      <input type="radio" name="rb" id="m3" value="phone">
+      <input type="radio" name="rb" id="m3" value="phone" @click="changeModle">
       <label for="m3">手机模式</label>
-      <input type="radio" name="rb" id="m4" value="phone2">
+      <input type="radio" name="rb" id="m4" value="phone2" @click="changeModle">
       <label for="m4">手机模式2</label>
+
       <div class="title">图片形式</div>
-      <input type="radio" name="output" id="o1" value="background" checked="">
+      <input type="radio" name="output" id="o1" value="background" @click="changeOutPut" checked="">
       <label for="o1">背景模式</label>
-      <input type="radio" name="output" id="o2" value="img">
+      <input type="radio" name="output" id="o2" value="img" @click="changeOutPut">
       <label for="o2">图片标签</label>
       <div class="title">其它配置</div>
       <input type="checkbox" name="cb" id="outText">
-      <label for="outText">导出文字</label>
+      <label for="outText" @click="changeOutText('outText')">导出文字</label>
     </div>
   </div>
 </div>
@@ -54,8 +54,7 @@
   </div>
 </div>
     <!-- 页面脚本 -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript" ></script>
-    <script src="./static/js/main.js" type="text/javascript" ></script>
+    <script src="./static/js/autoReload.js" type="text/javascript"></script>
     <!-- 主要script文件 -->
     <script src="./static/js/ozzx.main.js" type="text/javascript"></script>
   </body>

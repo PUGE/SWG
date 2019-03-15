@@ -22,14 +22,6 @@ module.exports = {
   ],
   // 使用到的外部脚本清单
   scriptList: [
-    {
-      name: "jquery-2.1.3",
-      src: "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
-    },
-    {
-      name: "main",
-      src: "./src/main.js"
-    }
   ],
   // 使用到的样式列表
   styleList: [

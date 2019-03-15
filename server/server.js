@@ -28,6 +28,10 @@ app.use(express.static('../public'))
 
 
 app.post('/uploads', upload.any(), function (request, response, next) {
+  if (!request.files || !request.files[0]) {
+    response.json({err: 1, message: '没有传递文件!'})
+    return
+  }
   const file = request.files[0]
   // console.log(file)
   console.log(request.query)
