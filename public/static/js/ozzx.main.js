@@ -1,4 +1,4 @@
-"use strict";// 对象合并方法
+"use strict";function _typeof(obj){if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof=function _typeof(obj){return typeof obj;};}else{_typeof=function _typeof(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof(obj);}// 对象合并方法
 function assign(a,b){var newObj={};for(var key in a){newObj[key]=a[key];}for(var key in b){newObj[key]=b[key];}return newObj;}// 运行页面所属的方法
 function runPageFunction(pageName,entryDom){// ozzx-name处理
 window.ozzx.domList={};pgNameHandler(entryDom);// 判断页面是否有自己的方法
@@ -35,20 +35,23 @@ newPageFunction.$el=this;newPageFunction.$event=event;newPageFunction.domList=wi
 eval(this.attributes['@click'].textContent);}};}// 递归处理所有子Dom结点
 if(tempDom.children.length>0){pgNameHandler(tempDom);}}}// 便捷获取被命名的dom元素
 function $dom(domName){return ozzx.domList[domName];}// 跳转到指定页面
-function $go(pageName,inAnimation,outAnimation){ozzx.state.animation={in:inAnimation,out:outAnimation};window.location.href="#"+pageName;}// 获取URL #后面内容
+function $go(pageName,inAnimation,outAnimation,param){ozzx.state.animation={in:inAnimation,out:outAnimation};var paramString='';if(param&&_typeof(param)=='object'){paramString+='?';// 生成URL参数
+for(var paramKey in param){paramString+=paramKey+'='+param[paramKey]+'&';}// 去掉尾端的&
+paramString=paramString.slice(0,-1);}window.location.href=paramString+"#"+pageName;}// 获取URL #后面内容
 function getarg(url){var arg=url.split("#");return arg[1];}// 页面资源加载完毕事件
 window.onload=function(){// 取出URL地址判断当前所在页面
-var pageArg=getarg(window.location.href);// 从配置项中取出程序入口
-var page=pageArg?pageArg.split('&')[0]:ozzx.entry;if(page){var entryDom=document.getElementById('ox-'+page);if(entryDom){// 显示主页面
+var pageArg=getarg(window.location.hash);// 从配置项中取出程序入口
+var page=pageArg?pageArg.split('?')[0]:ozzx.entry;if(page){var entryDom=document.getElementById('ox-'+page);if(entryDom){// 显示主页面
 entryDom.style.display='block';window.ozzx.activePage=page;// 更改$data链接
 $data=ozzx.script[page].data;runPageFunction(page,entryDom);}else{console.error('入口文件设置错误,错误值为: ',entryDom);}}else{console.error('未设置程序入口!');}};// url发生改变事件
 window.onhashchange=function(e){var oldUrlParam=getarg(e.oldURL);// 如果旧页面不存在则为默认页面
 if(!oldUrlParam)oldUrlParam=ozzx.entry;var newUrlParam=getarg(e.newURL);// 如果没有跳转到任何页面则跳转到主页
 if(newUrlParam===undefined){newUrlParam=ozzx.entry;}// 如果没有发生页面跳转则不需要进行操作
 // 切换页面特效
-switchPage(oldUrlParam,newUrlParam);};window.ozzx={script:{"home":{"data":{},"created":function created(){}},"show":{"data":{},"created":function created(){$dom('show').src='./temp/'+ozzx.state.showId;$dom('show').style.display='block';},"down":function down(){var httpRequest=new XMLHttpRequest();httpRequest.open('GET','down?id='+ozzx.state.showId,true);httpRequest.send();/**
+switchPage(oldUrlParam,newUrlParam);};window.ozzx={script:{"home":{"data":{},"created":function created(){}},"show":{"data":{},"created":function created(){// 获取url参数
+$dom('show').src='./temp/'+$tool.getQueryString('id');$dom('show').style.display='block';},"down":function down(){var httpRequest=new XMLHttpRequest();httpRequest.open('GET','down?id='+$tool.getQueryString('id'),true);httpRequest.send();/**
        * 获取数据后的处理程序
-       */httpRequest.onreadystatechange=function(){if(httpRequest.readyState==4&&httpRequest.status==200){var res=JSON.parse(httpRequest.responseText);if(res.err===0){window.open("./temp/".concat(ozzx.state.showId,".zip"));}else{alert(res.message);}}};}}},tool:{},entry:"home",state:{}};// 便捷的获取工具方法
+       */httpRequest.onreadystatechange=function(){if(httpRequest.readyState==4&&httpRequest.status==200){var res=JSON.parse(httpRequest.responseText);if(res.err===0){window.open("./temp/".concat($tool.getQueryString('id'),".zip"));}else{alert(res.message);}}};}}},tool:{},entry:"home",state:{}};// 便捷的获取工具方法
 var $tool=ozzx.tool;var $data={};function switchPage(oldUrlParam,newUrlParam){var oldPage=oldUrlParam.split('&')[0];var newPage=newUrlParam.split('&')[0];// 查找页面跳转前的page页(dom节点)
 // console.log(oldUrlParam)
 // 如果源地址获取不到 那么一般是因为源页面为首页
@@ -57,4 +60,8 @@ oldDom.style.display='none';}// 查找页面跳转后的page
 var newDom=document.getElementById('ox-'+newPage);// console.log(newDom)
 if(newDom){// 隐藏掉旧的节点
 newDom.style.display='block';}else{console.error('页面不存在!');return;}window.ozzx.activePage=newPage;// 更改$data链接
-$data=ozzx.script[newPage].data;runPageFunction(newPage,newDom);}
+$data=ozzx.script[newPage].data;runPageFunction(newPage,newDom);}/**
+ * 获取URL参数中字段的值
+ * @param  {string} name 参数名称
+ * @return {string} 返回参数值
+ */ozzx.tool.getQueryString=function(name){var reg=new RegExp("(^|&)"+name+"=([^&]*)(&|$)","i");var r=window.location.search.substr(1).match(reg);if(r!=null)return unescape(r[2]);return null;};

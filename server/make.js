@@ -66,7 +66,7 @@ function make (query, fileName) {
 
   console.log(`图层个数: ${treeLength}`)
   console.log(`输出模式: ${query.mode}`)
-
+  console.log(`图像宽度: ${psd.header.cols}, 图像高度: ${psd.header.rows}`)
   let domHtml = ``
   let styleData = ``
   switch (query.mode) {
@@ -144,7 +144,6 @@ function make (query, fileName) {
             var CRH = clientHeight / rootHeight
             console.log(CRW, CRH)
             var min = CRW > CRH ? CRH : CRW
-            min = min * 0.8
             root.style.width = rootWidth * min + 'px'
             root.style.height = rootHeight * min + 'px'
             root.style.opacity = 1

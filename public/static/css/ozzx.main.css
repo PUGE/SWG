@@ -253,6 +253,7 @@ body, html, .ox {
 .ox-show .down {
   position: fixed;
   right: 10px;
+  cursor: pointer;
   background-color: blueviolet;
   bottom: 10px;
   line-height: 20px;

@@ -20,12 +20,11 @@ function realOutPut (fileName, node, groupList, query) {
 
   // 初始化样式临时存储字段
   let styleData = ``
-  
   if (node.isRoot()) {
     styleList.push(
       'position: relative',
-      `width: ${node.width}px`,
-      `height: ${node.height}px`,
+      `width: ${node.psd.header.cols}px`,
+      `height: ${node.psd.header.rows}px`,
     )
     styleData = `.root {${styleList.join('; ')};}\r\n      `
     domHtml = `<div class="swg root">`

@@ -921,3 +921,661 @@
 [2019-03-14T16:54:36.813] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
 [2019-03-14T16:54:36.814] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
 [2019-03-14T16:54:36.814] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\main.js
+[2019-03-15T08:27:41.160] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T08:27:41.163] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T08:27:41.163] [INFO] main.js - 首次启动!
+[2019-03-15T08:27:41.163] [INFO] main.js - 生成版本号: s4mqbo1nr9s
+[2019-03-15T08:27:41.165] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:27:41.165] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:27:41.166] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:27:41.166] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T08:27:41.166] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T08:27:41.166] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T08:27:41.305] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:27:41.305] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:27:41.305] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:27:41.327] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T08:27:41.667] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:27:41.667] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:27:41.698] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T08:27:41.699] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:27:41.699] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:27:41.699] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T08:27:41.700] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T08:27:42.504] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:27:42.504] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:27:42.505] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T08:27:42.505] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T08:27:42.505] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T08:27:42.505] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T08:27:42.505] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T08:27:42.505] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T08:27:42.505] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:27:42.506] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:27:42.678] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:27:42.678] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:27:42.680] [INFO] main.js - Compile successfully, Use time: 1520 msec!
+[2019-03-15T08:27:42.681] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:27:42.681] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:27:42.682] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\main.js
+[2019-03-15T08:27:42.683] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-15T08:36:47.407] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T08:36:47.409] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T08:36:47.409] [INFO] main.js - 首次启动!
+[2019-03-15T08:36:47.409] [INFO] main.js - 生成版本号: zwqptgvu29k
+[2019-03-15T08:36:47.411] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:36:47.412] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:36:47.412] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:36:47.412] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T08:36:47.412] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T08:36:47.412] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T08:36:47.541] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:36:47.541] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:36:47.541] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:36:47.567] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T08:36:47.567] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:36:47.568] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:36:47.591] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T08:36:47.592] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:36:47.592] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:36:47.592] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T08:36:47.592] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T08:36:48.227] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:36:48.227] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:36:48.228] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T08:36:48.228] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T08:36:48.228] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T08:36:48.228] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T08:36:48.228] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T08:36:48.228] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T08:36:48.228] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:36:48.228] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:36:48.404] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:36:48.404] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:36:48.405] [INFO] main.js - Compile successfully, Use time: 998 msec!
+[2019-03-15T08:36:48.407] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:36:48.407] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:36:48.408] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-15T08:36:48.408] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\main.js
+[2019-03-15T08:37:32.903] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T08:37:32.905] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T08:37:32.905] [INFO] main.js - 首次启动!
+[2019-03-15T08:37:32.905] [INFO] main.js - 生成版本号: gfwwvxrpv6
+[2019-03-15T08:37:32.907] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:37:32.908] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:37:32.908] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:37:32.908] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T08:37:32.908] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T08:37:32.908] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T08:37:33.038] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:37:33.038] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:37:33.038] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:37:33.053] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T08:37:33.054] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:37:33.054] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:37:33.082] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T08:37:33.082] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:37:33.082] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:37:33.083] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T08:37:33.083] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T08:37:33.764] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:37:33.765] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:37:33.766] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T08:37:33.766] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T08:37:33.766] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T08:37:33.766] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T08:37:33.766] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T08:37:33.766] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T08:37:33.766] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:37:33.766] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:37:33.954] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:37:33.954] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:37:33.956] [INFO] main.js - Compile successfully, Use time: 1053 msec!
+[2019-03-15T08:37:33.957] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:37:33.957] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:37:33.958] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\main.js
+[2019-03-15T08:37:33.958] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-15T08:37:58.737] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T08:37:58.739] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T08:37:58.739] [INFO] main.js - 首次启动!
+[2019-03-15T08:37:58.740] [INFO] main.js - 生成版本号: qw4y9bwa42
+[2019-03-15T08:37:58.742] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:37:58.742] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:37:58.743] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:37:58.743] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T08:37:58.743] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T08:37:58.743] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T08:37:58.877] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:37:58.877] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:37:58.877] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:37:58.894] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T08:37:58.895] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:37:58.895] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:37:58.913] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T08:37:58.915] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:37:58.915] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:37:58.915] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T08:37:58.916] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T08:37:59.609] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:37:59.609] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:37:59.610] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T08:37:59.610] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T08:37:59.610] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T08:37:59.610] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T08:37:59.610] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T08:37:59.610] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T08:37:59.610] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:37:59.611] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:37:59.790] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:37:59.790] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:37:59.792] [INFO] main.js - Compile successfully, Use time: 1055 msec!
+[2019-03-15T08:37:59.793] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:37:59.794] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:37:59.795] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\main.js
+[2019-03-15T08:37:59.795] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-15T08:40:39.463] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T08:40:39.465] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T08:40:39.465] [INFO] main.js - 首次启动!
+[2019-03-15T08:40:39.465] [INFO] main.js - 生成版本号: 6tdhlsqyzz4
+[2019-03-15T08:40:39.467] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:40:39.468] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:40:39.468] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:40:39.468] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T08:40:39.468] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T08:40:39.468] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T08:40:39.633] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:40:39.633] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:40:39.633] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:40:39.659] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T08:40:39.660] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:40:39.660] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:40:39.672] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T08:40:39.673] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:40:39.673] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:40:39.673] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T08:40:39.674] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T08:40:40.398] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:40:40.398] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:40:40.399] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T08:40:40.399] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T08:40:40.399] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T08:40:40.400] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T08:40:40.400] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T08:40:40.400] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T08:40:40.400] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:40:40.400] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:40:40.572] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:40:40.572] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:40:40.574] [INFO] main.js - Compile successfully, Use time: 1111 msec!
+[2019-03-15T08:40:40.575] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:40:40.575] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:40:40.577] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\main.js
+[2019-03-15T08:40:40.577] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-15T08:40:56.548] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T08:40:56.550] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T08:40:56.550] [INFO] main.js - 首次启动!
+[2019-03-15T08:40:56.550] [INFO] main.js - 生成版本号: wyzbcu38ldn
+[2019-03-15T08:40:56.553] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:40:56.553] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:40:56.553] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:40:56.553] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T08:40:56.554] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T08:40:56.554] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T08:40:56.697] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:40:56.697] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:40:56.697] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:40:56.721] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T08:40:56.722] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:40:56.722] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:40:56.734] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T08:40:56.735] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:40:56.735] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:40:56.735] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T08:40:56.735] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T08:40:57.429] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:40:57.429] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:40:57.430] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T08:40:57.430] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T08:40:57.430] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T08:40:57.430] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T08:40:57.430] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T08:40:57.430] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T08:40:57.430] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:40:57.431] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:40:57.610] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:40:57.610] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:40:57.612] [INFO] main.js - Compile successfully, Use time: 1064 msec!
+[2019-03-15T08:40:57.613] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:40:57.613] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:40:57.614] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\main.js
+[2019-03-15T08:40:57.615] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-15T08:41:27.209] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T08:41:27.211] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T08:41:27.212] [INFO] main.js - 首次启动!
+[2019-03-15T08:41:27.212] [INFO] main.js - 生成版本号: rd22gpyrvrp
+[2019-03-15T08:41:27.214] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:41:27.214] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:41:27.214] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:41:27.214] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T08:41:27.215] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T08:41:27.215] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T08:41:27.354] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:41:27.354] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:41:27.354] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:41:27.377] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T08:41:27.378] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:41:27.378] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:41:27.396] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T08:41:27.398] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:41:27.398] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:41:27.398] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T08:41:27.399] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T08:41:28.094] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:41:28.094] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:41:28.095] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T08:41:28.095] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T08:41:28.095] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T08:41:28.095] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T08:41:28.095] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T08:41:28.095] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T08:41:28.095] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:41:28.095] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:41:28.270] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:41:28.270] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:41:28.271] [INFO] main.js - Compile successfully, Use time: 1062 msec!
+[2019-03-15T08:41:28.273] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:41:28.273] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:41:28.274] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\main.js
+[2019-03-15T08:41:28.274] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-15T08:41:46.048] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T08:41:46.050] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T08:41:46.051] [INFO] main.js - 首次启动!
+[2019-03-15T08:41:46.051] [INFO] main.js - 生成版本号: puz5xbahmk
+[2019-03-15T08:41:46.053] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:41:46.053] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:41:46.054] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:41:46.054] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T08:41:46.054] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T08:41:46.054] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T08:41:46.182] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:41:46.182] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:41:46.182] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:41:46.208] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T08:41:46.209] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:41:46.209] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:41:46.237] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T08:41:46.238] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:41:46.238] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:41:46.238] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T08:41:46.239] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T08:41:46.972] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:41:46.972] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:41:46.974] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T08:41:46.974] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T08:41:46.974] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T08:41:46.974] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T08:41:46.974] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T08:41:46.974] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T08:41:46.974] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:41:46.975] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:41:47.162] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:41:47.163] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:41:47.164] [INFO] main.js - Compile successfully, Use time: 1116 msec!
+[2019-03-15T08:41:47.165] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:41:47.166] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:41:47.167] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\main.js
+[2019-03-15T08:41:47.167] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-15T08:42:43.541] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T08:42:43.543] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T08:42:43.543] [INFO] main.js - 首次启动!
+[2019-03-15T08:42:43.543] [INFO] main.js - 生成版本号: duiehwb7eyh
+[2019-03-15T08:42:43.546] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:42:43.546] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:42:43.546] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:42:43.546] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T08:42:43.547] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T08:42:43.547] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T08:42:43.681] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:42:43.681] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:42:43.681] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:42:43.697] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T08:42:43.697] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:42:43.698] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:42:43.725] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T08:42:43.726] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:42:43.726] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:42:43.726] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T08:42:43.726] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T08:42:44.441] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:42:44.441] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:42:44.442] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\PG\core\debug\autoReload.js
+[2019-03-15T08:42:44.443] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T08:42:44.443] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T08:42:44.443] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T08:42:44.443] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T08:42:44.443] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T08:42:44.443] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T08:42:44.443] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:42:44.443] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:42:44.443] [INFO] main.js - 监控文件夹变化: C:\Users\PG\Documents\GitHub\SWG\client\src
+[2019-03-15T08:42:44.453] [INFO] main.js - 服务器运行在: 127.0.0.1:8000
+[2019-03-15T08:42:44.630] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:42:44.630] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:42:44.632] [INFO] main.js - Compile successfully, Use time: 1091 msec!
+[2019-03-15T08:42:44.646] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:42:44.646] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:42:44.646] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\PG\core\debug\autoReload.js
+[2019-03-15T08:42:44.648] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-15T08:42:44.648] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\main.js
+[2019-03-15T08:42:44.649] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\autoReload.js
+[2019-03-15T08:44:02.207] [INFO] main.js - file change: C:\Users\PG\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-15T08:44:02.207] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T08:44:02.207] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T08:44:02.207] [INFO] main.js - 刷新模式,变化目录: C:\Users\PG\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-15T08:44:02.208] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T08:44:02.208] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T08:44:02.208] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T08:44:02.242] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:44:02.242] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:44:02.242] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:44:02.262] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T08:44:02.266] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T08:44:02.266] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T08:44:02.267] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T08:44:02.351] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T08:44:02.351] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T08:44:02.351] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T08:44:02.351] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T08:44:02.351] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T08:44:02.351] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T08:44:02.351] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:44:02.471] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:44:02.472] [INFO] main.js - Compile successfully, Use time: 265 msec!
+[2019-03-15T08:52:23.628] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T08:52:23.630] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T08:52:23.630] [INFO] main.js - 首次启动!
+[2019-03-15T08:52:23.630] [INFO] main.js - 生成版本号: n2qfwg7654m
+[2019-03-15T08:52:23.633] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:52:23.633] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:52:23.633] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:52:23.633] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T08:52:23.633] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T08:52:23.633] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T08:52:23.812] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:52:23.812] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:52:23.812] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:52:23.829] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T08:52:23.830] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:52:23.830] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:52:23.858] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T08:52:23.858] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:52:23.858] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:52:23.858] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T08:52:23.859] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T08:52:24.759] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:52:24.759] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:52:24.760] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\PG\core\debug\autoReload.js
+[2019-03-15T08:52:24.761] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T08:52:24.761] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T08:52:24.761] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T08:52:24.761] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T08:52:24.761] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T08:52:24.761] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T08:52:24.761] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:52:24.761] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:52:24.761] [INFO] main.js - 监控文件夹变化: C:\Users\PG\Documents\GitHub\SWG\client\src
+[2019-03-15T08:52:24.772] [INFO] main.js - 服务器运行在: 127.0.0.1:8000
+[2019-03-15T08:52:24.944] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:52:24.944] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:52:24.945] [INFO] main.js - Compile successfully, Use time: 1318 msec!
+[2019-03-15T08:52:24.951] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\PG\core\debug\autoReload.js
+[2019-03-15T08:52:24.951] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:52:24.951] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:52:24.953] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\autoReload.js
+[2019-03-15T08:52:24.953] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-15T08:52:24.954] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\main.js
+[2019-03-15T08:53:50.780] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T08:53:50.782] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T08:53:50.782] [INFO] main.js - 首次启动!
+[2019-03-15T08:53:50.782] [INFO] main.js - 生成版本号: 04so3vtbwwtg
+[2019-03-15T08:53:50.787] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:53:50.787] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:53:50.787] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T08:53:50.788] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T08:53:50.788] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T08:53:50.788] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T08:53:50.926] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:53:50.926] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:53:50.926] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:53:50.942] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T08:53:50.943] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:53:50.943] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T08:53:50.960] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T08:53:50.970] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:53:50.970] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T08:53:50.970] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T08:53:50.971] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T08:53:51.702] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:53:51.702] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T08:53:51.703] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\PG\core\debug\autoReload.js
+[2019-03-15T08:53:51.704] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T08:53:51.704] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T08:53:51.704] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T08:53:51.704] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T08:53:51.704] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T08:53:51.704] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T08:53:51.704] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:53:51.704] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:53:51.704] [INFO] main.js - 监控文件夹变化: C:\Users\PG\Documents\GitHub\SWG\client\src
+[2019-03-15T08:53:51.714] [INFO] main.js - 服务器运行在: 127.0.0.1:8000
+[2019-03-15T08:53:51.886] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:53:51.886] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:53:51.888] [INFO] main.js - Compile successfully, Use time: 1108 msec!
+[2019-03-15T08:53:51.893] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\PG\core\debug\autoReload.js
+[2019-03-15T08:53:51.893] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:53:51.893] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T08:53:51.895] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\autoReload.js
+[2019-03-15T08:53:51.895] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\main.js
+[2019-03-15T08:53:51.895] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-15T08:55:22.370] [INFO] main.js - file change: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:55:22.370] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T08:55:22.370] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T08:55:22.370] [INFO] main.js - 刷新模式,变化目录: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:55:22.370] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T08:55:22.370] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T08:55:22.370] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T08:55:22.407] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:55:22.407] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:55:22.407] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:55:22.419] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T08:55:22.425] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T08:55:22.425] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T08:55:22.425] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T08:55:22.519] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T08:55:22.519] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T08:55:22.519] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T08:55:22.519] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T08:55:22.519] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T08:55:22.519] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T08:55:22.519] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:55:22.519] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:55:22.637] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:55:22.639] [INFO] main.js - Compile successfully, Use time: 269 msec!
+[2019-03-15T08:55:22.640] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:55:22.642] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\main.js
+[2019-03-15T08:55:57.153] [INFO] main.js - file change: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:55:57.153] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T08:55:57.153] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T08:55:57.153] [INFO] main.js - 刷新模式,变化目录: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:55:57.153] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T08:55:57.154] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T08:55:57.154] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T08:55:57.193] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:55:57.193] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:55:57.193] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T08:55:57.199] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T08:55:57.201] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T08:55:57.202] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T08:55:57.202] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T08:55:57.247] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T08:55:57.248] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T08:55:57.248] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T08:55:57.248] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T08:55:57.248] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T08:55:57.248] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T08:55:57.248] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:55:57.248] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:55:57.365] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T08:55:57.366] [INFO] main.js - Compile successfully, Use time: 213 msec!
+[2019-03-15T08:55:57.367] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T08:55:57.368] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\main.js
+[2019-03-15T09:00:01.879] [INFO] main.js - file change: C:\Users\PG\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-15T09:00:01.880] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T09:00:01.880] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T09:00:01.880] [INFO] main.js - 刷新模式,变化目录: C:\Users\PG\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-15T09:00:01.880] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T09:00:01.880] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T09:00:01.880] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T09:00:01.905] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T09:00:01.905] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T09:00:01.905] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T09:00:01.919] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T09:00:01.922] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T09:00:01.922] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T09:00:01.923] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T09:00:01.977] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T09:00:01.977] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T09:00:01.977] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T09:00:01.977] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T09:00:01.977] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T09:00:01.977] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T09:00:01.977] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T09:00:02.122] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T09:00:02.123] [INFO] main.js - Compile successfully, Use time: 243 msec!
+[2019-03-15T09:00:11.650] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T09:00:11.652] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T09:00:11.652] [INFO] main.js - 首次启动!
+[2019-03-15T09:00:11.652] [INFO] main.js - 生成版本号: gjv5cvgxvvj
+[2019-03-15T09:00:11.654] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T09:00:11.655] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T09:00:11.655] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T09:00:11.655] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T09:00:11.655] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T09:00:11.655] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T09:00:11.789] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T09:00:11.789] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T09:00:11.790] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T09:00:11.804] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T09:00:11.805] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T09:00:11.805] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T09:00:11.823] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T09:00:11.823] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T09:00:11.824] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T09:00:11.824] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T09:00:11.824] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T09:00:12.560] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T09:00:12.561] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T09:00:12.562] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\PG\core\debug\autoReload.js
+[2019-03-15T09:00:12.562] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T09:00:12.563] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T09:00:12.563] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T09:00:12.563] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T09:00:12.563] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T09:00:12.563] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T09:00:12.563] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T09:00:12.563] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T09:00:12.563] [INFO] main.js - 监控文件夹变化: C:\Users\PG\Documents\GitHub\SWG\client\src
+[2019-03-15T09:00:12.574] [INFO] main.js - 服务器运行在: 127.0.0.1:8000
+[2019-03-15T09:00:12.752] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T09:00:12.752] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T09:00:12.754] [INFO] main.js - Compile successfully, Use time: 1104 msec!
+[2019-03-15T09:00:12.760] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\PG\core\debug\autoReload.js
+[2019-03-15T09:00:12.760] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T09:00:12.760] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T09:00:12.761] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-15T09:00:12.761] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\main.js
+[2019-03-15T09:00:12.761] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\autoReload.js
+[2019-03-15T09:00:45.850] [INFO] main.js - file change: C:\Users\PG\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-15T09:00:45.850] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T09:00:45.850] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T09:00:45.850] [INFO] main.js - 刷新模式,变化目录: C:\Users\PG\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-15T09:00:45.850] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T09:00:45.850] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T09:00:45.850] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T09:00:45.880] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T09:00:45.880] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T09:00:45.880] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T09:00:45.905] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T09:00:45.908] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T09:00:45.909] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T09:00:45.909] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T09:00:45.994] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T09:00:45.994] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T09:00:45.994] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T09:00:45.994] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T09:00:45.995] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T09:00:45.995] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T09:00:45.995] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T09:00:46.113] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T09:00:46.114] [INFO] main.js - Compile successfully, Use time: 264 msec!
+[2019-03-15T09:02:58.946] [INFO] main.js - file change: C:\Users\PG\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-15T09:02:58.946] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T09:02:58.946] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T09:02:58.946] [INFO] main.js - 刷新模式,变化目录: C:\Users\PG\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-15T09:02:58.946] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T09:02:58.947] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T09:02:58.947] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T09:02:58.986] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T09:02:58.986] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T09:02:58.986] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T09:02:58.999] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T09:02:59.004] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T09:02:59.004] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T09:02:59.004] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T09:02:59.059] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T09:02:59.059] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T09:02:59.059] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T09:02:59.059] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T09:02:59.059] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T09:02:59.059] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T09:02:59.059] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T09:02:59.181] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T09:02:59.182] [INFO] main.js - Compile successfully, Use time: 236 msec!
+[2019-03-15T09:59:32.164] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-15T09:59:32.169] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-15T09:59:32.170] [INFO] main.js - 首次启动!
+[2019-03-15T09:59:32.170] [INFO] main.js - 生成版本号: b7ri6jpsf7g
+[2019-03-15T09:59:32.175] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T09:59:32.175] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T09:59:32.175] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-15T09:59:32.176] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-15T09:59:32.176] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-15T09:59:32.176] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-15T09:59:32.744] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T09:59:32.744] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T09:59:32.744] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-15T09:59:32.762] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-15T09:59:32.763] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T09:59:32.764] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-15T09:59:32.798] [INFO] main.js - 工程中包含多个页面!
+[2019-03-15T09:59:32.811] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T09:59:32.811] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-15T09:59:32.811] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-15T09:59:32.812] [DEBUG] main.js - 页面中不包含切换动画!
+[2019-03-15T09:59:37.172] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T09:59:37.172] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-15T09:59:37.173] [DEBUG] main.js - 处理引用脚本: [{"name":"jquery-2.1.3","src":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"},{"name":"main","src":"./src/main.js"}]
+[2019-03-15T09:59:37.173] [DEBUG] main.js - 外部脚本数量: 2
+[2019-03-15T09:59:37.173] [DEBUG] main.js - 处理脚本: jquery-2.1.3
+[2019-03-15T09:59:37.173] [DEBUG] main.js - 网络脚本: jquery-2.1.3
+[2019-03-15T09:59:37.174] [DEBUG] main.js - 处理脚本: main
+[2019-03-15T09:59:37.174] [DEBUG] main.js - 不使用bable处理脚本!
+[2019-03-15T09:59:37.174] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T09:59:37.174] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T09:59:37.346] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T09:59:37.346] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-15T09:59:37.348] [INFO] main.js - Compile successfully, Use time: 5184 msec!
+[2019-03-15T09:59:37.351] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-15T09:59:37.352] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-15T09:59:37.359] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.js
+[2019-03-15T09:59:37.360] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\js\main.js

@@ -104,8 +104,9 @@ $('#dnd').dragAndDrop({
       // setTimeout(() => {
       //   window.location.href = '/temp/' + msg.id
       // }, 500)
-      ozzx.state.showId = msg.id
-      $go('show', 'moveToLeft', 'moveFromRight')
+      $go('show', 'moveToLeft', 'moveFromRight', {
+        id: msg.id
+      })
     } else {
       alert(msg.message)
     }

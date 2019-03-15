@@ -10,12 +10,13 @@
     data: {
     },
     created: () => {
-      $dom('show').src = './temp/' + ozzx.state.showId
+      // 获取url参数
+      $dom('show').src = './temp/' + $tool.getQueryString('id')
       $dom('show').style.display = 'block'
     },
     down: () => {
       const httpRequest = new XMLHttpRequest()
-      httpRequest.open('GET', 'down?id=' + ozzx.state.showId, true)
+      httpRequest.open('GET', 'down?id=' + $tool.getQueryString('id'), true)
       httpRequest.send()
       /**
        * 获取数据后的处理程序
@@ -24,7 +25,7 @@
         if (httpRequest.readyState == 4 && httpRequest.status == 200) {
           const res = JSON.parse(httpRequest.responseText)
           if (res.err === 0) {
-            window.open(`./temp/${ozzx.state.showId}.zip`)
+            window.open(`./temp/${$tool.getQueryString('id')}.zip`)
           } else {
             alert(res.message)
           }
@@ -46,6 +47,7 @@
 .down {
   position: fixed;
   right: 10px;
+  cursor: pointer;
   background-color: blueviolet;
   bottom: 10px;
   line-height: 20px;
