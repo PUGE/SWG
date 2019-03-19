@@ -61,10 +61,8 @@ function animateOutPut (fileName, node, groupList, query) {
     // 是背景吗
     const WC = node.width  + node.left - node.right
     const HC = node.height + node.top - node.bottom
-    console.log(WC)
     // 是背景吗
     const isBG = (WC == 0 && HC == 0)
-    console.log(isBG, node.width, node.left, node.right, node.height, node.top, node.bottom)
     // 判断是否为切换页
     const isSlide = groupList.length === 1
     // 如果不是根节点 会有上下左右位置

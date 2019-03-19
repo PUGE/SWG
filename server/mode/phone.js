@@ -35,29 +35,36 @@ function phoneOutPut (fileName, node, groupList, query) {
     styleData = `.root {${styleList.join('; ')};position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;opacity: 0;}\r\n      `
     domHtml = `<div class="swg root" id="root">`
   } else {
-    const WC = node.width - node.left - node.right
-    const HC = node.height - node.top - node.bottom
-    // 是背景吗
-    const isBG = WC == 0 && HC == 0
+    // 从文件缓存中取出是否以前生成过此图层
+    const layerId = getLayerID(node.layer)
+    fileTemp = cacheFile(layerId, node, fileTemp, groupList, fileName)
     // 如果不是根节点 会有上下左右位置
+    const leftValue = getRatio(node.left - nodeParent.left, nodeParent.width)
+    const topValue = getRatio(node.top - nodeParent.top, nodeParent.height)
+    const rightValue = getRatio(nodeParent.right - node.right, nodeParent.width)
+    const bottomValue = getRatio(nodeParent.bottom - node.bottom, nodeParent.height)
     styleList.push(
       'position: absolute',
-      `left: ${getRatio(node.left - nodeParent.left, nodeParent.width)}%`,
-      `top: ${getRatio(node.top - nodeParent.top, nodeParent.height)}%`,
-      `right: ${getRatio(nodeParent.right - node.right, nodeParent.width)}%`,
-      `bottom: ${getRatio(nodeParent.bottom - node.bottom, nodeParent.height)}%`,
+      `left: ${leftValue}%`,
+      `top: ${topValue}%`,
+      `right: ${rightValue}%`,
+      `bottom: ${bottomValue}%`,
       `width: ${getRatio(node.width, nodeParent.width)}%`,
       `height: ${getRatio(node.height, nodeParent.height)}%`,
     )
+    const isBG = leftValue == 0  && topValue == 0 && rightValue == 0 && bottomValue == 0
+    const outPutData = getOutPut(node.export(), styleList, domHtml, groupList, fileTemp[layerId], itemIndex, node, query, isBG)
+    styleList = outPutData[0]
+    domHtml = outPutData[1]
     styleData = `.swg-${groupList.join('-')} {${styleList.join('; ')};}\r\n      `
-    domHtml = `<div class="swg swg-${groupList.join('-')} item-${itemIndex} ${isBG ? 'bg' : ''}">`
   }
   
   for (let ind in childrenNodeList) {
     // 获取的子节点
-    const element = childrenNodeList[ind]
+    const node = childrenNodeList[ind]
+    const nodeParent = node.parent
     // 获取子节点信息
-    const elementInfo = element.export()
+    const elementInfo = node.export()
     let groupListCopy = JSON.parse(JSON.stringify(groupList))
     groupListCopy.push(ind)
 
@@ -65,11 +72,11 @@ function phoneOutPut (fileName, node, groupList, query) {
     if (isEmptyLayer(elementInfo)) continue
 
     // 判断是否为组
-    if (element.type === 'group') {
+    if (node.type === 'group') {
       // 递归处理子节点
-      // console.log(element.height, element.left)
-      console.log(`递归处理组: ${element.name}`)
-      const outPut = phoneOutPut(fileName, element, groupListCopy, query)
+      // console.log(node.height, node.left)
+      console.log(`递归处理组: ${node.name}`)
+      const outPut = phoneOutPut(fileName, node, groupListCopy, query)
       // console.log(outPut)
       domHtml += outPut.html
       styleData += outPut.style
@@ -77,26 +84,31 @@ function phoneOutPut (fileName, node, groupList, query) {
     }
     
 
-    // console.log(element.name, elementInfo.left, element.parent.left)
-    console.log(`处理图层: ${element.name}`)
+    // console.log(node.name, elementInfo.left, node.parent.left)
+    console.log(`处理图层: ${node.name}`)
 
     // 从文件缓存中取出是否以前生成过此图层
-    const layerId = getLayerID(element.layer)
-    fileTemp = cacheFile(layerId, element, fileTemp, groupListCopy, fileName)
+    const layerId = getLayerID(node.layer)
+    fileTemp = cacheFile(layerId, node, fileTemp, groupListCopy, fileName)
     // 生成样式
+    // 如果不是根节点 会有上下左右位置
+    const leftValue = getRatio(elementInfo.left - nodeParent.left, nodeParent.width)
+    const topValue = getRatio(elementInfo.top - nodeParent.top, nodeParent.height)
+    const rightValue = getRatio(nodeParent.right - elementInfo.right, nodeParent.width)
+    const bottomValue = getRatio(nodeParent.bottom - elementInfo.bottom, nodeParent.height)
     let styleList = [
       'position: absolute',
-      `left: ${getRatio(elementInfo.left - element.parent.left, element.parent.width)}%`,
-      `top: ${getRatio(elementInfo.top - element.parent.top, element.parent.height)}%`,
-      `right: ${getRatio(element.parent.right - elementInfo.right, element.parent.width)}%`,
-      `bottom: ${getRatio(element.parent.bottom - elementInfo.bottom, element.parent.height)}%`,
+      `left: ${leftValue}%`,
+      `top: ${topValue}%`,
+      `right: ${rightValue}%`,
+      `bottom: ${bottomValue}%`,
       `opacity: ${(elementInfo.opacity).toFixed(2)}`,
       `z-index: ${-ind}`,
-      `width: ${getRatio(elementInfo.width, element.parent.width)}%`,
-      `height: ${getRatio(elementInfo.height, element.parent.height)}%`
+      `width: ${getRatio(elementInfo.width, node.parent.width)}%`,
+      `height: ${getRatio(elementInfo.height, node.parent.height)}%`
     ]
-    
-    const outPutData = getOutPut(elementInfo, styleList, domHtml, groupListCopy, fileTemp[layerId], ind, node, query)
+    const isBG = leftValue == 0  && topValue == 0 && rightValue == 0 && bottomValue == 0
+    const outPutData = getOutPut(elementInfo, styleList, domHtml, groupListCopy, fileTemp[layerId], ind, node, query, isBG)
     styleList = outPutData[0]
     domHtml = outPutData[1]
     styleData += `.swg-${groupListCopy.join('-')} {${styleList.join('; ')};}\r\n      `
