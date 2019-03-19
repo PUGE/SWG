@@ -1,10 +1,10 @@
 const { textOutPut }  = require('./tool')
 
 function getOutPut (elementInfo, styleList, domHtml, groupList, fileName, ind, node, query) {
-  const WC = node.width - node.left - node.right
-  const HC = node.height - node.top - node.bottom
+  const WC = node.left == 0 && node.right == 0
+  const HC = node.top == 0 && node.bottom == 0
   // 是背景吗
-  const isBG = WC == 0 && HC == 0
+  const isBG = WC  && HC 
   // 判断是否 配置了输出文字 并且此图层是文字
   if (JSON.parse(query.outText) && elementInfo.text) {
     [styleList, domHtml] = textOutPut(elementInfo.text, styleList, domHtml, groupList)

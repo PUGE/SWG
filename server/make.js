@@ -5,6 +5,7 @@ const PSD = require('psd')
 const { ratioOutPut }  = require('./mode/ratio')
 const { realOutPut }  = require('./mode/real')
 const { phoneOutPut }  = require('./mode/phone')
+const { animateOutPut }  = require('./mode/animate')
 
 
 
@@ -157,8 +158,43 @@ function make (query, fileName) {
       `)
       break
     }
+    case 'animate': {
+      styleData += `<style type="text/css">\r\n      `
+      const outPut = animateOutPut(fileName, psd.tree(), [], query)
+      domHtml += outPut.html + `\r\n    </div>`
+      styleData += outPut.style
+      // 手机页面有自己的js代码
+      styleData += `
+          .bg{ position: fixed;background-size: 100%; }
+          .swiper-slide {width: 100%; overflow: hidden;position: relative;}
+      `
+      htmlTemple = htmlTemple.replace(`<!-- script-output -->`, `
+        <script src="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/swiper.min.js"></script>
+        <script src="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/swiper.animate1.0.3.min.js"></script>
+        <script>
+          window.onload = function() { 
+            var mySwiper = new Swiper ('.root', {
+              direction : 'vertical',
+              onInit: function(swiper){
+                swiperAnimateCache(swiper);
+                swiperAnimate(swiper);
+              },
+              onSlideChangeEnd: function(swiper) {
+                swiperAnimate(swiper);
+              },
+              onTransitionEnd: function(swiper) {
+                swiperAnimate(swiper);
+              }
+            })
+          }
+        </script>
+      `)
+      break
+    }
   }
-  styleData += `\r\n    </style>`
+  styleData += `\r\n    </style>
+      <link rel="stylesheet" href="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/animate.min.css">
+  `
   htmlTemple = htmlTemple.replace(`<!-- page-output -->`, domHtml)
   htmlTemple = htmlTemple.replace(`<!-- css-output -->`, styleData)
   fs.writeFileSync(`../public/temp/${fileName}/index.html`, htmlTemple)

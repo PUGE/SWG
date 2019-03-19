@@ -2,7 +2,7 @@
 
 
 function getRatio (num, total) {
-  return (num / total * 100).toFixed(2)
+  return parseFloat((num / total * 100).toFixed(2))
 }
 
 // 过滤空图层和隐藏图层
