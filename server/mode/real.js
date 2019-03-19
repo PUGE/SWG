@@ -75,21 +75,25 @@ function realOutPut (fileName, node, groupList, query) {
     const layerId = getLayerID(element.layer)
     fileTemp = cacheFile(layerId, element, fileTemp, groupListCopy, fileName)
 
+    const leftValue = elementInfo.left - element.parent.left
+    const topValue = elementInfo.top - element.parent.top
+    const rightValue = element.parent.right - elementInfo.right
+    const bottomValue = element.parent.bottom - elementInfo.bottom
     let styleList = [
       'position: absolute',
-      `left: ${elementInfo.left - element.parent.left}px`,
-      `top: ${elementInfo.top - element.parent.top}px`,
-      `right: ${element.parent.right - elementInfo.right}px`,
-      `bottom: ${element.parent.bottom - elementInfo.bottom}px`,
+      `left: ${leftValue}px`,
+      `top: ${topValue}px`,
+      `right: ${rightValue}px`,
+      `bottom: ${bottomValue}px`,
       `opacity: ${elementInfo.opacity}`,
       `z-index: ${-ind}`,
       `width: ${elementInfo.width}px`,
       `height: ${elementInfo.height}px`
     ]
-
-    const outPutData = getOutPut(elementInfo, styleList, domHtml, groupListCopy, fileTemp[layerId], ind, node, query)
+    const isBG = leftValue == 0  && topValue == 0 && rightValue == 0 && bottomValue == 0
+    const outPutData = getOutPut(elementInfo, styleList, domHtml, groupListCopy, fileTemp[layerId], ind, query, isBG)
     styleList = outPutData[0]
-    domHtml = outPutData[1]
+    domHtml = outPutData[1] + '</div>\r\n    '
     styleData += `.swg-${groupListCopy.join('-')} {${styleList.join('; ')};}\r\n      `
   }
   domHtml += `</div>`

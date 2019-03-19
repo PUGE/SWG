@@ -47,6 +47,7 @@ function ratioOutPut (fileName, node, groupList, query) {
   for (let ind in childrenNodeList) {
     // 获取的子节点
     const element = childrenNodeList[ind]
+    const nodeParent = element.parent
     // 获取子节点信息
     const elementInfo = element.export()
     let groupListCopy = JSON.parse(JSON.stringify(groupList))
@@ -76,21 +77,25 @@ function ratioOutPut (fileName, node, groupList, query) {
     fileTemp = cacheFile(layerId, element, fileTemp, groupListCopy, fileName)
 
     // 生成样式
+    const leftValue = getRatio(elementInfo.left - nodeParent.left, nodeParent.width)
+    const topValue = getRatio(elementInfo.top - nodeParent.top, nodeParent.height)
+    const rightValue = getRatio(nodeParent.right - elementInfo.right, nodeParent.width)
+    const bottomValue = getRatio(nodeParent.bottom - elementInfo.bottom, nodeParent.height)
     let styleList = [
       'position: absolute',
-      `left: ${getRatio(elementInfo.left - element.parent.left, element.parent.width)}%`,
-      `top: ${getRatio(elementInfo.top - element.parent.top, element.parent.height)}%`,
-      `right: ${getRatio(element.parent.right - elementInfo.right, element.parent.width)}%`,
-      `bottom: ${getRatio(element.parent.bottom - elementInfo.bottom, element.parent.height)}%`,
+      `left: ${leftValue}%`,
+      `top: ${topValue}%`,
+      `right: ${rightValue}%`,
+      `bottom: ${bottomValue}%`,
       `opacity: ${(elementInfo.opacity).toFixed(2)}`,
       `z-index: ${-ind}`,
-      `width: ${getRatio(elementInfo.width, element.parent.width)}%`,
-      `height: ${getRatio(elementInfo.height, element.parent.height)}%`
+      `width: ${getRatio(elementInfo.width, nodeParent.width)}%`,
+      `height: ${getRatio(elementInfo.height, nodeParent.height)}%`
     ]
-
-    const outPutData = getOutPut(elementInfo, styleList, domHtml, groupListCopy, fileTemp[layerId], ind, node, query)
+    const isBG = leftValue == 0  && topValue == 0 && rightValue == 0 && bottomValue == 0
+    const outPutData = getOutPut(elementInfo, styleList, domHtml, groupListCopy, fileTemp[layerId], ind, query, isBG)
     styleList = outPutData[0]
-    domHtml = outPutData[1]
+    domHtml = outPutData[1] + '</div>\r\n    '
     styleData += `.swg-${groupListCopy.join('-')} {${styleList.join('; ')};}\r\n      `
   }
   domHtml += `</div>`

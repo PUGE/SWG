@@ -53,9 +53,10 @@ function phoneOutPut (fileName, node, groupList, query) {
       `height: ${getRatio(node.height, nodeParent.height)}%`,
     )
     const isBG = leftValue == 0  && topValue == 0 && rightValue == 0 && bottomValue == 0
-    const outPutData = getOutPut(node.export(), styleList, domHtml, groupList, fileTemp[layerId], itemIndex, node, query, isBG)
+    const outPutData = getOutPut(node.export(), styleList, domHtml, groupList, fileTemp[layerId], itemIndex, query, isBG)
     styleList = outPutData[0]
-    domHtml = outPutData[1]
+    domHtml = outPutData[1] + '\r\n    '
+    // console.log(`.swg-${groupList.join('-')} {${styleList.join('; ')};}\r\n      `)
     styleData = `.swg-${groupList.join('-')} {${styleList.join('; ')};}\r\n      `
   }
   
@@ -108,9 +109,9 @@ function phoneOutPut (fileName, node, groupList, query) {
       `height: ${getRatio(elementInfo.height, node.parent.height)}%`
     ]
     const isBG = leftValue == 0  && topValue == 0 && rightValue == 0 && bottomValue == 0
-    const outPutData = getOutPut(elementInfo, styleList, domHtml, groupListCopy, fileTemp[layerId], ind, node, query, isBG)
+    const outPutData = getOutPut(elementInfo, styleList, domHtml, groupListCopy, fileTemp[layerId], ind, query, isBG)
     styleList = outPutData[0]
-    domHtml = outPutData[1]
+    domHtml = outPutData[1] + '</div>\r\n    '
     styleData += `.swg-${groupListCopy.join('-')} {${styleList.join('; ')};}\r\n      `
     
   }
