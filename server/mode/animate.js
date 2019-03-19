@@ -3,10 +3,11 @@ const { getRatio, isEmptyLayer, getLayerID, cacheFile }  = require('../lib/tool'
 
 
 function getOutPut (elementInfo, styleList, domHtml, groupList, fileName, ind, node, query) {
-  const WC = node.left == 0 && node.right == 0
-  const HC = node.top == 0 && node.bottom == 0
   // 是背景吗
-  const isBG = WC  && HC 
+  const WC = node.width  + node.left - node.right
+  const HC = node.height + node.top - node.bottom
+  // 是背景吗
+  const isBG = (WC == 0 && HC == 0)
   // 判断是否 配置了输出文字 并且此图层是文字
   if (JSON.parse(query.outText) && elementInfo.text) {
     [styleList, domHtml] = textOutPut(elementInfo.text, styleList, domHtml, groupList)   
@@ -58,7 +59,12 @@ function animateOutPut (fileName, node, groupList, query) {
     domHtml = `<div class="swg root" id="root">\r\n      <div class="swiper-wrapper">`
   } else {
     // 是背景吗
-    const isBG = node.left == 0 && node.right == 0 && node.top == 0 && node.bottom == 0
+    const WC = node.width  + node.left - node.right
+    const HC = node.height + node.top - node.bottom
+    console.log(WC)
+    // 是背景吗
+    const isBG = (WC == 0 && HC == 0)
+    console.log(isBG, node.width, node.left, node.right, node.height, node.top, node.bottom)
     // 判断是否为切换页
     const isSlide = groupList.length === 1
     // 如果不是根节点 会有上下左右位置

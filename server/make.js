@@ -165,7 +165,6 @@ function make (query, fileName) {
       styleData += outPut.style
       // 手机页面有自己的js代码
       styleData += `
-          .bg{ position: fixed;background-size: 100%; }
           .swiper-slide {width: 100%; overflow: hidden;position: relative;}
       `
       htmlTemple = htmlTemple.replace(`<!-- script-output -->`, `
