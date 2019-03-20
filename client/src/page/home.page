@@ -46,6 +46,8 @@
       <div class="title">其它配置</div>
       <input type="checkbox" name="cb" id="outText" />
       <label for="outText" @click="changeOutText('outText')">导出文字</label>
+      <input type="checkbox" name="co" id="compress" value="true" checked/>
+      <label for="compress" @click="changeOutText('compress')">压缩图片</label>
     </div>
   </div>
 </template>
@@ -55,7 +57,8 @@
     data: {
       mode: 'real',
       output: 'background',
-      outText: false
+      outText: false,
+      compress: true
     },
     created: function () {
       $dom('uploadInput').onchange = () => {
@@ -101,6 +104,10 @@
 
       const file = new FormData()
       file.append('data', fileData)
+      let sendStr = ''
+      for (let key in this.data) {
+        sendStr += `${key}=${this.data[key]}&`
+      }
       // 获取选择模式
       const mode = this.data.mode
       // 输出模式
@@ -108,8 +115,7 @@
       const outText = this.data.outText
       // 传输文件
       const xhr = new XMLHttpRequest()
-      xhr.open("POST", 'uploads?mode=' + mode + '&outText=' + outText + '&output=' + output, true)
-
+      xhr.open("POST", 'uploads?' + sendStr, true)
       //上传进度事件
       xhr.upload.addEventListener("progress", (result) => {
         if (result.lengthComputable) {

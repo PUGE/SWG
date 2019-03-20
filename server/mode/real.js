@@ -73,7 +73,7 @@ function realOutPut (fileName, node, groupList, query) {
 
     // 从文件缓存中取出是否以前生成过此图层
     const layerId = getLayerID(element.layer)
-    fileTemp = cacheFile(layerId, element, fileTemp, groupListCopy, fileName)
+    fileTemp = cacheFile(layerId, element, fileTemp, groupListCopy, fileName, query.compress)
 
     const leftValue = elementInfo.left - element.parent.left
     const topValue = elementInfo.top - element.parent.top

@@ -37,7 +37,7 @@ function phoneOutPut (fileName, node, groupList, query) {
   } else {
     // 从文件缓存中取出是否以前生成过此图层
     const layerId = getLayerID(node.layer)
-    fileTemp = cacheFile(layerId, node, fileTemp, groupList, fileName)
+    fileTemp = cacheFile(layerId, node, fileTemp, groupList, fileName, query.compress)
     // 如果不是根节点 会有上下左右位置
     const leftValue = getRatio(node.left - nodeParent.left, nodeParent.width)
     const topValue = getRatio(node.top - nodeParent.top, nodeParent.height)
@@ -90,7 +90,7 @@ function phoneOutPut (fileName, node, groupList, query) {
 
     // 从文件缓存中取出是否以前生成过此图层
     const layerId = getLayerID(node.layer)
-    fileTemp = cacheFile(layerId, node, fileTemp, groupListCopy, fileName)
+    fileTemp = cacheFile(layerId, node, fileTemp, groupListCopy, fileName, query.compress)
     // 生成样式
     // 如果不是根节点 会有上下左右位置
     const leftValue = getRatio(elementInfo.left - nodeParent.left, nodeParent.width)

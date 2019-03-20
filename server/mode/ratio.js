@@ -74,7 +74,7 @@ function ratioOutPut (fileName, node, groupList, query) {
 
     // 从文件缓存中取出是否以前生成过此图层
     const layerId = getLayerID(element.layer)
-    fileTemp = cacheFile(layerId, element, fileTemp, groupListCopy, fileName)
+    fileTemp = cacheFile(layerId, element, fileTemp, groupListCopy, fileName, query.compress)
 
     // 生成样式
     const leftValue = getRatio(elementInfo.left - nodeParent.left, nodeParent.width)

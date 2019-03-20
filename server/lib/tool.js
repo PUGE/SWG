@@ -1,5 +1,7 @@
 'use strict'
-
+// 图片处理
+const imagemin = require('imagemin')
+const imageminPngquant = require('imagemin-pngquant')
 
 function getRatio (num, total) {
   return parseFloat((num / total * 100).toFixed(2))
@@ -24,14 +26,28 @@ function getLayerID (layer) {
 }
 
 // 缓存文件
-function cacheFile (layerId, element, fileTemp, groupList, fileName) {
+function cacheFile (layerId, element, fileTemp, groupList, fileName, compress) {
   if (fileTemp[layerId] === undefined) {
     fileTemp[layerId] = `${groupList.join('-')}`
     // 导出图片
     if (element.layer.image) {
       const imagePath = `../public/temp/${fileName}/${groupList.join('-')}.png`
-      element.layer.image.saveAsPng(imagePath)
       console.log(`保存图片: ${imagePath}`)
+      element.layer.image.saveAsPng(imagePath).then((e) => {
+        console.log(e)
+        // 判断是否开启压缩图片
+        if (JSON.parse(compress)) {
+          imagemin([imagePath], `../public/temp/${fileName}/`, {
+            plugins: [
+              imageminPngquant({
+                quality: [0.6, 0.8]
+              })
+            ]
+          })
+        }
+      })
+    } else {
+      console.log(`没有图层: ${imagePath}`)
     }
   } else {
     console.log(`图层 [${element.name}] 与文件 [${fileTemp[layerId]}] 重复,智能忽略!`)
