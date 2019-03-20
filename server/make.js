@@ -135,8 +135,8 @@ function make (query, fileName) {
             var clientWidth = document.body.clientWidth
             var clientHeight = document.body.clientHeight
             var root = document.getElementById('root')
-            var rootWidth = root.offsetWidth
-            var rootHeight = root.offsetHeight
+            var rootWidth = root.getAttribute('width')
+            var rootHeight = root.getAttribute('height')
             // console.log(clientWidth / clientHeight)
             // console.log(rootWidth / rootHeight)
             // console.log(clientWidth / clientHeight - rootWidth / rootHeight)
@@ -151,8 +151,55 @@ function make (query, fileName) {
           window.onload = function() {
             getSize()
           }
+          var resizeTimer = null;
           window.onresize = function() {
+            if (resizeTimer) clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+              console.log('屏幕大小被改变!')
+              getSize()
+            }, 500)
+          }
+        </script>
+      `)
+      break
+    }
+    case 'phone3': {
+      styleData += `<style type="text/css">\r\n      `
+      const outPut = phoneOutPut(fileName, psd.tree(), [], query)
+      domHtml += outPut.html
+      styleData += outPut.style
+      // 手机页面有自己的js代码
+      htmlTemple = htmlTemple.replace(`<!-- script-output -->`, `
+        <script>
+          
+          function getSize () {
+            var clientWidth = document.body.clientWidth
+            var clientHeight = document.body.clientHeight
+            var root = document.getElementById('root')
+            var rootWidth = root.getAttribute('width')
+            var rootHeight = root.getAttribute('height')
+            var WH = rootHeight / rootWidth
+            // 最大宽度为图片最大宽度
+            if (clientWidth > rootWidth) {
+              clientWidth = rootWidth
+            }
+            console.log(clientWidth, clientWidth * WH)
+            root.style.width = clientWidth * 1 + 'px'
+            root.style.height = clientWidth * WH + 'px'
+            
+          }
+          window.onload = function() {
             getSize()
+            var root = document.getElementById('root')
+            root.style.opacity = 1
+          }
+          var resizeTimer = null;
+          window.onresize = function() {
+            if (resizeTimer) clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+              console.log('屏幕大小被改变!')
+              getSize()
+            }, 500)
           }
         </script>
       `)
