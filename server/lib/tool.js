@@ -30,11 +30,10 @@ function cacheFile (layerId, element, fileTemp, groupList, fileName, compress) {
   if (fileTemp[layerId] === undefined) {
     fileTemp[layerId] = `${groupList.join('-')}`
     // 导出图片
-    if (element.layer.image) {
-      const imagePath = `../public/temp/${fileName}/${groupList.join('-')}.png`
+    const imagePath = `../public/temp/${fileName}/${groupList.join('-')}.png`
+    if (element.layer.image && element.type === 'layer') {
       console.log(`保存图片: ${imagePath}`)
       element.layer.image.saveAsPng(imagePath).then((e) => {
-        console.log(e)
         // 判断是否开启压缩图片
         if (JSON.parse(compress)) {
           imagemin([imagePath], `../public/temp/${fileName}/`, {
