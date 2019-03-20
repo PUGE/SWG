@@ -4,8 +4,7 @@
       <form enctype="multipart/form-data" method="post" @name="uploadBox">
         <div class="dnd-container">
           <div class="start" @name="stareIcon"></div>   
-          <div class="done" @name="doneIcon"></div>   
-          <progress max="100" value="0" @name="progress"></progress>
+          <div class="done" @name="doneIcon"></div>
         </div>
         <p>选择或者拖拽PSD文件 (建议不要过大)</p>
         <button class="dndAlternative" @click="uploadFile">选择</button>
@@ -52,6 +51,11 @@
       <input type="checkbox" name="co" id="compress" value="true" checked/>
       <label for="compress" @click="changeOutText('compress')">压缩图片</label>
     </div>
+    <div class="progress-box" @name="progress">
+      <img src="@&progress.svg&"/>
+      <div class="progress-text" @name="progressText"></div>
+    </div>
+    <div class="tips">系统不支持PS中的特殊效果,请在上传前将有特殊效果的图层合并为智能对象!</div>
   </div>
 </template>
 
@@ -125,7 +129,12 @@
           const percentComplete = result.loaded / result.total
           $dom('stareIcon').style.display = 'none'
           $dom('progress').style.display = 'block'
-          $dom('progress').value = Math.round(percentComplete * 100)
+          const uploadValue = Math.round(percentComplete * 100)
+          if (uploadValue < 100) {
+            $dom('progressText').innerText = `正在上传文件: ${uploadValue}%`
+          } else {
+            $dom('progressText').innerText = `服务器正在对PSD文件进行处理!`
+          }
         }
       }, false)
       xhr.addEventListener("readystatechange", () => {
@@ -135,9 +144,12 @@
         } 
         else if (result.readyState == 4) { // 上传完毕
           const msg = JSON.parse(result.response)
-          $go('show', 'moveToLeft', 'moveFromRight', {
-            id: msg.id
-          })
+          $dom('progressText').innerText = `准备就绪,即将预览页面!`
+          setTimeout(() => {
+            $go('show', 'moveToLeft', 'moveFromRight', {
+              id: msg.id
+            })
+          }, 500)
         }
       })
       xhr.send(file)
@@ -303,11 +315,10 @@ label {
   margin-right: 10px;
   padding-left: 25px;
   padding-right: 10px;
-  height: 25px;
-  line-height: 25px;
+  height: 24px;
+  line-height: 24px;
   cursor: pointer;
-  margin-bottom: 5px;
-  margin-top: 5px;
+  font-size: 16px;
 }
 label::before {
   content: " ";
@@ -327,7 +338,7 @@ input[type="radio"] + label::before {
 /* Checked */
 input[type="checkbox"]:checked + label,
 input[type="radio"]:checked + label {
-  padding-left: 15px;
+  padding-left: 10px;
   color: #fff;
 }
 input[type="checkbox"]:checked + label::before,
@@ -337,6 +348,7 @@ input[type="radio"]:checked + label::before {
   height: 100%;
   background: #8e44ad;
   border-radius: 5px;
+  border: none;
 }
 /* Transition */
 label,
@@ -352,8 +364,8 @@ label::before {
 }
 
 .control .title {
-  font-size: 1.2rem;
-  line-height: 2rem;
+  font-size: 15px;
+  line-height: 25px;
   background-color: mediumturquoise;
   padding: 0 10px;
   margin: 10px 0;
@@ -361,5 +373,44 @@ label::before {
 }
 .modle-control {
   display: none;
+}
+.tips {
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - 20px);
+  background-color: orange;
+  padding: 0 10px;
+  line-height: 30px;
+  color: white;
+}
+.progress-box {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  display: none;
+  img {
+    width: 30%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    top: 0;
+    margin: auto;
+  }
+  .progress-text {
+    color: royalblue;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    bottom: 0;
+    margin: auto;
+    height: 30px;
+  }
 }
 </style>

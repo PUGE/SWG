@@ -25,7 +25,44 @@ const upload = multer({ dest: '../uploads/', fileFilter })
 app.use(cors())
 app.use(express.static('../public'))
 
+// 删除文件夹所有内容
+function delDir(path) {
+  let files = [];
+  if(fs.existsSync(path)){
+    files = fs.readdirSync(path);
+    files.forEach((file, index) => {
+      let curPath = path + "/" + file;
+      if(fs.statSync(curPath).isDirectory()){
+        delDir(curPath); //递归删除文件夹
+      } else {
+        fs.unlinkSync(curPath); //删除文件
+      }
+    })
+    fs.rmdirSync(path)
+  }
+}
 
+// 如果目录不存在则创建目录
+function creatDirIfNotExist(path) {
+  if (!fs.existsSync(path)) {
+    fs.mkdirSync(path)
+  }
+}
+
+// 自动清理上传目录
+function clear () {
+  console.log('清理历史文件!')
+  delDir('../public/temp')
+  delDir('../uploads')
+  creatDirIfNotExist('../public/temp')
+  creatDirIfNotExist('../uploads')
+}
+clear()
+
+setInterval(() => {
+  console.log('执行定时清理!')
+  clear()
+}, 1000 * 60 * 60 * 24)
 
 app.post('/uploads', upload.any(), function (request, response, next) {
   if (!request.files || !request.files[0]) {

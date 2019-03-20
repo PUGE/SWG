@@ -302,7 +302,13 @@ window.ozzx = {
             var percentComplete = result.loaded / result.total;
             $dom('stareIcon').style.display = 'none';
             $dom('progress').style.display = 'block';
-            $dom('progress').value = Math.round(percentComplete * 100);
+            var uploadValue = Math.round(percentComplete * 100);
+
+            if (uploadValue < 100) {
+              $dom('progressText').innerText = "\u6B63\u5728\u4E0A\u4F20\u6587\u4EF6: ".concat(uploadValue, "%");
+            } else {
+              $dom('progressText').innerText = "\u670D\u52A1\u5668\u6B63\u5728\u5BF9PSD\u6587\u4EF6\u8FDB\u884C\u5904\u7406!";
+            }
           }
         }, false);
         xhr.addEventListener("readystatechange", function () {
@@ -314,9 +320,12 @@ window.ozzx = {
           } else if (result.readyState == 4) {
             // 上传完毕
             var msg = JSON.parse(result.response);
-            $go('show', 'moveToLeft', 'moveFromRight', {
-              id: msg.id
-            });
+            $dom('progressText').innerText = "\u51C6\u5907\u5C31\u7EEA,\u5373\u5C06\u9884\u89C8\u9875\u9762!";
+            setTimeout(function () {
+              $go('show', 'moveToLeft', 'moveFromRight', {
+                id: msg.id
+              });
+            }, 500);
           }
         });
         xhr.send(file);

@@ -169,11 +169,10 @@ body, html, .ox {
   margin-right: 10px;
   padding-left: 25px;
   padding-right: 10px;
-  height: 25px;
-  line-height: 25px;
+  height: 24px;
+  line-height: 24px;
   cursor: pointer;
-  margin-bottom: 5px;
-  margin-top: 5px;
+  font-size: 16px;
 }
 
 .ox-home label::before {
@@ -197,7 +196,7 @@ body, html, .ox {
 
 .ox-home input[type="checkbox"]:checked + label,
 .ox-home input[type="radio"]:checked + label {
-  padding-left: 15px;
+  padding-left: 10px;
   color: #fff;
 }
 
@@ -208,6 +207,7 @@ body, html, .ox {
   height: 100%;
   background: #8e44ad;
   border-radius: 5px;
+  border: none;
 }
 
 /* Transition */
@@ -223,8 +223,8 @@ body, html, .ox {
 }
 
 .ox-home .control .title {
-  font-size: 1.2rem;
-  line-height: 2rem;
+  font-size: 15px;
+  line-height: 25px;
   background-color: mediumturquoise;
   padding: 0 10px;
   margin: 10px 0;
@@ -233,6 +233,49 @@ body, html, .ox {
 
 .ox-home .modle-control {
   display: none;
+}
+
+.ox-home .tips {
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - 20px);
+  background-color: orange;
+  padding: 0 10px;
+  line-height: 30px;
+  color: white;
+}
+
+.ox-home .progress-box {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  display: none;
+}
+
+.ox-home .progress-box img {
+  width: 30%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  top: 0;
+  margin: auto;
+}
+
+.ox-home .progress-box .progress-text {
+  color: royalblue;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  bottom: 0;
+  margin: auto;
+  height: 30px;
 }.ox-show .iframe {
   display: none;
 }

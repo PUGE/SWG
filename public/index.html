@@ -18,8 +18,7 @@
       <form enctype="multipart/form-data" method="post" @name="uploadBox">
         <div class="dnd-container">
           <div class="start" @name="stareIcon"></div>   
-          <div class="done" @name="doneIcon"></div>   
-          <progress max="100" value="0" @name="progress"></progress>
+          <div class="done" @name="doneIcon"></div>
         </div>
         <p>选择或者拖拽PSD文件 (建议不要过大)</p>
         <button class="dndAlternative" @click="uploadFile">选择</button>
@@ -66,6 +65,11 @@
       <input type="checkbox" name="co" id="compress" value="true" checked="">
       <label for="compress" @click="changeOutText('compress')">压缩图片</label>
     </div>
+    <div class="progress-box" @name="progress">
+      <img src="./static/resource/progress.svg">
+      <div class="progress-text" @name="progressText"></div>
+    </div>
+    <div class="tips">系统不支持PS中的特殊效果,请在上传前将有特殊效果的图层合并为智能对象!</div>
   </div>
 </div>
     <div class="ox-show ox" id="ox-show" style="display: none;"><div class="show-box">
