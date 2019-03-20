@@ -12,12 +12,27 @@ function getOutPut (elementInfo, styleList, domHtml, groupList, fileName, ind, n
   if (JSON.parse(query.outText) && elementInfo.text) {
     [styleList, domHtml] = textOutPut(elementInfo.text, styleList, domHtml, groupList)   
   } else { // 什么都不是那就输出成图片吧
-    // 判断输出图形的形式
-    if (query.output === 'background') {
-      styleList.push(`background-image: url(./${fileName}.png)`)
-      domHtml += `\r\n          <div class="swg swg-${groupList.join('-')} item-${ind} ${isBG ? 'bg' : ''} ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="10.5s" swiper-animate-delay="0.3s"></div>`
-    } else if (query.output === 'img') {
-      domHtml += `\r\n          <img class="swg swg-${groupList.join('-')} item-${ind} ${isBG ? 'bg' : ''} ani" src="./${fileName}.png" />`
+    // 从图层名判断是否需要加入动画
+    if (elementInfo.name.includes('#[') && elementInfo.name.match(/\#\[(\S*)\]/)[1] !== null) {
+      let arg = elementInfo.name.match(/\#\[(\S*)\]/)[1].split(',')
+      // 如果没有设置动画时间和延迟时间则使用默认
+      if (arg[1] === undefined) arg[1] = 0.5
+      if (arg[2] === undefined) arg[2] = 0
+      // 判断输出图形的形式
+      if (query.output === 'background') {
+        styleList.push(`background-image: url(./${fileName}.png)`)
+        domHtml += `\r\n          <div class="swg swg-${groupList.join('-')} item-${ind} ${isBG ? 'bg' : ''} ani" swiper-animate-effect="${arg[0]}" swiper-animate-duration="${arg[1]}s" swiper-animate-delay="${arg[2]}s"></div>`
+      } else if (query.output === 'img') {
+        domHtml += `\r\n          <img class="swg swg-${groupList.join('-')} item-${ind} ${isBG ? 'bg' : ''} ani" swiper-animate-effect="${arg[0]}" swiper-animate-duration="${arg[1]}s" swiper-animate-delay="${arg[2]}s" src="./${fileName}.png" />`
+      }
+    } else {
+      // 判断输出图形的形式
+      if (query.output === 'background') {
+        styleList.push(`background-image: url(./${fileName}.png)`)
+        domHtml += `\r\n          <div class="swg swg-${groupList.join('-')} item-${ind} ${isBG ? 'bg' : ''}"></div>`
+      } else if (query.output === 'img') {
+        domHtml += `\r\n          <img class="swg swg-${groupList.join('-')} item-${ind} ${isBG ? 'bg' : ''}" src="./${fileName}.png" />`
+      }
     }
   }
   return [styleList, domHtml]

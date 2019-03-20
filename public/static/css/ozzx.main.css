@@ -229,6 +229,10 @@ body, html, .ox {
   padding: 0 10px;
   margin: 10px 0;
   color: white;
+}
+
+.ox-home .modle-control {
+  display: none;
 }.ox-show .iframe {
   display: none;
 }

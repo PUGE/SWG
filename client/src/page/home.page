@@ -14,16 +14,29 @@
     </div>
     <div class="control">
       <div class="title">生成模式</div>
-      <input type="radio" name="rb" id="m1" value="real" @click="changeModle" checked/>
+      <input type="radio" name="rb" id="m1" value="real" @click="changeModle(true)" checked/>
       <label for="m1">真实还原</label>
-      <input type="radio" name="rb" id="m2" value="ratio" @click="changeModle"/>
-      <label for="m2">铺满全屏</label>
-      <input type="radio" name="rb" id="m3" value="phone" @click="changeModle" />
-      <label for="m3">手机模式</label>
-      <input type="radio" name="rb" id="m4" value="phone2" @click="changeModle"/>
-      <label for="m4">手机模式2</label>
-      <input type="radio" name="rb" id="m5" value="animate" @click="changeModle"/>
+      <input type="radio" name="rb" id="m2" value="ratio" @click="changeModle(true)"/>
+      <label for="m2">适应屏幕</label>
+      <input type="radio" name="rb" id="m3" value="phone" @click="checkPhone" />
+      <label for="m3">手机页面</label>
+      <input type="radio" name="rb" id="m5" value="animate" @click="checkAnimate"/>
       <label for="m5">场景动画</label>
+      
+      <div class="phone-box modle-control" @name="phone">
+        <div class="title">手机配置</div>
+        <input type="radio" name="ph" id="p3" value="phone" @click="changeModle" checked/>
+        <label for="p3">背景铺满</label>
+        <input type="radio" name="ph" id="p4" value="phone2" @click="changeModle"/>
+        <label for="p4">背景缩放</label>
+      </div>
+
+      <div class="animate-box modle-control" @name="animate">
+        <div class="title">场景模式</div>
+        <input type="radio" name="an" id="a1" value="animate" @click="changeModle" checked/>
+        <label for="a1">纵向切换</label>
+      </div>
+
 
       <div class="title">图片形式</div>
       <input type="radio" name="output" id="o1" value="background" @click="changeOutPut" checked/>
@@ -120,7 +133,9 @@
       })
       xhr.send(file)
     },
-    changeModle: function () {
+    changeModle: function (clear) {
+      console.log('更改模式')
+      if (clear) this.hideModleControl()
       if (this.$el.checked) {
         this.data.mode = this.$el.value
       }
@@ -132,6 +147,26 @@
     },
     changeOutText: function (item) {
       this.data[item] = !this.data[item]
+    },
+    hideModleControl: function () {
+      const modleControlList = document.getElementsByClassName('modle-control')
+      for (let index = 0; index < modleControlList.length; index++) {
+        const element = modleControlList[index]
+        if (element.style) {
+          element.style.display = 'none'
+        }
+      }
+    },
+    // 显示手机详细菜单
+    checkPhone: function () {
+      this.hideModleControl()
+      $dom('phone').style.display = 'block'
+      this.data.mode = 'phone'
+    },
+    checkAnimate: function () {
+      this.hideModleControl()
+      $dom('animate').style.display = 'block'
+      this.data.mode = 'animate'
     }
   }
 </script>
@@ -314,5 +349,8 @@ label::before {
   padding: 0 10px;
   margin: 10px 0;
   color: white;
+}
+.modle-control {
+  display: none;
 }
 </style>

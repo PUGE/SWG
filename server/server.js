@@ -58,7 +58,7 @@ app.post('/uploads', upload.any(), function (request, response, next) {
 })
 
 app.get('/down', function(request, response, next){
-  console.log(request.query)
+  console.log('收到下载代码指令!')
   // 判断是否有进程正在执行下载
   if (isDownLoading) {
     response.send('{"err":1,"message":"有其他用户正在下载，请稍后再试"}')
@@ -70,12 +70,17 @@ app.get('/down', function(request, response, next){
     archive.on('error', function(err) {
       throw err
     })
-
+    output.on('close', function() {
+      console.log(archive.pointer() + ' total bytes');
+      console.log('archiver has been finalized and the output file descriptor has closed.')
+      response.send('{"err":0}')
+      isDownLoading = false
+    })
     archive.pipe(output);
     archive.directory(`../public/temp/${request.query.id}`, false)
+    console.log(`开始打包文件: ../public/temp/${request.query.id}`)
     archive.finalize()
-    isDownLoading = false
-    response.send('{"err":0}')
+    
   }
 })
 
