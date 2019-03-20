@@ -4233,3 +4233,23 @@
 [2019-03-20T13:40:30.977] [DEBUG] main.js - 判断是否可以输出Html!
 [2019-03-20T13:40:31.085] [DEBUG] main.js - 判断是否可以输出Html!
 [2019-03-20T13:40:31.086] [INFO] main.js - Compile successfully, Use time: 222 msec!
+[2019-03-20T15:41:24.907] [INFO] main.js - file change: C:\Users\PG\Documents\GitHub\SWG\client\src\page\home.page
+[2019-03-20T15:41:24.910] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-20T15:41:24.910] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-20T15:41:24.910] [INFO] main.js - 刷新模式,变化目录: C:\Users\PG\Documents\GitHub\SWG\client\src\page\home.page
+[2019-03-20T15:41:24.910] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-20T15:41:24.911] [DEBUG] main.js - 读取网页标题: 页面
+[2019-03-20T15:41:24.912] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-20T15:41:24.999] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-20T15:41:24.999] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-20T15:41:24.999] [DEBUG] default - 发现 comment 规则: undefined
+[2019-03-20T15:41:25.061] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-20T15:41:25.085] [INFO] main.js - 工程中包含多个页面!
+[2019-03-20T15:41:25.094] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-20T15:41:25.095] [INFO] main.js - 包含有页面切换动画!
+[2019-03-20T15:41:25.095] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-20T15:41:25.229] [DEBUG] main.js - 处理引用脚本: []
+[2019-03-20T15:41:25.229] [DEBUG] main.js - 没有使用到外部脚本!
+[2019-03-20T15:41:25.230] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-20T15:41:25.348] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-20T15:41:25.351] [INFO] main.js - Compile successfully, Use time: 441 msec!

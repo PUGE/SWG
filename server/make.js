@@ -176,16 +176,23 @@ function make (query, fileName) {
             var clientWidth = document.body.clientWidth
             var clientHeight = document.body.clientHeight
             var root = document.getElementById('root')
-            var rootWidth = root.getAttribute('width')
-            var rootHeight = root.getAttribute('height')
+            var rootWidth = parseFloat(root.getAttribute('width'))
+            var rootHeight = parseFloat(root.getAttribute('height'))
             var WH = rootHeight / rootWidth
+            var bodyWidth = clientWidth
             // 最大宽度为图片最大宽度
             if (clientWidth > rootWidth) {
-              clientWidth = rootWidth
+              bodyWidth = rootWidth
             }
-            console.log(clientWidth, clientWidth * WH)
-            root.style.width = clientWidth * 1 + 'px'
-            root.style.height = clientWidth * WH + 'px'
+            // console.log(bodyWidth * WH * 0.75, clientHeight)
+            var securityHeight = bodyWidth * WH * 0.75
+            if (securityHeight > clientHeight) {
+              bodyWidth = (clientHeight / securityHeight) * bodyWidth
+              console.log(clientHeight / securityHeight)
+            }
+            // console.log(bodyWidth, bodyWidth * WH)
+            root.style.width = bodyWidth * 1 + 'px'
+            root.style.height = bodyWidth * WH + 'px'
             
           }
           window.onload = function() {
