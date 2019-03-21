@@ -27,30 +27,35 @@
     </div>
     <div class="control">
       <div class="title">生成模式</div>
-      <input type="radio" name="rb" id="m1" value="real" @click="changeModle(true)" checked="">
-      <label for="m1">真实还原</label>
-      <input type="radio" name="rb" id="m2" value="ratio" @click="changeModle(true)">
-      <label for="m2">适应屏幕</label>
-      <input type="radio" name="rb" id="m3" value="phone" @click="checkPhone">
+      <input type="radio" name="rb" id="m1" @click="switchShow('currency', 'real')" checked="">
+      <label for="m1">通用页面</label>
+      <input type="radio" name="rb" id="m3" @click="switchShow('phone', 'centrality')">
       <label for="m3">手机页面</label>
-      <input type="radio" name="rb" id="m5" value="animate" @click="checkAnimate">
+      <input type="radio" name="rb" id="m5" @click="switchShow('animate', 'portrait')">
       <label for="m5">场景动画</label>
       
+      <div class="currency-box modle-control" @name="currency">
+        <div class="title">屏幕适配</div>
+        <input type="radio" name="cu" id="control-real" value="real" @click="changeModle()" checked="">
+        <label for="control-real">真实还原</label>
+        <input type="radio" name="cu" id="control-ratio" value="ratio" @click="changeModle()">
+        <label for="control-ratio">适应屏幕</label>
+      </div>
+
       <div class="phone-box modle-control" @name="phone">
-        <div class="title">手机配置</div>
-        
-        <input type="radio" name="ph" id="p3" value="phone" @click="changeModle" checked="">
-        <label for="p3">背景铺满</label>
-        <input type="radio" name="ph" id="p4" value="phone2" @click="changeModle">
-        <label for="p4">缩放居中</label>
-        <input type="radio" name="ph" id="p2" value="phone3" @click="changeModle">
-        <label for="p2">中心缩放</label>
+        <div class="title">屏幕适配</div>
+        <input type="radio" name="ph" id="control-centrality" value="centrality" @click="changeModle">
+        <label for="control-centrality">中心缩放</label>
+        <input type="radio" name="ph" id="control-tile" value="tile" @click="changeModle">
+        <label for="control-tile">背景铺满</label>
+        <input type="radio" name="ph" id="control-middle" value="middle" @click="changeModle">
+        <label for="control-middle">中央显示</label>
       </div>
 
       <div class="animate-box modle-control" @name="animate">
         <div class="title">场景模式</div>
-        <input type="radio" name="an" id="a1" value="animate" @click="changeModle" checked="">
-        <label for="a1">纵向切换</label>
+        <input type="radio" name="an" id="control-portrait" value="portrait" @click="changeModle" checked="">
+        <label for="control-portrait">纵向切换</label>
       </div>
 
 
@@ -74,7 +79,7 @@
 </div>
     <div class="ox-show ox" id="ox-show" style="display: none;"><div class="show-box">
     <iframe @name="show"></iframe>
-    <div class="down" @click="down">下载代码</div>
+    <img class="down" @click="down" src="./static/resource/download.svg">
   </div>
 </div>
     <!-- 页面脚本 -->

@@ -357,15 +357,11 @@ window.ozzx = {
           }
         }
       },
-      "checkPhone": function checkPhone() {
+      "switchShow": function switchShow(name, defaultValue) {
         this.hideModleControl();
-        $dom('phone').style.display = 'block';
-        this.data.mode = 'phone';
-      },
-      "checkAnimate": function checkAnimate() {
-        this.hideModleControl();
-        $dom('animate').style.display = 'block';
-        this.data.mode = 'animate';
+        $dom(name).style.display = 'block';
+        this.data.mode = defaultValue;
+        document.getElementById('control-' + defaultValue).checked = true;
       }
     },
     "show": {

@@ -1,0 +1,38 @@
+<script>
+  function getSize () {
+    var clientWidth = document.body.clientWidth
+    var clientHeight = document.body.clientHeight
+    var root = document.getElementById('root')
+    var rootWidth = parseFloat(root.getAttribute('width'))
+    var rootHeight = parseFloat(root.getAttribute('height'))
+    var WH = rootHeight / rootWidth
+    var bodyWidth = clientWidth
+    // 最大宽度为图片最大宽度
+    if (clientWidth > rootWidth) {
+      bodyWidth = rootWidth
+    }
+    // console.log(bodyWidth * WH * 0.75, clientHeight)
+    var securityHeight = bodyWidth * WH * 0.75
+    if (securityHeight > clientHeight) {
+      bodyWidth = (clientHeight / securityHeight) * bodyWidth
+      console.log(clientHeight / securityHeight)
+    }
+    // console.log(bodyWidth, bodyWidth * WH)
+    root.style.width = bodyWidth * 1 + 'px'
+    root.style.height = bodyWidth * WH + 'px'
+    
+  }
+  window.onload = function() {
+    getSize()
+    var root = document.getElementById('root')
+    root.style.opacity = 1
+  }
+  var resizeTimer = null;
+  window.onresize = function() {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      console.log('屏幕大小被改变!')
+      getSize()
+    }, 500)
+  }
+</script>

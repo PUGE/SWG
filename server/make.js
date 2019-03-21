@@ -86,7 +86,8 @@ function make (query, fileName) {
       styleData += outPut.style
       break
     }
-    case 'phone': {
+    // 手机模式-背景铺满
+    case 'tile': {
       styleData += `<style type="text/css">\r\n      `
       const outPut = phoneOutPut(fileName, psd.tree(), [], query)
       domHtml += outPut.html
@@ -122,7 +123,7 @@ function make (query, fileName) {
       `)
       break
     }
-    case 'phone2': {
+    case 'middle': {
       styleData += `<style type="text/css">\r\n      `
       const outPut = phoneOutPut(fileName, psd.tree(), [], query)
       domHtml += outPut.html
@@ -130,7 +131,6 @@ function make (query, fileName) {
       // 手机页面有自己的js代码
       htmlTemple = htmlTemple.replace(`<!-- script-output -->`, `
         <script>
-          
           function getSize () {
             var clientWidth = document.body.clientWidth
             var clientHeight = document.body.clientHeight
@@ -163,56 +163,19 @@ function make (query, fileName) {
       `)
       break
     }
-    case 'phone3': {
+    // 手机模式-中心缩放
+    case 'centrality': {
       styleData += `<style type="text/css">\r\n      `
       const outPut = phoneOutPut(fileName, psd.tree(), [], query)
       domHtml += outPut.html
       styleData += outPut.style
       // 手机页面有自己的js代码
-      htmlTemple = htmlTemple.replace(`<!-- script-output -->`, `
-        <script>
-          
-          function getSize () {
-            var clientWidth = document.body.clientWidth
-            var clientHeight = document.body.clientHeight
-            var root = document.getElementById('root')
-            var rootWidth = parseFloat(root.getAttribute('width'))
-            var rootHeight = parseFloat(root.getAttribute('height'))
-            var WH = rootHeight / rootWidth
-            var bodyWidth = clientWidth
-            // 最大宽度为图片最大宽度
-            if (clientWidth > rootWidth) {
-              bodyWidth = rootWidth
-            }
-            // console.log(bodyWidth * WH * 0.75, clientHeight)
-            var securityHeight = bodyWidth * WH * 0.75
-            if (securityHeight > clientHeight) {
-              bodyWidth = (clientHeight / securityHeight) * bodyWidth
-              console.log(clientHeight / securityHeight)
-            }
-            // console.log(bodyWidth, bodyWidth * WH)
-            root.style.width = bodyWidth * 1 + 'px'
-            root.style.height = bodyWidth * WH + 'px'
-            
-          }
-          window.onload = function() {
-            getSize()
-            var root = document.getElementById('root')
-            root.style.opacity = 1
-          }
-          var resizeTimer = null;
-          window.onresize = function() {
-            if (resizeTimer) clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(function() {
-              console.log('屏幕大小被改变!')
-              getSize()
-            }, 500)
-          }
-        </script>
-      `)
+      const fileData = fs.readFileSync('./code/phone/centrality.temple', 'utf8')
+      htmlTemple = htmlTemple.replace(`<!-- script-output -->`, fileData)
       break
     }
-    case 'animate': {
+    // 场景动画-纵向切换
+    case 'portrait': {
       styleData += `<style type="text/css">\r\n      `
       const outPut = animateOutPut(fileName, psd.tree(), [], query)
       domHtml += outPut.html + `\r\n    </div>`

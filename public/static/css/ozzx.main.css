@@ -235,6 +235,10 @@ body, html, .ox {
   display: none;
 }
 
+.ox-home .currency-box {
+  display: block;
+}
+
 .ox-home .tips {
   position: fixed;
   bottom: 0;
@@ -290,10 +294,7 @@ body, html, .ox {
   position: fixed;
   right: 10px;
   cursor: pointer;
-  background-color: blueviolet;
   bottom: 10px;
-  line-height: 20px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: white;
+  width: 45px;
+  height: 45px;
 }
