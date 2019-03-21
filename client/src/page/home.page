@@ -17,8 +17,8 @@
       <label for="m1">通用页面</label>
       <input type="radio" name="rb" id="m3" @click="switchShow('phone', 'centrality')" />
       <label for="m3">手机页面</label>
-      <input type="radio" name="rb" id="m5" @click="switchShow('animate', 'portrait')"/>
-      <label for="m5">场景动画</label>
+      <input type="radio" name="rb" id="m5" @click="switchShow('swiper', 'centrality')"/>
+      <label for="m5">手机动画</label>
       
       <div class="currency-box modle-control" @name="currency">
         <div class="title">屏幕适配</div>
@@ -28,7 +28,7 @@
         <label for="control-ratio">适应屏幕</label>
       </div>
 
-      <div class="phone-box modle-control" @name="phone">
+      <div class="phone-box modle-control swiper-box" @name="phone">
         <div class="title">屏幕适配</div>
         <input type="radio" name="ph" id="control-centrality" value="centrality" @click="changeAdaptation"/>
         <label for="control-centrality">中心缩放</label>
@@ -36,12 +36,6 @@
         <label for="control-tile">背景铺满</label>
         <input type="radio" name="ph" id="control-middle" value="middle" @click="changeAdaptation"/>
         <label for="control-middle">中央显示</label>
-      </div>
-
-      <div class="animate-box modle-control" @name="animate">
-        <div class="title">场景模式</div>
-        <input type="radio" name="an" id="control-portrait" value="portrait" @click="changeAdaptation" checked/>
-        <label for="control-portrait">纵向切换</label>
       </div>
 
 
@@ -190,7 +184,7 @@
       this.data.mode = name
       this.data.adaptation = defaultValue
       this.hideModleControl()
-      $dom(name).style.display = 'block'
+      document.getElementsByClassName(name + '-box')[0].style.display = 'block'
       this.data.adaptation = defaultValue
       document.getElementById('control-' + defaultValue).checked = true
     }

@@ -5,7 +5,7 @@ const PSD = require('psd')
 const { ratioOutPut }  = require('./mode/ratio')
 const { realOutPut }  = require('./mode/real')
 const { phoneOutPut }  = require('./mode/phone')
-const { animateOutPut }  = require('./mode/animate')
+const { animateOutPut }  = require('./mode/swiper')
 
 
 
@@ -93,13 +93,22 @@ function make (query, fileName) {
       domHtml += outPut.html
       styleData += outPut.style
       // 手机页面有自己的js代码
-      styleData += `\r\n.bg{ position: fixed;background-size: 100%; }`
-      const fileData = fs.readFileSync(`./code/phone/${query.adaptation}.temple`, 'utf8')
+      // styleData += `\r\n.bg{ position: fixed;background-size: 100%; }`
+      let fileData = fs.readFileSync(`./code/phone/${query.adaptation}.temple`, 'utf8')
+      fileData += `
+        <script>
+          window.onload = function() {
+            getSize()
+            var root = document.getElementById('root')
+            root.style.opacity = 1
+          }
+        </script>
+      `
       htmlTemple = htmlTemple.replace(`<!-- script-output -->`, fileData)
       break
     }
     // 场景动画-纵向切换
-    case 'animate': {
+    case 'swiper': {
       styleData += `<style type="text/css">\r\n      `
       const outPut = animateOutPut(fileName, psd.tree(), [], query)
       domHtml += outPut.html + `\r\n    </div>`
@@ -108,7 +117,32 @@ function make (query, fileName) {
       styleData += `
           .swiper-slide {width: 100%; overflow: hidden;position: relative;}
       `
-      const fileData = fs.readFileSync('./code/phone/portrait.temple', 'utf8')
+      let fileData = `
+        <script src="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/swiper.min.js"></script>
+        <script src="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/swiper.animate1.0.3.min.js"></script>
+        <script>
+          window.onload = function() {
+            getSize()
+            var root = document.getElementById('root')
+            // 注册swiper
+            var mySwiper = new Swiper ('.root', {
+              direction : 'vertical',
+              on:{
+                init: function(){
+                  swiperAnimateCache(this); //隐藏动画元素 
+                  swiperAnimate(this); //初始化完成开始动画
+                }, 
+                slideChangeTransitionEnd: function(){ 
+                  swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+                  //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+                } 
+              }
+            })
+            root.style.opacity = 1
+          }
+        </script>
+      `
+      fileData += fs.readFileSync(`./code/phone/${query.adaptation}.temple`, 'utf8')
       htmlTemple = htmlTemple.replace(`<!-- script-output -->`, fileData)
       break
     }

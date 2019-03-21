@@ -71,7 +71,7 @@ function animateOutPut (fileName, node, groupList, query) {
     styleData = `.root {${styleList.join('; ')};margin: auto;}
           .swiper-wrapper {width: 100%; height: 100%;}
     `
-    domHtml = `<div class="swg root" id="root">\r\n      <div class="swiper-wrapper">`
+    domHtml = `<div class="swg root" id="root" width="${node.width}" height="${node.height}">\r\n      <div class="swiper-wrapper">`
   } else {
     // 是背景吗
     const WC = node.width  + node.left - node.right

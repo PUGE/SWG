@@ -16,14 +16,10 @@
     root.style.height = rootHeight * min + 'px'
     root.style.opacity = 1
   }
-  window.onload = function() {
-    getSize()
-  }
   var resizeTimer = null;
   window.onresize = function() {
     if (resizeTimer) clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function() {
-      console.log('屏幕大小被改变!')
       getSize()
     }, 500)
   }
