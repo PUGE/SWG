@@ -1,0 +1,25 @@
+<script>
+  function getSize () {
+    var clientWidth = document.body.clientWidth
+    var clientHeight = document.body.clientHeight
+    var root = document.getElementById('root')
+    var rootWidth = root.offsetWidth
+    var rootHeight = root.offsetHeight
+    // console.log(clientWidth / clientHeight)
+    // console.log(rootWidth / rootHeight)
+    // console.log(clientWidth / clientHeight - rootWidth / rootHeight)
+    var CRW = clientWidth / rootWidth
+    var CRH = clientHeight / rootHeight
+    // console.log(CRW, CRH)
+    var min = CRW > CRH ? CRH : CRW
+    root.style.width = rootWidth * min + 'px'
+    root.style.height = rootHeight * min + 'px'
+    root.style.opacity = 1
+  }
+  window.onload = function() {
+    getSize()
+  }
+  window.onresize = function() {
+    getSize()
+  }
+</script>

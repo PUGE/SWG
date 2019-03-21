@@ -94,33 +94,8 @@ function make (query, fileName) {
       styleData += outPut.style
       // 手机页面有自己的js代码
       styleData += `\r\n.bg{ position: fixed;background-size: 100%; }`
-      htmlTemple = htmlTemple.replace(`<!-- script-output -->`, `
-        <script>
-          function getSize () {
-            var clientWidth = document.body.clientWidth
-            var clientHeight = document.body.clientHeight
-            var root = document.getElementById('root')
-            var rootWidth = root.offsetWidth
-            var rootHeight = root.offsetHeight
-            // console.log(clientWidth / clientHeight)
-            // console.log(rootWidth / rootHeight)
-            // console.log(clientWidth / clientHeight - rootWidth / rootHeight)
-            var CRW = clientWidth / rootWidth
-            var CRH = clientHeight / rootHeight
-            // console.log(CRW, CRH)
-            var min = CRW > CRH ? CRH : CRW
-            root.style.width = rootWidth * min + 'px'
-            root.style.height = rootHeight * min + 'px'
-            root.style.opacity = 1
-          }
-          window.onload = function() {
-            getSize()
-          }
-          window.onresize = function() {
-            getSize()
-          }
-        </script>
-      `)
+      const fileData = fs.readFileSync('./code/phone/middle.temple', 'utf8')
+      htmlTemple = htmlTemple.replace(`<!-- script-output -->`, fileData)
       break
     }
     case 'middle': {
@@ -129,38 +104,8 @@ function make (query, fileName) {
       domHtml += outPut.html
       styleData += outPut.style
       // 手机页面有自己的js代码
-      htmlTemple = htmlTemple.replace(`<!-- script-output -->`, `
-        <script>
-          function getSize () {
-            var clientWidth = document.body.clientWidth
-            var clientHeight = document.body.clientHeight
-            var root = document.getElementById('root')
-            var rootWidth = root.getAttribute('width')
-            var rootHeight = root.getAttribute('height')
-            // console.log(clientWidth / clientHeight)
-            // console.log(rootWidth / rootHeight)
-            // console.log(clientWidth / clientHeight - rootWidth / rootHeight)
-            var CRW = clientWidth / rootWidth
-            var CRH = clientHeight / rootHeight
-            // console.log(CRW, CRH)
-            var min = CRW > CRH ? CRH : CRW
-            root.style.width = rootWidth * min + 'px'
-            root.style.height = rootHeight * min + 'px'
-            root.style.opacity = 1
-          }
-          window.onload = function() {
-            getSize()
-          }
-          var resizeTimer = null;
-          window.onresize = function() {
-            if (resizeTimer) clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(function() {
-              console.log('屏幕大小被改变!')
-              getSize()
-            }, 500)
-          }
-        </script>
-      `)
+      const fileData = fs.readFileSync('./code/phone/middle.temple', 'utf8')
+      htmlTemple = htmlTemple.replace(`<!-- script-output -->`, fileData)
       break
     }
     // 手机模式-中心缩放
@@ -184,27 +129,8 @@ function make (query, fileName) {
       styleData += `
           .swiper-slide {width: 100%; overflow: hidden;position: relative;}
       `
-      htmlTemple = htmlTemple.replace(`<!-- script-output -->`, `
-        <script src="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/swiper.min.js"></script>
-        <script src="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/swiper.animate1.0.3.min.js"></script>
-        <script>
-          window.onload = function() { 
-            var mySwiper = new Swiper ('.root', {
-              direction : 'vertical',
-              on:{
-                init: function(){
-                  swiperAnimateCache(this); //隐藏动画元素 
-                  swiperAnimate(this); //初始化完成开始动画
-                }, 
-                slideChangeTransitionEnd: function(){ 
-                  swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
-                  //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
-                } 
-              }
-            })
-          }
-        </script>
-      `)
+      const fileData = fs.readFileSync('./code/phone/portrait.temple', 'utf8')
+      htmlTemple = htmlTemple.replace(`<!-- script-output -->`, fileData)
       break
     }
   }
