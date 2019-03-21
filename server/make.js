@@ -71,56 +71,35 @@ function make (query, fileName) {
   let domHtml = ``
   let styleData = ``
   switch (query.mode) {
-    // 真实输出
-    case 'real': {
+    // 通用模式
+    case 'currency': {
+      let outPut = null
       styleData += `<style type="text/css">\r\n      `
-      const outPut = realOutPut(fileName, psd.tree(), [], query)
+      // 判断适配方案
+      const adaptation = query.adaptation
+      if (query.adaptation === 'real') {
+        outPut = realOutPut(fileName, psd.tree(), [], query)
+      } else if (adaptation) {
+        outPut = ratioOutPut(fileName, psd.tree(), [], query)
+      }
       domHtml += outPut.html
       styleData += outPut.style
       break
     }
-    case 'ratio': {
-      styleData += `<style type="text/css">\r\n      `
-      const outPut = ratioOutPut(fileName, psd.tree(), [], query)
-      domHtml += outPut.html
-      styleData += outPut.style
-      break
-    }
-    // 手机模式-背景铺满
-    case 'tile': {
+    // 手机模式
+    case 'phone': {
       styleData += `<style type="text/css">\r\n      `
       const outPut = phoneOutPut(fileName, psd.tree(), [], query)
       domHtml += outPut.html
       styleData += outPut.style
       // 手机页面有自己的js代码
       styleData += `\r\n.bg{ position: fixed;background-size: 100%; }`
-      const fileData = fs.readFileSync('./code/phone/middle.temple', 'utf8')
-      htmlTemple = htmlTemple.replace(`<!-- script-output -->`, fileData)
-      break
-    }
-    case 'middle': {
-      styleData += `<style type="text/css">\r\n      `
-      const outPut = phoneOutPut(fileName, psd.tree(), [], query)
-      domHtml += outPut.html
-      styleData += outPut.style
-      // 手机页面有自己的js代码
-      const fileData = fs.readFileSync('./code/phone/middle.temple', 'utf8')
-      htmlTemple = htmlTemple.replace(`<!-- script-output -->`, fileData)
-      break
-    }
-    // 手机模式-中心缩放
-    case 'centrality': {
-      styleData += `<style type="text/css">\r\n      `
-      const outPut = phoneOutPut(fileName, psd.tree(), [], query)
-      domHtml += outPut.html
-      styleData += outPut.style
-      // 手机页面有自己的js代码
-      const fileData = fs.readFileSync('./code/phone/centrality.temple', 'utf8')
+      const fileData = fs.readFileSync(`./code/phone/${query.adaptation}.temple`, 'utf8')
       htmlTemple = htmlTemple.replace(`<!-- script-output -->`, fileData)
       break
     }
     // 场景动画-纵向切换
-    case 'portrait': {
+    case 'animate': {
       styleData += `<style type="text/css">\r\n      `
       const outPut = animateOutPut(fileName, psd.tree(), [], query)
       domHtml += outPut.html + `\r\n    </div>`
