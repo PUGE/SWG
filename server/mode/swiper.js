@@ -21,17 +21,17 @@ function getOutPut (elementInfo, styleList, domHtml, groupList, fileName, ind, n
       // 判断输出图形的形式
       if (query.output === 'background') {
         styleList.push(`background-image: url(./${fileName}.png)`)
-        domHtml += `\r\n          <div class="swg swg-${groupList.join('-')} item-${ind} ${isBG ? 'bg' : ''} ani" swiper-animate-effect="${arg[0]}" swiper-animate-duration="${arg[1]}s" swiper-animate-delay="${arg[2]}s"></div>`
+        domHtml += `\r\n          <div class="swg swg-${groupList.join('-')} layer-${groupList.length} item-${ind} ${isBG ? 'bg' : ''} ani" swiper-animate-effect="${arg[0]}" swiper-animate-duration="${arg[1]}s" swiper-animate-delay="${arg[2]}s"></div>`
       } else if (query.output === 'img') {
-        domHtml += `\r\n          <img class="swg swg-${groupList.join('-')} item-${ind} ${isBG ? 'bg' : ''} ani" swiper-animate-effect="${arg[0]}" swiper-animate-duration="${arg[1]}s" swiper-animate-delay="${arg[2]}s" src="./${fileName}.png" />`
+        domHtml += `\r\n          <img class="swg swg-${groupList.join('-')} layer-${groupList.length} item-${ind} ${isBG ? 'bg' : ''} ani" swiper-animate-effect="${arg[0]}" swiper-animate-duration="${arg[1]}s" swiper-animate-delay="${arg[2]}s" src="./${fileName}.png" />`
       }
     } else {
       // 判断输出图形的形式
       if (query.output === 'background') {
         styleList.push(`background-image: url(./${fileName}.png)`)
-        domHtml += `\r\n          <div class="swg swg-${groupList.join('-')} item-${ind} ${isBG ? 'bg' : ''}"></div>`
+        domHtml += `\r\n          <div class="swg swg-${groupList.join('-')} layer-${groupList.length} item-${ind} ${isBG ? 'bg' : ''}"></div>`
       } else if (query.output === 'img') {
-        domHtml += `\r\n          <img class="swg swg-${groupList.join('-')} item-${ind} ${isBG ? 'bg' : ''}" src="./${fileName}.png" />`
+        domHtml += `\r\n          <img class="swg swg-${groupList.join('-')} layer-${groupList.length} item-${ind} ${isBG ? 'bg' : ''}" src="./${fileName}.png" />`
       }
     }
   }
@@ -97,7 +97,7 @@ function animateOutPut (fileName, node, groupList, query) {
     } else {
       domHtml = ''
     }
-    domHtml += `\r\n        <div class="swg swg-${groupList.join('-')} item-${itemIndex} ${isBG ? 'bg' : ''}">`
+    domHtml += `\r\n        <div class="swg swg-${groupList.join('-')} layer-${groupList.length} item-${itemIndex} ${isBG ? 'bg' : ''}">`
   }
   // 遍历处理子节点
   for (let ind in childrenNodeList) {

@@ -142,6 +142,7 @@ function make (query, fileName) {
       styleData += outPut.style
       // 手机页面有自己的js代码
       styleData += `
+          .layer-1 {margin: auto;}
           .swiper-slide {width: 100%; overflow: hidden;position: relative;}
       `
       let fileData = `

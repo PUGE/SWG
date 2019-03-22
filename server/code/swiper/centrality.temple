@@ -20,9 +20,12 @@
       console.log(clientHeight / securityHeight)
     }
     // console.log(bodyWidth, bodyWidth * WH)
-    root.style.width = bodyWidth * 1 + 'px'
-    root.style.height = bodyWidth * WH + 'px'
-    
+    var layerList1 = document.getElementsByClassName('layer-1')
+    for (var ind = 0; ind < layerList1.length; ind++) {
+      const element = layerList1[ind]
+      element.style.width = bodyWidth * 1 + 'px'
+      element.style.height = bodyWidth * WH + 'px'
+    }
   }
   window.onload = function() {
     getSize()
