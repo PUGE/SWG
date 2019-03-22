@@ -71,9 +71,19 @@ app.post('/uploads', upload.any(), function (request, response, next) {
   }
   const file = request.files[0]
   // console.log(file)
-  console.log(request.query)
+  
+  // 获取配置项
+  const query = {
+    mode: request.body.mode,
+    output: request.body.output,
+    outText: request.body.outText === 'true',
+    compress: request.body.compress === 'true',
+    adaptation: request.body.adaptation,
+    bgm: request.body.bgm === 'true',
+    musicSrc: request.body.musicSrc
+  }
   // 判断是否传递来了模式
-  if (!request.query.mode) {
+  if (!query.mode) {
     response.json({err: 1, message: '没有传递参数mode!'})
     return
   }
@@ -84,11 +94,10 @@ app.post('/uploads', upload.any(), function (request, response, next) {
       response.json({err: 1, message: '有用户正在执行打包,请稍后再试!'})
     } else {
       isPacking = true
-      make(request.query, file.filename)
+      make(query, file.filename)
       isPacking = false
       response.json({err: 0, id: file.filename})
     }
-    
   } else {
     response.json({err: 1, message: "不是正确的psd文件!"})
   }

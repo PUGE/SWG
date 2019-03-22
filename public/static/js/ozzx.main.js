@@ -228,7 +228,9 @@ window.ozzx = {
         "output": "background",
         "outText": false,
         "compress": true,
-        "adaptation": "real"
+        "adaptation": "real",
+        "bgm": false,
+        "musicSrc": "https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/bgm.mp3"
       },
       "created": function created() {
         var _this = this;
@@ -283,10 +285,9 @@ window.ozzx = {
 
         var file = new FormData();
         file.append('data', fileData);
-        var sendStr = '';
 
         for (var key in this.data) {
-          sendStr += "".concat(key, "=").concat(this.data[key], "&");
+          file.append(key, this.data[key]);
         } // 获取选择模式
 
 
@@ -296,7 +297,7 @@ window.ozzx = {
         var outText = this.data.outText; // 传输文件
 
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", 'uploads?' + sendStr, true); //上传进度事件
+        xhr.open("POST", 'uploads', true); //上传进度事件
 
         xhr.upload.addEventListener("progress", function (result) {
           if (result.lengthComputable) {

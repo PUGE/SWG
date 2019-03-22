@@ -37,11 +37,38 @@ let temple = `
         background-repeat: no-repeat;
         background-size: 100% 100%;
       }
+      .music-box {
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        z-index: 999;
+      }
+      .music-box .music-play {
+        display: none;
+        animation-name: circle;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      .music-box .music-close {
+        display: block;
+      }
+      .music-box img {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+      }
+      @keyframes circle{
+        0%{ transform:rotate(0deg); }
+        100%{ transform:rotate(360deg); }
+      }
     </style>
     <!-- css-output -->
   </head>
   <body>
     <!-- page-output -->
+    <!-- music-output -->
     <!-- script-output -->
   </body>
 </html>
@@ -118,6 +145,7 @@ function make (query, fileName) {
           .swiper-slide {width: 100%; overflow: hidden;position: relative;}
       `
       let fileData = `
+        <link rel="stylesheet" href="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/animate.min.css">
         <script src="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/swiper.min.js"></script>
         <script src="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/swiper.animate1.0.3.min.js"></script>
         <script>
@@ -144,12 +172,44 @@ function make (query, fileName) {
       `
       fileData += fs.readFileSync(`./code/phone/${query.adaptation}.temple`, 'utf8')
       htmlTemple = htmlTemple.replace(`<!-- script-output -->`, fileData)
+      
       break
     }
   }
-  styleData += `\r\n    </style>
-      <link rel="stylesheet" href="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/animate.min.css">
-  `
+  styleData += `\r\n    </style>`
+  // 判断是否有音乐
+  if (query.bgm && query.musicSrc) {
+    domHtml += `
+      <audio src="${query.musicSrc}" id="bgm" loop>您的浏览器不支持 audio 标签。</audio>
+      <div class="music-box">
+        <img class="music-play" id="musicPlay" onclick="closeMusic()" src="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/music-play.png"/>
+        <img class="music-close" id="musicClose" onclick="palyMusic()" src="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/music-close.png"/>
+      </div>
+    `
+    htmlTemple = htmlTemple.replace(`<!-- music-output -->`, `
+      <script>
+        // 微信自动播放音频
+        document.addEventListener('WeixinJSBridgeReady', () => {
+          // 播放音乐
+          document.getElementById('bgm').play()
+          document.getElementById('musicPlay').style.display = 'block'
+          document.getElementById('musicClose').style.display = 'none'
+        })
+        function closeMusic () {
+          console.log('关闭音乐播放!')
+          document.getElementById('musicPlay').style.display = 'none'
+          document.getElementById('musicClose').style.display = 'block'
+          document.getElementById('bgm').pause()
+        }
+        function palyMusic () {
+          console.log('开启音乐播放!')
+          document.getElementById('musicPlay').style.display = 'block'
+          document.getElementById('musicClose').style.display = 'none'
+          document.getElementById('bgm').play()
+        }
+      </script>
+    `)
+  }
   htmlTemple = htmlTemple.replace(`<!-- page-output -->`, domHtml)
   htmlTemple = htmlTemple.replace(`<!-- css-output -->`, styleData)
   fs.writeFileSync(`../public/temp/${fileName}/index.html`, htmlTemple)

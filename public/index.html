@@ -14,6 +14,68 @@
   <body>
     <!-- 页面区域 -->
     <div class="ox-home ox" id="ox-home" style="display: none;"><div class="home">
+    <div class="control">
+      <div class="model-box card">
+        <div class="title">生成模式</div>
+        <input type="radio" name="rb" id="m1" @click="switchShow('currency', 'real')" checked="">
+        <label for="m1">通用页面</label>
+        <input type="radio" name="rb" id="m3" @click="switchShow('phone', 'centrality')">
+        <label for="m3">手机页面</label>
+        <input type="radio" name="rb" id="m5" @click="switchShow('swiper', 'centrality')">
+        <label for="m5">手机动画</label>
+        <div class="clear"></div>
+      </div>
+      
+      
+      <div class="currency-box modle-control card" @name="currency">
+        <div class="title">屏幕适配</div>
+        <input type="radio" name="cu" id="control-real" value="real" @click="changeAdaptation()" checked="">
+        <label for="control-real">真实还原</label>
+        <input type="radio" name="cu" id="control-ratio" value="ratio" @click="changeAdaptation()">
+        <label for="control-ratio">适应屏幕</label>
+        <div class="clear"></div>
+      </div>
+
+      <div class="phone-box swiper-box modle-control card" @name="phone">
+        <div class="title">屏幕适配</div>
+        <input type="radio" name="ph" id="control-centrality" value="centrality" @click="changeAdaptation">
+        <label for="control-centrality">中心缩放</label>
+        <input type="radio" name="ph" id="control-tile" value="tile" @click="changeAdaptation">
+        <label for="control-tile">背景铺满</label>
+        <input type="radio" name="ph" id="control-middle" value="middle" @click="changeAdaptation">
+        <label for="control-middle">中央显示</label>
+        <div class="clear"></div>
+      </div>
+
+      
+      <div class="image-box card">
+        <div class="title">图片形式</div>
+        <input type="radio" name="output" id="o1" value="background" @click="changeOutPut" checked="">
+        <label for="o1">背景模式</label>
+        <input type="radio" name="output" id="o2" value="img" @click="changeOutPut">
+        <label for="o2">图片标签</label>
+        <div class="clear"></div>
+      </div>
+
+      <div class="export-box card">
+        <div class="title">输出配置</div>
+        <input type="checkbox" name="cb" id="outText">
+        <label for="outText" @click="changeOutText('outText')">导出文字</label>
+        <input type="checkbox" name="co" id="compress" value="true" checked="">
+        <label for="compress" @click="changeOutText('compress')">压缩图片</label>
+        <div class="clear"></div>
+      </div>
+      
+      <div class="music-box card">
+        <div class="title">背景音乐</div>
+        <input type="checkbox" name="bgm" id="bgm-centrality" value="bgm" @click="changeOutText('bgm')">
+        <label for="bgm-centrality">开启音乐</label>
+        <div class="clear"></div>
+        <div class="title">音乐链接</div>
+        <input type="text" id="musicSrcInput" value="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/bgm.mp3">
+      </div>
+      
+    </div>
     <div id="dnd">
       <form enctype="multipart/form-data" method="post" @name="uploadBox">
         <div class="dnd-container">
@@ -24,45 +86,6 @@
         <button class="dndAlternative" @click="uploadFile">选择</button>
         <input type="file" name="upload" accept="*.psd" @name="uploadInput">
       </form>
-    </div>
-    <div class="control">
-      <div class="title">生成模式</div>
-      <input type="radio" name="rb" id="m1" @click="switchShow('currency', 'real')" checked="">
-      <label for="m1">通用页面</label>
-      <input type="radio" name="rb" id="m3" @click="switchShow('phone', 'centrality')">
-      <label for="m3">手机页面</label>
-      <input type="radio" name="rb" id="m5" @click="switchShow('swiper', 'centrality')">
-      <label for="m5">手机动画</label>
-      
-      <div class="currency-box modle-control" @name="currency">
-        <div class="title">屏幕适配</div>
-        <input type="radio" name="cu" id="control-real" value="real" @click="changeAdaptation()" checked="">
-        <label for="control-real">真实还原</label>
-        <input type="radio" name="cu" id="control-ratio" value="ratio" @click="changeAdaptation()">
-        <label for="control-ratio">适应屏幕</label>
-      </div>
-
-      <div class="phone-box modle-control swiper-box" @name="phone">
-        <div class="title">屏幕适配</div>
-        <input type="radio" name="ph" id="control-centrality" value="centrality" @click="changeAdaptation">
-        <label for="control-centrality">中心缩放</label>
-        <input type="radio" name="ph" id="control-tile" value="tile" @click="changeAdaptation">
-        <label for="control-tile">背景铺满</label>
-        <input type="radio" name="ph" id="control-middle" value="middle" @click="changeAdaptation">
-        <label for="control-middle">中央显示</label>
-      </div>
-
-
-      <div class="title">图片形式</div>
-      <input type="radio" name="output" id="o1" value="background" @click="changeOutPut" checked="">
-      <label for="o1">背景模式</label>
-      <input type="radio" name="output" id="o2" value="img" @click="changeOutPut">
-      <label for="o2">图片标签</label>
-      <div class="title">其它配置</div>
-      <input type="checkbox" name="cb" id="outText">
-      <label for="outText" @click="changeOutText('outText')">导出文字</label>
-      <input type="checkbox" name="co" id="compress" value="true" checked="">
-      <label for="compress" @click="changeOutText('compress')">压缩图片</label>
     </div>
     <div class="progress-box" @name="progress">
       <img src="./static/resource/progress.svg">
