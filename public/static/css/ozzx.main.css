@@ -112,6 +112,11 @@ body, html, .ox {
   color: #999;
   text-align: right;
   font-size: 14px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 .ox-home .progress-box {

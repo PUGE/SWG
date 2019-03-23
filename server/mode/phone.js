@@ -32,8 +32,8 @@ function phoneOutPut (fileName, node, groupList, query) {
       `height: ${node.height}px`,
     )
     // 因为手机页面需要计算的原因所以用js控制显示
-    styleData = `.root {${styleList.join('; ')};position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;opacity: 0;}\r\n      `
-    domHtml = `<div class="swg root" id="root" width="${node.width}" height="${node.height}">`
+    styleData = `.swg-root {${styleList.join('; ')};position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;opacity: 0;}\r\n      `
+    domHtml = `<div class="swg swg-root" id="swgRoot" width="${node.width}" height="${node.height}">`
   } else {
     // 从文件缓存中取出是否以前生成过此图层
     const layerId = getLayerID(node.layer)

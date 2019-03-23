@@ -2,7 +2,7 @@
   function getSize () {
     var clientWidth = document.body.clientWidth
     var clientHeight = document.body.clientHeight
-    var root = document.getElementById('root')
+    var root = document.getElementById('swgRoot')
     var rootWidth = root.getAttribute('width')
     var rootHeight = root.getAttribute('height')
     // console.log(clientWidth / clientHeight)
@@ -12,8 +12,12 @@
     var CRH = clientHeight / rootHeight
     // console.log(CRW, CRH)
     var min = CRW > CRH ? CRH : CRW
-    root.style.width = rootWidth * min + 'px'
-    root.style.height = rootHeight * min + 'px'
+    var rootList = document.getElementsByClassName('swg-root')
+    for (var ind = 0; ind < rootList.length; ind++) {
+      var element = rootList[ind]
+      element.style.width = rootWidth * min + 'px'
+      element.style.height = rootHeight * min + 'px'
+    }
     root.style.opacity = 1
   }
   var resizeTimer = null;

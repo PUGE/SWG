@@ -26,7 +26,7 @@ let temple = `
         margin: 0;
         font-size: 24px;
       }
-      .root {
+      .swg-root {
         overflow: hidden;
         position: relative;
       }
@@ -126,7 +126,7 @@ function make (query, fileName) {
         <script>
           window.onload = function() {
             getSize()
-            var root = document.getElementById('root')
+            var root = document.getElementById('swgRoot')
             root.style.opacity = 1
           }
         </script>
@@ -152,9 +152,9 @@ function make (query, fileName) {
         <script>
           window.onload = function() {
             getSize()
-            var root = document.getElementById('root')
+            var root = document.getElementById('swgRoot')
             // 注册swiper
-            var mySwiper = new Swiper ('.root', {
+            var mySwiper = new Swiper ('#swgRoot', {
               direction : 'vertical',
               on:{
                 init: function(){

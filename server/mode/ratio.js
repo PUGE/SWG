@@ -27,8 +27,8 @@ function ratioOutPut (fileName, node, groupList, query) {
   if (node.isRoot()) {
     // 根节点样式
     styleList.push('position: relative', 'width: 100%','height: 100%')
-    styleData = `.root {${styleList.join('; ')};}\r\n      `
-    domHtml = `<div class="swg root">`
+    styleData = `.swg-root {${styleList.join('; ')};}\r\n      `
+    domHtml = `<div class="swg swg-root">`
   } else {
     // 如果不是根节点 会有上下左右位置
     styleList.push(

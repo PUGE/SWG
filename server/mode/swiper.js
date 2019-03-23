@@ -68,10 +68,12 @@ function animateOutPut (fileName, node, groupList, query) {
       `height: 100%`,
     )
     // 因为手机页面需要计算的原因所以用js控制显示
-    styleData = `.root {${styleList.join('; ')};margin: auto;}
+    styleData = `.swg-root {${styleList.join('; ')};margin: auto;}
+          #swgRoot {max-width: 100%;max-height: 100%;}
           .swiper-wrapper {width: 100%; height: 100%;}
+          .swiper-page {width: 100%; height: 100%;position: absolute;left: 0;right: 0;top: 0;bottom: 0;margin: auto;}
     `
-    domHtml = `<div class="swg root" id="root" width="${node.width}" height="${node.height}">\r\n      <div class="swiper-wrapper">`
+    domHtml = `<div class="swg swg-root" id="swgRoot" width="${node.width}" height="${node.height}">\r\n      <div class="swiper-wrapper">`
   } else {
     // 是背景吗
     const WC = node.width  + node.left - node.right
@@ -93,7 +95,7 @@ function animateOutPut (fileName, node, groupList, query) {
     styleData = `.swg-${groupList.join('-')} {${styleList.join('; ')};}\r\n      `
     // 如果是切换页需要多包裹一层
     if (isSlide) {
-      domHtml = '\r\n        <div class="swiper-slide">'
+      domHtml = '\r\n        <div class="swiper-slide">\r\n        <div class="swiper-page swg-root">'
     } else {
       domHtml = ''
     }
@@ -149,7 +151,7 @@ function animateOutPut (fileName, node, groupList, query) {
     styleData += `.swg-${groupListCopy.join('-')} {${styleList.join('; ')};}\r\n      `
     
   }
-  domHtml += `\r\n        </div>\r\n        </div>`
+  domHtml += `\r\n        </div>\r\n        </div>\r\n        </div>`
   return {
     html: domHtml,
     style: styleData
