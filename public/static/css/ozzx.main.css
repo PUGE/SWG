@@ -188,3 +188,34 @@ body, html, .ox {
   width: 45px;
   height: 45px;
 }
+
+.ox-show .qr-box {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 0;
+  top: 0;
+}
+
+.ox-show .qr {
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+}
+
+.ox-show .qr-button {
+  position: fixed;
+  right: 10px;
+  cursor: pointer;
+  bottom: 60px;
+  width: 45px;
+  height: 45px;
+}

@@ -22,6 +22,10 @@ module.exports = {
   ],
   // 使用到的外部脚本清单
   scriptList: [
+    {
+      name: "QR",
+      src: "http://cunchu.site/swg/qrcode.min.js"
+    }
   ],
   // 使用到的样式列表
   styleList: [
@@ -65,7 +69,7 @@ module.exports = {
       // 输出文件自动追加版本号，可以用来消除缓存
       outFileAddVersion: false
     },
-    serverPort: 8000,
+    serverPort: 8001,
     // 静态文件服务
     server: true,
     // 自动重新加载

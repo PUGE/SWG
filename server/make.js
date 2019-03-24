@@ -93,7 +93,7 @@ function make (query, fileName) {
   const treeLength = psd.tree().descendants().length
 
   console.log(`图层个数: ${treeLength}`)
-  console.log(`输出模式: ${query.mode}`)
+  console.log(`输出模式:`, query)
   console.log(`图像宽度: ${psd.header.cols}, 图像高度: ${psd.header.rows}`)
   let domHtml = ``
   let styleData = ``
@@ -120,7 +120,7 @@ function make (query, fileName) {
       domHtml += outPut.html
       styleData += outPut.style
       // 手机页面有自己的js代码
-      // styleData += `\r\n.bg{ position: fixed;background-size: 100%; }`
+      styleData += `\r\n.bg{ position: fixed;background-size: 100%; }`
       let fileData = fs.readFileSync(`./code/phone/${query.adaptation}.temple`, 'utf8')
       fileData += `
         <script>

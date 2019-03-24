@@ -234,3 +234,838 @@
 [2019-03-23T16:48:24.320] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\download.svg
 [2019-03-23T16:48:24.320] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\progress.svg
 [2019-03-23T16:48:24.320] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-23T17:47:47.924] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-23T17:47:47.927] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-23T17:47:47.927] [INFO] main.js - 首次启动!
+[2019-03-23T17:47:47.927] [INFO] main.js - 生成版本号: 6om1zpyil7w
+[2019-03-23T17:47:47.930] [INFO] main.js - 清理资源文件夹: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-23T17:47:47.930] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-23T17:47:47.931] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-23T17:47:47.931] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-23T17:47:47.931] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-23T17:47:47.931] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-23T17:47:48.138] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-23T17:47:48.139] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\resource
+[2019-03-23T17:47:48.140] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\resource
+[2019-03-23T17:47:48.155] [INFO] main.js - 工程中包含多个页面!
+[2019-03-23T17:47:48.156] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\css
+[2019-03-23T17:47:48.156] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\css
+[2019-03-23T17:47:48.156] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-23T17:47:48.157] [INFO] main.js - 包含有页面切换动画!
+[2019-03-23T17:47:48.157] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-23T17:47:49.254] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\js
+[2019-03-23T17:47:49.254] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\js
+[2019-03-23T17:47:49.255] [DEBUG] main.js - 处理引用脚本: []
+[2019-03-23T17:47:49.255] [DEBUG] main.js - 没有使用到外部脚本!
+[2019-03-23T17:47:49.255] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-23T17:47:49.462] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\main.css
+[2019-03-23T17:47:49.462] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-23T17:47:49.463] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-23T17:47:49.463] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-23T17:47:49.465] [INFO] main.js - Compile successfully, Use time: 1541 msec!
+[2019-03-23T17:47:49.467] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-23T17:47:49.467] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-23T17:47:49.467] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\main.css
+[2019-03-23T17:47:49.468] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\progress.svg
+[2019-03-23T17:47:49.468] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\download.svg
+[2019-03-23T17:47:49.468] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-23T17:48:36.624] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-23T17:48:36.626] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-23T17:48:36.627] [INFO] main.js - 首次启动!
+[2019-03-23T17:48:36.627] [INFO] main.js - 生成版本号: nd3j1iq2wcc
+[2019-03-23T17:48:36.629] [INFO] main.js - 清理资源文件夹: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-23T17:48:36.630] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-23T17:48:36.630] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-23T17:48:36.630] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-23T17:48:36.630] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-23T17:48:36.630] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-23T17:48:36.822] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-23T17:48:36.823] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\resource
+[2019-03-23T17:48:36.824] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\resource
+[2019-03-23T17:48:36.840] [INFO] main.js - 工程中包含多个页面!
+[2019-03-23T17:48:36.840] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\css
+[2019-03-23T17:48:36.841] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\css
+[2019-03-23T17:48:36.841] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-23T17:48:36.842] [INFO] main.js - 包含有页面切换动画!
+[2019-03-23T17:48:36.842] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-23T17:48:37.851] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\js
+[2019-03-23T17:48:37.851] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\js
+[2019-03-23T17:48:37.852] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\pack\core\debug\autoReload.js
+[2019-03-23T17:48:37.853] [DEBUG] main.js - 处理引用脚本: []
+[2019-03-23T17:48:37.853] [DEBUG] main.js - 没有使用到外部脚本!
+[2019-03-23T17:48:37.853] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-23T17:48:37.853] [INFO] main.js - 监控文件夹变化: C:\Users\my\Documents\GitHub\SWG\client\src
+[2019-03-23T17:48:37.865] [INFO] main.js - 服务器运行在: 127.0.0.1:8000
+[2019-03-23T17:48:38.075] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\main.css
+[2019-03-23T17:48:38.075] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-23T17:48:38.075] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-23T17:48:38.075] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-23T17:48:38.077] [INFO] main.js - Compile successfully, Use time: 1453 msec!
+[2019-03-23T17:48:38.084] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\pack\core\debug\autoReload.js
+[2019-03-23T17:48:38.084] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-23T17:48:38.085] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-23T17:48:38.085] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\main.css
+[2019-03-23T17:48:38.086] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\progress.svg
+[2019-03-23T17:48:38.086] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\js\autoReload.js
+[2019-03-23T17:48:38.086] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\download.svg
+[2019-03-23T17:48:38.086] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-23T17:49:47.250] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-23T17:49:47.252] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-23T17:49:47.252] [INFO] main.js - 首次启动!
+[2019-03-23T17:49:47.252] [INFO] main.js - 生成版本号: hilmnelmo2q
+[2019-03-23T17:49:47.255] [INFO] main.js - 清理资源文件夹: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-23T17:49:47.256] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-23T17:49:47.256] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-23T17:49:47.256] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-23T17:49:47.256] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-23T17:49:47.256] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-23T17:49:47.465] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-23T17:49:47.466] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\resource
+[2019-03-23T17:49:47.466] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\resource
+[2019-03-23T17:49:47.483] [INFO] main.js - 工程中包含多个页面!
+[2019-03-23T17:49:47.484] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\css
+[2019-03-23T17:49:47.484] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\css
+[2019-03-23T17:49:47.484] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-23T17:49:47.486] [INFO] main.js - 包含有页面切换动画!
+[2019-03-23T17:49:47.486] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-23T17:49:48.503] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\js
+[2019-03-23T17:49:48.503] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\js
+[2019-03-23T17:49:48.504] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\pack\core\debug\autoReload.js
+[2019-03-23T17:49:48.505] [DEBUG] main.js - 处理引用脚本: []
+[2019-03-23T17:49:48.505] [DEBUG] main.js - 没有使用到外部脚本!
+[2019-03-23T17:49:48.505] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-23T17:49:48.505] [INFO] main.js - 监控文件夹变化: C:\Users\my\Documents\GitHub\SWG\client\src
+[2019-03-23T17:49:48.517] [INFO] main.js - 服务器运行在: 127.0.0.1:8000
+[2019-03-23T17:49:48.729] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\main.css
+[2019-03-23T17:49:48.729] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-23T17:49:48.729] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-23T17:49:48.730] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-23T17:49:48.732] [INFO] main.js - Compile successfully, Use time: 1482 msec!
+[2019-03-23T17:49:48.742] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\pack\core\debug\autoReload.js
+[2019-03-23T17:49:48.742] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-23T17:49:48.742] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-23T17:49:48.742] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\main.css
+[2019-03-23T17:49:48.744] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\progress.svg
+[2019-03-23T17:49:48.744] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\js\autoReload.js
+[2019-03-23T17:49:48.744] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-23T17:49:48.744] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\download.svg
+[2019-03-23T17:51:30.622] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-23T17:51:30.624] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-23T17:51:30.624] [INFO] main.js - 首次启动!
+[2019-03-23T17:51:30.624] [INFO] main.js - 生成版本号: wk1yay3duds
+[2019-03-23T17:51:30.627] [INFO] main.js - 清理资源文件夹: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-23T17:51:30.627] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-23T17:51:30.627] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-23T17:51:30.627] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-23T17:51:30.628] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-23T17:51:30.628] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-23T17:51:30.814] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-23T17:51:30.815] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\resource
+[2019-03-23T17:51:30.816] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\resource
+[2019-03-23T17:51:30.831] [INFO] main.js - 工程中包含多个页面!
+[2019-03-23T17:51:30.832] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\css
+[2019-03-23T17:51:30.832] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\css
+[2019-03-23T17:51:30.832] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-23T17:51:30.833] [INFO] main.js - 包含有页面切换动画!
+[2019-03-23T17:51:30.834] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-23T17:51:31.863] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\js
+[2019-03-23T17:51:31.863] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\js
+[2019-03-23T17:51:31.864] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\pack\core\debug\autoReload.js
+[2019-03-23T17:51:31.865] [DEBUG] main.js - 处理引用脚本: []
+[2019-03-23T17:51:31.865] [DEBUG] main.js - 没有使用到外部脚本!
+[2019-03-23T17:51:31.865] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-23T17:51:31.865] [INFO] main.js - 监控文件夹变化: C:\Users\my\Documents\GitHub\SWG\client\src
+[2019-03-23T17:51:31.878] [INFO] main.js - 服务器运行在: 127.0.0.1:8000
+[2019-03-23T17:51:32.092] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\main.css
+[2019-03-23T17:51:32.092] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-23T17:51:32.093] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-23T17:51:32.093] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-23T17:51:32.095] [INFO] main.js - Compile successfully, Use time: 1474 msec!
+[2019-03-23T17:51:32.102] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\pack\core\debug\autoReload.js
+[2019-03-23T17:51:32.103] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-23T17:51:32.103] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-23T17:51:32.103] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\main.css
+[2019-03-23T17:51:32.104] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\js\autoReload.js
+[2019-03-23T17:51:32.104] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\download.svg
+[2019-03-23T17:51:32.104] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\progress.svg
+[2019-03-23T17:51:32.104] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-24T17:55:42.726] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T17:55:42.728] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T17:55:42.728] [INFO] main.js - 首次启动!
+[2019-03-24T17:55:42.728] [INFO] main.js - 生成版本号: zkt4q1ml30q
+[2019-03-24T17:55:42.731] [INFO] main.js - 清理资源文件夹: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-24T17:55:42.731] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-24T17:55:42.732] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-24T17:55:42.732] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T17:55:42.732] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T17:55:42.732] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T17:55:42.956] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T17:55:42.960] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\resource
+[2019-03-24T17:55:42.961] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\resource
+[2019-03-24T17:55:42.976] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T17:55:42.983] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\css
+[2019-03-24T17:55:42.983] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\css
+[2019-03-24T17:55:42.983] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T17:55:42.984] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T17:55:42.984] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T17:55:44.100] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\js
+[2019-03-24T17:55:44.101] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\js
+[2019-03-24T17:55:44.102] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\pack\core\debug\autoReload.js
+[2019-03-24T17:55:44.102] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T17:55:44.102] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T17:55:44.102] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T17:55:44.102] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T17:55:44.102] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T17:55:44.102] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T17:55:44.102] [INFO] main.js - 监控文件夹变化: C:\Users\my\Documents\GitHub\SWG\client\src
+[2019-03-24T17:55:44.114] [INFO] main.js - 服务器运行在: 127.0.0.1:8000
+[2019-03-24T17:55:44.321] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\main.css
+[2019-03-24T17:55:44.321] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T17:55:44.322] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T17:55:44.322] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T17:55:44.324] [INFO] main.js - Compile successfully, Use time: 1599 msec!
+[2019-03-24T17:55:44.330] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\pack\core\debug\autoReload.js
+[2019-03-24T17:55:44.331] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T17:55:44.331] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T17:55:44.331] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\main.css
+[2019-03-24T17:55:44.332] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\js\autoReload.js
+[2019-03-24T17:55:44.332] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\progress.svg
+[2019-03-24T17:55:44.332] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\download.svg
+[2019-03-24T17:55:44.332] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-24T17:56:33.913] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T17:56:33.916] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T17:56:33.916] [INFO] main.js - 首次启动!
+[2019-03-24T17:56:33.916] [INFO] main.js - 生成版本号: kjtsmnyuynk
+[2019-03-24T17:56:33.920] [INFO] main.js - 清理资源文件夹: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-24T17:56:33.920] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-24T17:56:33.920] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-24T17:56:33.920] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T17:56:33.920] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T17:56:33.920] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T17:56:34.118] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T17:56:34.119] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\resource
+[2019-03-24T17:56:34.119] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\resource
+[2019-03-24T17:56:34.135] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T17:56:34.136] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\css
+[2019-03-24T17:56:34.136] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\css
+[2019-03-24T17:56:34.136] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T17:56:34.137] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T17:56:34.137] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T17:56:35.092] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\js
+[2019-03-24T17:56:35.092] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\js
+[2019-03-24T17:56:35.093] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\pack\core\debug\autoReload.js
+[2019-03-24T17:56:35.093] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T17:56:35.093] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T17:56:35.093] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T17:56:35.093] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T17:56:35.093] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T17:56:35.094] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T17:56:35.094] [INFO] main.js - 监控文件夹变化: C:\Users\my\Documents\GitHub\SWG\client\src
+[2019-03-24T17:56:35.105] [INFO] main.js - 服务器运行在: 127.0.0.1:8001
+[2019-03-24T17:56:35.314] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\main.css
+[2019-03-24T17:56:35.314] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T17:56:35.314] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T17:56:35.314] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T17:56:35.316] [INFO] main.js - Compile successfully, Use time: 1403 msec!
+[2019-03-24T17:56:35.323] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\pack\core\debug\autoReload.js
+[2019-03-24T17:56:35.323] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T17:56:35.323] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T17:56:35.324] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\main.css
+[2019-03-24T17:56:35.325] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\js\autoReload.js
+[2019-03-24T17:56:35.325] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\progress.svg
+[2019-03-24T17:56:35.325] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-24T17:56:35.325] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\download.svg
+[2019-03-24T17:59:57.287] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T17:59:57.289] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T17:59:57.289] [INFO] main.js - 首次启动!
+[2019-03-24T17:59:57.289] [INFO] main.js - 生成版本号: vp70prkfa8
+[2019-03-24T17:59:57.292] [INFO] main.js - 清理资源文件夹: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-24T17:59:57.293] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-24T17:59:57.293] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-24T17:59:57.293] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T17:59:57.293] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T17:59:57.293] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T17:59:57.478] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T17:59:57.479] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\resource
+[2019-03-24T17:59:57.479] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\resource
+[2019-03-24T17:59:57.495] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T17:59:57.495] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\css
+[2019-03-24T17:59:57.496] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\css
+[2019-03-24T17:59:57.496] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T17:59:57.497] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T17:59:57.497] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T17:59:58.436] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\js
+[2019-03-24T17:59:58.436] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\js
+[2019-03-24T17:59:58.437] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\pack\core\debug\autoReload.js
+[2019-03-24T17:59:58.437] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T17:59:58.437] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T17:59:58.437] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T17:59:58.437] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T17:59:58.437] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T17:59:58.438] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T17:59:58.438] [INFO] main.js - 监控文件夹变化: C:\Users\my\Documents\GitHub\SWG\client\src
+[2019-03-24T17:59:58.449] [INFO] main.js - 服务器运行在: 127.0.0.1:8001
+[2019-03-24T17:59:58.658] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\main.css
+[2019-03-24T17:59:58.658] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T17:59:58.658] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T17:59:58.658] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T17:59:58.660] [INFO] main.js - Compile successfully, Use time: 1373 msec!
+[2019-03-24T17:59:58.667] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\pack\core\debug\autoReload.js
+[2019-03-24T17:59:58.667] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T17:59:58.667] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T17:59:58.667] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\main.css
+[2019-03-24T17:59:58.668] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\js\autoReload.js
+[2019-03-24T17:59:58.668] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\progress.svg
+[2019-03-24T17:59:58.668] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-24T17:59:58.668] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\download.svg
+[2019-03-24T18:00:31.371] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:00:31.373] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:00:31.374] [INFO] main.js - 首次启动!
+[2019-03-24T18:00:31.374] [INFO] main.js - 生成版本号: 97zfi2vwllv
+[2019-03-24T18:00:31.377] [INFO] main.js - 清理资源文件夹: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-24T18:00:31.377] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-24T18:00:31.377] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static
+[2019-03-24T18:00:31.377] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:00:31.377] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:00:31.377] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:00:31.567] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:00:31.568] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\resource
+[2019-03-24T18:00:31.568] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\resource
+[2019-03-24T18:00:31.584] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:00:31.585] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\css
+[2019-03-24T18:00:31.585] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\css
+[2019-03-24T18:00:31.585] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:00:31.586] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:00:31.586] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:00:32.543] [INFO] tool.js - 文件夹不存在: C:\Users\my\Documents\GitHub\SWG\public\static\js
+[2019-03-24T18:00:32.543] [INFO] tool.js - 创建文件夹: C:\Users\my\Documents\GitHub\SWG\public\static\js
+[2019-03-24T18:00:32.544] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\pack\core\debug\autoReload.js
+[2019-03-24T18:00:32.544] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:00:32.544] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:00:32.544] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:00:32.547] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:00:32.547] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:00:32.547] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:00:32.547] [INFO] main.js - 监控文件夹变化: C:\Users\my\Documents\GitHub\SWG\client\src
+[2019-03-24T18:00:32.559] [INFO] main.js - 服务器运行在: 127.0.0.1:8001
+[2019-03-24T18:00:32.764] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\main.css
+[2019-03-24T18:00:32.764] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:00:32.764] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:00:32.764] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:00:32.766] [INFO] main.js - Compile successfully, Use time: 1395 msec!
+[2019-03-24T18:00:32.773] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\pack\core\debug\autoReload.js
+[2019-03-24T18:00:32.773] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:00:32.773] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:00:32.773] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\main.css
+[2019-03-24T18:00:32.774] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\js\autoReload.js
+[2019-03-24T18:00:32.774] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\progress.svg
+[2019-03-24T18:00:32.774] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\download.svg
+[2019-03-24T18:00:32.774] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-24T18:02:25.423] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:02:25.423] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:02:25.423] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:02:25.423] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:02:25.424] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:02:25.424] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:02:25.424] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:02:25.487] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:02:25.490] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:02:25.491] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:02:25.491] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:02:25.491] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:02:25.663] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:02:25.663] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:02:25.663] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:02:25.663] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:02:25.663] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:02:25.663] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:02:25.808] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:02:25.808] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:02:25.808] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:02:25.809] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:02:25.810] [INFO] main.js - Compile successfully, Use time: 387 msec!
+[2019-03-24T18:02:57.796] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:02:57.796] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:02:57.796] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:02:57.796] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:02:57.796] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:02:57.796] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:02:57.797] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:02:57.852] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:02:57.856] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:02:57.857] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:02:57.858] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:02:57.858] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:02:57.986] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:02:57.986] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:02:57.986] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:02:57.986] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:02:57.986] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:02:57.986] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:02:58.125] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:02:58.125] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:02:58.125] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:02:58.125] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:02:58.126] [INFO] main.js - Compile successfully, Use time: 330 msec!
+[2019-03-24T18:05:49.750] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:05:49.750] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:05:49.750] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:05:49.750] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:05:49.750] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:05:49.750] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:05:49.751] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:05:49.808] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:05:49.811] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:05:49.811] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:05:49.812] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:05:49.812] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:05:49.969] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:05:49.969] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:05:49.969] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:05:49.969] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:05:49.969] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:05:49.969] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:05:50.111] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:05:50.111] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:05:50.111] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:05:50.111] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:05:50.113] [INFO] main.js - Compile successfully, Use time: 363 msec!
+[2019-03-24T18:06:58.186] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:06:58.186] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:06:58.186] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:06:58.186] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:06:58.186] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:06:58.186] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:06:58.186] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:06:58.240] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:06:58.244] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:06:58.245] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:06:58.246] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:06:58.246] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:06:58.339] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:06:58.340] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:06:58.340] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:06:58.340] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:06:58.340] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:06:58.340] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:06:58.519] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:06:58.519] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:06:58.519] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:06:58.519] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:06:58.521] [INFO] main.js - Compile successfully, Use time: 335 msec!
+[2019-03-24T18:07:11.058] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:07:11.058] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:07:11.058] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:07:11.058] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:07:11.058] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:07:11.058] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:07:11.058] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:07:11.108] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:07:11.111] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:07:11.112] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:07:11.112] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:07:11.113] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:07:11.189] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:07:11.189] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:07:11.189] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:07:11.189] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:07:11.189] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:07:11.189] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:07:11.320] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:07:11.320] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:07:11.321] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:07:11.321] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:07:11.322] [INFO] main.js - Compile successfully, Use time: 264 msec!
+[2019-03-24T18:09:35.808] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:09:35.808] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:09:35.808] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:09:35.808] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:09:35.808] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:09:35.808] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:09:35.808] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:09:35.854] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:09:35.857] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:09:35.858] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:09:35.859] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:09:35.859] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:09:35.931] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:09:35.931] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:09:35.931] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:09:35.931] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:09:35.931] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:09:35.931] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:09:36.059] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:09:36.060] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:09:36.060] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:09:36.060] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:09:36.061] [INFO] main.js - Compile successfully, Use time: 253 msec!
+[2019-03-24T18:09:56.705] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:09:56.705] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:09:56.705] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:09:56.705] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:09:56.705] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:09:56.706] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:09:56.706] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:09:56.772] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:09:56.775] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:09:56.775] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:09:56.776] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:09:56.776] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:09:56.914] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:09:56.914] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:09:56.914] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:09:56.914] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:09:56.914] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:09:56.914] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:09:57.067] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:09:57.068] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:09:57.068] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:09:57.068] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:09:57.069] [INFO] main.js - Compile successfully, Use time: 364 msec!
+[2019-03-24T18:10:11.007] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:10:11.007] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:10:11.007] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:10:11.007] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:10:11.007] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:10:11.007] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:10:11.007] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:10:11.051] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:10:11.057] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:10:11.057] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:10:11.058] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:10:11.058] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:10:11.132] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:10:11.132] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:10:11.132] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:10:11.132] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:10:11.132] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:10:11.132] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:10:11.260] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:10:11.261] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:10:11.261] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:10:11.261] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:10:11.262] [INFO] main.js - Compile successfully, Use time: 255 msec!
+[2019-03-24T18:10:17.174] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:10:17.174] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:10:17.174] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:10:17.174] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:10:17.174] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:10:17.174] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:10:17.174] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:10:17.217] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:10:17.221] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:10:17.222] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:10:17.223] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:10:17.223] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:10:17.344] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:10:17.344] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:10:17.344] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:10:17.344] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:10:17.344] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:10:17.344] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:10:17.483] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:10:17.483] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:10:17.483] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:10:17.483] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:10:17.484] [INFO] main.js - Compile successfully, Use time: 310 msec!
+[2019-03-24T18:10:26.803] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:10:26.803] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:10:26.803] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:10:26.803] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:10:26.803] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:10:26.803] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:10:26.803] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:10:26.846] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:10:26.852] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:10:26.852] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:10:26.853] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:10:26.853] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:10:26.928] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:10:26.928] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:10:26.928] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:10:26.928] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:10:26.928] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:10:26.928] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:10:27.056] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:10:27.056] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:10:27.057] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:10:27.057] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:10:27.058] [INFO] main.js - Compile successfully, Use time: 255 msec!
+[2019-03-24T18:10:41.392] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:10:41.392] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:10:41.392] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:10:41.392] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:10:41.392] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:10:41.392] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:10:41.392] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:10:41.441] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:10:41.444] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:10:41.444] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:10:41.445] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:10:41.445] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:10:41.570] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:10:41.570] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:10:41.570] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:10:41.570] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:10:41.570] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:10:41.570] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:10:41.705] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:10:41.705] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:10:41.706] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:10:41.706] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:10:41.707] [INFO] main.js - Compile successfully, Use time: 315 msec!
+[2019-03-24T18:11:08.362] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:11:08.362] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:11:08.362] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:11:08.362] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:11:08.362] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:11:08.362] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:11:08.362] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:11:08.408] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:11:08.413] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:11:08.413] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:11:08.414] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:11:08.414] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:11:08.489] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:11:08.489] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:11:08.489] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:11:08.489] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:11:08.489] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:11:08.489] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:11:08.617] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:11:08.617] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:11:08.617] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:11:08.618] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:11:08.619] [INFO] main.js - Compile successfully, Use time: 257 msec!
+[2019-03-24T18:11:26.561] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:11:26.561] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:11:26.561] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:11:26.561] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:11:26.561] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:11:26.561] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:11:26.561] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:11:26.606] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:11:26.610] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:11:26.611] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:11:26.611] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:11:26.612] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:11:26.746] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:11:26.746] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:11:26.746] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:11:26.746] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:11:26.746] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:11:26.746] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:11:26.887] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:11:26.887] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:11:26.887] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:11:26.887] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:11:26.888] [INFO] main.js - Compile successfully, Use time: 327 msec!
+[2019-03-24T18:11:59.371] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:11:59.371] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:11:59.371] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:11:59.371] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:11:59.371] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:11:59.371] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:11:59.371] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:11:59.417] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:11:59.422] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:11:59.423] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:11:59.423] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:11:59.423] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:11:59.501] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:11:59.501] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:11:59.501] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:11:59.501] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:11:59.501] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:11:59.501] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:11:59.630] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:11:59.630] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:11:59.630] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:11:59.630] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:11:59.631] [INFO] main.js - Compile successfully, Use time: 260 msec!
+[2019-03-24T18:12:27.796] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:12:27.796] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:12:27.796] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:12:27.796] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:12:27.796] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:12:27.797] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:12:27.797] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:12:27.841] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:12:27.844] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:12:27.845] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:12:27.845] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:12:27.845] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:12:27.976] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:12:27.976] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:12:27.976] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:12:27.976] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:12:27.976] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:12:27.976] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:12:28.111] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:12:28.111] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:12:28.111] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:12:28.112] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:12:28.113] [INFO] main.js - Compile successfully, Use time: 317 msec!
+[2019-03-24T18:14:16.157] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:14:16.157] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:14:16.157] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:14:16.157] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:14:16.157] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:14:16.157] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:14:16.157] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:14:16.210] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:14:16.215] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:14:16.216] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:14:16.216] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:14:16.216] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:14:16.373] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:14:16.373] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:14:16.374] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:14:16.374] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:14:16.374] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:14:16.374] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:14:16.514] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:14:16.514] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:14:16.514] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:14:16.514] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:14:16.516] [INFO] main.js - Compile successfully, Use time: 359 msec!
+[2019-03-24T18:15:03.924] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:15:03.924] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:15:03.924] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:15:03.924] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:15:03.924] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:15:03.924] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:15:03.924] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:15:03.967] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:15:03.969] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:15:03.970] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:15:03.971] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:15:03.971] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:15:04.053] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:15:04.053] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:15:04.053] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:15:04.053] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:15:04.053] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:15:04.053] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:15:04.219] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:15:04.219] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:15:04.220] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:15:04.220] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:15:04.222] [INFO] main.js - Compile successfully, Use time: 298 msec!
+[2019-03-24T18:15:28.672] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:15:28.672] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:15:28.672] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:15:28.672] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:15:28.672] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:15:28.672] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:15:28.672] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:15:28.720] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:15:28.722] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:15:28.723] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:15:28.724] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:15:28.724] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:15:28.864] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:15:28.864] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:15:28.864] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:15:28.864] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:15:28.864] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:15:28.864] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:15:28.999] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:15:28.999] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:15:28.999] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:15:28.999] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:15:29.001] [INFO] main.js - Compile successfully, Use time: 329 msec!
+[2019-03-24T18:17:28.514] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:17:28.514] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:17:28.514] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:17:28.514] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:17:28.514] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:17:28.514] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:17:28.514] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:17:28.561] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:17:28.566] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:17:28.566] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:17:28.567] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:17:28.567] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:17:28.649] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:17:28.649] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:17:28.649] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:17:28.649] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:17:28.649] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:17:28.649] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:17:28.778] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:17:28.778] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:17:28.778] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:17:28.778] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:17:28.779] [INFO] main.js - Compile successfully, Use time: 265 msec!
+[2019-03-24T18:22:18.902] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:22:18.902] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:22:18.902] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:22:18.902] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:22:18.902] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:22:18.902] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:22:18.902] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:22:18.948] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:22:18.952] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:22:18.952] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:22:18.953] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:22:18.953] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:22:19.077] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:22:19.077] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:22:19.077] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:22:19.077] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:22:19.077] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:22:19.077] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:22:19.214] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:22:19.214] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:22:19.214] [INFO] tool.js - 读取文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-24T18:22:19.214] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:22:19.215] [INFO] main.js - Compile successfully, Use time: 313 msec!
+[2019-03-24T18:22:19.216] [INFO] tool.js - 读取成功: C:\Users\my\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-24T18:22:19.216] [INFO] tool.js - 写入文件: C:\Users\my\Documents\GitHub\SWG\public\static\resource\qr.svg
+[2019-03-24T18:22:53.004] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:22:53.004] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:22:53.004] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:22:53.004] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:22:53.004] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:22:53.004] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:22:53.004] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:22:53.041] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:22:53.045] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:22:53.046] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:22:53.046] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:22:53.046] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:22:53.136] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:22:53.136] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:22:53.136] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:22:53.136] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:22:53.136] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:22:53.136] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:22:53.268] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:22:53.268] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:22:53.268] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-24T18:22:53.269] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:22:53.270] [INFO] main.js - Compile successfully, Use time: 266 msec!
+[2019-03-24T18:23:50.614] [INFO] main.js - file change: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:23:50.614] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-24T18:23:50.614] [INFO] main.js - 程序运行目录: C:\Users\my\Documents\GitHub\SWG\client
+[2019-03-24T18:23:50.614] [INFO] main.js - 刷新模式,变化目录: C:\Users\my\Documents\GitHub\SWG\client\src\page\show.page
+[2019-03-24T18:23:50.614] [INFO] main.js - 读取模板文件: C:\Users\my\Documents\GitHub\pack\index.html
+[2019-03-24T18:23:50.614] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-24T18:23:50.614] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-24T18:23:50.664] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-24T18:23:50.667] [INFO] main.js - 工程中包含多个页面!
+[2019-03-24T18:23:50.668] [INFO] main.js - 写文件: C:\Users\my\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-24T18:23:50.668] [INFO] main.js - 包含有页面切换动画!
+[2019-03-24T18:23:50.668] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-24T18:23:50.790] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-24T18:23:50.790] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-24T18:23:50.790] [DEBUG] main.js - 处理脚本: QR
+[2019-03-24T18:23:50.790] [DEBUG] main.js - 网络脚本: QR
+[2019-03-24T18:23:50.790] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-24T18:23:50.790] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:23:50.923] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-24T18:23:50.924] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-24T18:23:50.924] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-24T18:23:50.924] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-24T18:23:50.925] [INFO] main.js - Compile successfully, Use time: 311 msec!

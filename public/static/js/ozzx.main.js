@@ -120,6 +120,9 @@ function pgNameHandler(dom) {
           }
 
           clickFor = clickFor.replace('(' + parameterList + ')', '');
+        } else {
+          // 解决 @click="xxx()"会造成的问题
+          clickFor = clickFor.replace('()', '');
         } // console.log(newPageFunction)
         // 如果有方法,则运行它
 
@@ -374,6 +377,16 @@ window.ozzx = {
         // 获取url参数
         $dom('show').src = './temp/' + $tool.getQueryString('id');
         $dom('show').style.display = 'block';
+        setTimeout(function () {
+          new QRCode(document.getElementById("qr"), {
+            text: "http://" + window.location.host + '/temp/' + $tool.getQueryString('id'),
+            width: 128,
+            height: 128,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+          });
+        }, 500);
       },
       "down": function down() {
         var httpRequest = new XMLHttpRequest();
@@ -394,6 +407,13 @@ window.ozzx = {
             }
           }
         };
+      },
+      "hideQR": function hideQR() {
+        console.log(this);
+        this.$el.style.display = 'none';
+      },
+      "qrCode": function qrCode() {
+        $dom('qrBox').style.display = 'block';
       }
     }
   },

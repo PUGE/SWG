@@ -1,7 +1,11 @@
 <template>
   <div class="show-box">
     <iframe @name="show"></iframe>
+    <img class="qr-button" @click="qrCode" src="@&qr.svg&"/>
     <img class="down" @click="down" src="@&download.svg&"/>
+    <div class="qr-box" @name="qrBox" @click="hideQR">
+      <div class="qr" id="qr"></div>
+    </div>
   </div>
 </template>
 
@@ -13,6 +17,16 @@
       // 获取url参数
       $dom('show').src = './temp/' + $tool.getQueryString('id')
       $dom('show').style.display = 'block'
+      setTimeout(() => {
+        new QRCode(document.getElementById("qr"), {
+          text: "http://" + window.location.host + '/temp/' + $tool.getQueryString('id'),
+          width: 128,
+          height: 128,
+          colorDark : "#000000",
+          colorLight : "#ffffff",
+          correctLevel : QRCode.CorrectLevel.H
+        })
+      }, 500)
     },
     down: () => {
       const httpRequest = new XMLHttpRequest()
@@ -31,6 +45,13 @@
           }
         }
       }
+    },
+    hideQR: function () {
+      console.log(this)
+      this.$el.style.display = 'none'
+    },
+    qrCode: () => {
+      $dom('qrBox').style.display = 'block'
     }
   }
 </script>
@@ -49,6 +70,34 @@
   right: 10px;
   cursor: pointer;
   bottom: 10px;
+  width: 45px;
+  height: 45px;
+}
+.qr-box {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 0;
+  top: 0;
+}
+.qr {
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+}
+.qr-button {
+  position: fixed;
+  right: 10px;
+  cursor: pointer;
+  bottom: 60px;
   width: 45px;
   height: 45px;
 }
