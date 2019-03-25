@@ -26,6 +26,9 @@ let temple = `
         margin: 0;
         font-size: 24px;
       }
+      #swgRoot {
+        opacity: 0;
+      }
       .swg-root {
         overflow: hidden;
         position: relative;
