@@ -47,12 +47,18 @@
         <div class="clear"></div>
       </div>
 
-      <div class="swiper-box modle-control card" @name="phone">
+      <div class="swiper-box modle-control card" @name="swiper">
         <div class="title">屏幕适配</div>
         <input type="radio" name="sw" id="sw-control-centrality" value="centrality" @click="changeAdaptation" checked="">
         <label for="sw-control-centrality">中心缩放</label>
         <input type="radio" name="sw" id="sw-control-middle" value="middle" @click="changeAdaptation">
         <label for="sw-control-middle">中央显示</label>
+        <div class="clear"></div>
+        <div class="title">切换形式</div>
+        <input type="radio" name="sd" id="sw-direction-vertical" value="vertical" @click="changeSwitchMode" checked="">
+        <label for="sw-direction-vertical">竖直切换</label>
+        <input type="radio" name="sd" id="sw-direction-horizontal" value="horizontal" @click="changeSwitchMode">
+        <label for="sw-direction-horizontal">水平切换</label>
         <div class="clear"></div>
       </div>
 
@@ -81,7 +87,7 @@
         <label for="bgm-centrality">开启音乐</label>
         <div class="clear"></div>
         <div class="title">音乐链接</div>
-        <input type="text" id="musicSrcInput" value="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/bgm.mp3">
+        <input type="text" id="musicSrcInput" value="https://cunchu.site/swg/bgm.mp3">
       </div>
       
     </div>

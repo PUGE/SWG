@@ -143,19 +143,19 @@ function make (query, fileName) {
       // 手机页面有自己的js代码
       styleData += `
           .layer-1 {margin: auto;}
-          .swiper-slide {width: 100%; overflow: hidden;position: relative;}
+          .swiper-slide {width: 100%; height: 100%; overflow: hidden;position: relative;}
       `
       let fileData = `
-        <link rel="stylesheet" href="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/animate.min.css">
-        <script src="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/swiper.min.js"></script>
-        <script src="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/swiper.animate1.0.3.min.js"></script>
+        <link rel="stylesheet" href="https://cunchu.site/swg/animate.min.css">
+        <script src="https://cunchu.site/swg/swiper.min.js"></script>
+        <script src="https://cunchu.site/swg/swiper.animate1.0.3.min.js"></script>
         <script>
           window.onload = function() {
             getSize()
             var root = document.getElementById('swgRoot')
             // 注册swiper
             var mySwiper = new Swiper ('#swgRoot', {
-              direction : 'vertical',
+              direction : '${query.switchMode}',
               on:{
                 init: function(){
                   swiperAnimateCache(this); //隐藏动画元素 
@@ -183,8 +183,8 @@ function make (query, fileName) {
     domHtml += `
       <audio src="${query.musicSrc}" id="bgm" loop>您的浏览器不支持 audio 标签。</audio>
       <div class="music-box">
-        <img class="music-play" id="musicPlay" onclick="closeMusic()" src="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/music-play.png"/>
-        <img class="music-close" id="musicClose" onclick="palyMusic()" src="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/music-close.png"/>
+        <img class="music-play" id="musicPlay" onclick="closeMusic()" src="https://cunchu.site/swg/music-play.png"/>
+        <img class="music-close" id="musicClose" onclick="palyMusic()" src="https://cunchu.site/swg/music-close.png"/>
       </div>
     `
     htmlTemple = htmlTemple.replace(`<!-- music-output -->`, `

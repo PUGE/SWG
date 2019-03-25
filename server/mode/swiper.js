@@ -70,9 +70,18 @@ function animateOutPut (fileName, node, groupList, query) {
     // 因为手机页面需要计算的原因所以用js控制显示
     styleData = `.swg-root {${styleList.join('; ')};margin: auto;}
           #swgRoot {max-width: 100%;max-height: 100%;}
-          .swiper-wrapper {width: 100%; height: 100%;}
           .swiper-page {width: 100%; height: 100%;position: absolute;left: 0;right: 0;top: 0;bottom: 0;margin: auto;}
     `
+    // 判断是否为横屏切换
+    if (query.switchMode === 'horizontal') {
+      styleData += `
+      .swiper-wrapper {width: ${childrenNodeList.length * 100}%; height: 100%;display: flex;}
+      `
+    } else {
+      styleData += `
+      .swiper-wrapper {width: 100%; height: 100%;}
+      `
+    }
     domHtml = `<div class="swg swg-root" id="swgRoot" width="${node.width}" height="${node.height}">\r\n      <div class="swiper-wrapper">`
   } else {
     // 是背景吗

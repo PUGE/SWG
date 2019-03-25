@@ -33,12 +33,18 @@
         <div class="clear"></div>
       </div>
 
-      <div class="swiper-box modle-control card" @name="phone">
+      <div class="swiper-box modle-control card" @name="swiper">
         <div class="title">屏幕适配</div>
         <input type="radio" name="sw" id="sw-control-centrality" value="centrality" @click="changeAdaptation" checked/>
         <label for="sw-control-centrality">中心缩放</label>
         <input type="radio" name="sw" id="sw-control-middle" value="middle" @click="changeAdaptation"/>
         <label for="sw-control-middle">中央显示</label>
+        <div class="clear"></div>
+        <div class="title">切换形式</div>
+        <input type="radio" name="sd" id="sw-direction-vertical" value="vertical" @click="changeSwitchMode" checked/>
+        <label for="sw-direction-vertical">竖直切换</label>
+        <input type="radio" name="sd" id="sw-direction-horizontal" value="horizontal" @click="changeSwitchMode"/>
+        <label for="sw-direction-horizontal">水平切换</label>
         <div class="clear"></div>
       </div>
 
@@ -67,7 +73,7 @@
         <label for="bgm-centrality">开启音乐</label>
         <div class="clear"></div>
         <div class="title">音乐链接</div>
-        <input type="text" id="musicSrcInput" value="https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/bgm.mp3"/>
+        <input type="text" id="musicSrcInput" value="https://cunchu.site/swg/bgm.mp3"/>
       </div>
       
     </div>
@@ -97,10 +103,12 @@
       output: 'background',
       outText: false,
       compress: true,
+      // 切换模式
+      switchMode: 'vertical',
       // 适配模式
       adaptation: 'real',
       bgm: false,
-      musicSrc: 'https://puge-10017157.cos.ap-shanghai.myqcloud.com/swg/bgm.mp3'
+      musicSrc: 'https://cunchu.site/swg/bgm.mp3'
     },
     created: function () {
       $dom('uploadInput').onchange = () => {
@@ -196,6 +204,13 @@
         this.data.adaptation = this.$el.value
       }
     },
+    changeSwitchMode: function (clear) {
+      console.log('更改切换模式')
+      if (clear) this.hideModleControl()
+      if (this.$el.checked) {
+        this.data.switchMode = this.$el.value
+      }
+    },
     changeOutPut: function () {
       if (this.$el.checked) {
         this.data.output = this.$el.value
@@ -218,7 +233,11 @@
       this.data.mode = name
       this.data.adaptation = defaultValue
       this.hideModleControl()
-      document.getElementsByClassName(name + '-box')[0].style.display = 'block'
+      const activeList = document.getElementsByClassName(name + '-box')
+      for (let ind = 0; ind < activeList.length; ind++) {
+        const element = activeList[ind]
+        element.style.display = 'block'
+      }
       this.data.adaptation = defaultValue
       document.getElementById('control-' + defaultValue).checked = true
     }
@@ -309,7 +328,7 @@ body, html {
   z-index: 2;
   display: none;
   img {
-    width: 30%;
+    width: 160px;
     position: absolute;
     left: 0;
     right: 0;
@@ -323,7 +342,7 @@ body, html {
     line-height: 30px;
     position: absolute;
     width: 100%;
-    top: 30%;
+    top: 160px;
     bottom: 0;
     margin: auto;
     height: 30px;

@@ -20,8 +20,8 @@
       setTimeout(() => {
         new QRCode(document.getElementById("qr"), {
           text: "http://" + window.location.host + '/temp/' + $tool.getQueryString('id'),
-          width: 128,
-          height: 128,
+          width: 150,
+          height: 150,
           colorDark : "#000000",
           colorLight : "#ffffff",
           correctLevel : QRCode.CorrectLevel.H
@@ -83,8 +83,8 @@
   top: 0;
 }
 .qr {
-  width: 128px;
-  height: 128px;
+  width: 150px;
+  height: 150px;
   position: absolute;
   left: 0;
   right: 0;
@@ -92,6 +92,8 @@
   bottom: 0;
   margin: auto;
   z-index: 10;
+  padding: 10px;
+  background-color: white;
 }
 .qr-button {
   position: fixed;

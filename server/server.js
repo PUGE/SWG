@@ -80,6 +80,7 @@ app.post('/uploads', upload.any(), function (request, response, next) {
     compress: request.body.compress === 'true',
     adaptation: request.body.adaptation,
     bgm: request.body.bgm === 'true',
+    switchMode: request.body.switchMode,
     musicSrc: request.body.musicSrc
   }
   // 判断是否传递来了模式
