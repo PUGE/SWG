@@ -16,3 +16,7 @@ Soulless Web Pages - PSD generates web pages
 已知问题:
 1. psd不支持效果
 2. psd文件画布超出情况下可能会出现问题
+
+待修复问题:
+1. 手机动画 文字输出有问题
+2. 手机动画文件夹嵌套有问题
