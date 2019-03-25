@@ -27,7 +27,7 @@ function realOutPut (fileName, node, groupList, query) {
       `height: ${node.psd.header.rows}px`,
     )
     styleData = `.swg-root {${styleList.join('; ')};}\r\n      `
-    domHtml = `<div class="swg swg-root" id="swgRoot" width="${node.width}" height="${node.height}">`
+    domHtml = `<div class="swg swg-root" width="${node.width}" height="${node.height}">`
   } else {
     // 如果不是根节点 会有上下左右位置
     styleList.push(

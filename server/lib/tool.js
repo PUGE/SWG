@@ -68,7 +68,7 @@ function textOutPut (textInfo, styleList, domHtml, groupList) {
   if (textInfo.font.alignment[0]) {
     styleList.push(`text-align: ${textInfo.font.alignment[0]}`)
   }
-  domHtml += `<div class="swg swg-${groupList.join('-')} text item-${groupList[groupList.length - 1]}">${textInfo.value}</div>\r\n    `
+  domHtml += `<div class="swg swg-${groupList.join('-')} text item-${groupList[groupList.length - 1]}">${textInfo.value}`
   return [styleList, domHtml]
 }
 
