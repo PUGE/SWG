@@ -111,7 +111,12 @@ function phoneOutPut (fileName, node, groupList, query) {
     const isBG = leftValue == 0  && topValue == 0 && rightValue == 0 && bottomValue == 0
     const outPutData = getOutPut(elementInfo, styleList, domHtml, groupListCopy, fileTemp[layerId], ind, query, isBG)
     styleList = outPutData[0]
-    domHtml = outPutData[1] + '</div>\r\n    '
+    // 如果是背景模式则需要封闭标签
+    if (query.output === 'background') {
+      domHtml = outPutData[1] + '</div>\r\n    '
+    } else {
+      domHtml = outPutData[1]
+    }
     styleData += `.swg-${groupListCopy.join('-')} {${styleList.join('; ')};}\r\n      `
     
   }

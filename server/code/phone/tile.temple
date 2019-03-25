@@ -3,14 +3,14 @@
     var clientWidth = document.body.clientWidth
     var clientHeight = document.body.clientHeight
     var root = document.getElementById('swgRoot')
-    var rootWidth = root.offsetWidth
-    var rootHeight = root.offsetHeight
+    var rootWidth = root.getAttribute('width')
+    var rootHeight = root.getAttribute('height')
     // console.log(clientWidth / clientHeight)
     // console.log(rootWidth / rootHeight)
     // console.log(clientWidth / clientHeight - rootWidth / rootHeight)
     var CRW = clientWidth / rootWidth
     var CRH = clientHeight / rootHeight
-    // console.log(CRW, CRH)
+    console.log(CRW, CRH)
     var min = CRW > CRH ? CRH : CRW
     var rootList = document.getElementsByClassName('swg-root')
     for (var ind = 0; ind < rootList.length; ind++) {

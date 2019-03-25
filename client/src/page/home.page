@@ -22,7 +22,7 @@
         <div class="clear"></div>
       </div>
 
-      <div class="phone-box swiper-box modle-control card" @name="phone">
+      <div class="phone-box modle-control card" @name="phone">
         <div class="title">屏幕适配</div>
         <input type="radio" name="ph" id="control-centrality" value="centrality" @click="changeAdaptation"/>
         <label for="control-centrality">中心缩放</label>
@@ -30,6 +30,15 @@
         <label for="control-tile">背景铺满</label>
         <input type="radio" name="ph" id="control-middle" value="middle" @click="changeAdaptation"/>
         <label for="control-middle">中央显示</label>
+        <div class="clear"></div>
+      </div>
+
+      <div class="swiper-box modle-control card" @name="phone">
+        <div class="title">屏幕适配</div>
+        <input type="radio" name="sw" id="sw-control-centrality" value="centrality" @click="changeAdaptation" checked/>
+        <label for="sw-control-centrality">中心缩放</label>
+        <input type="radio" name="sw" id="sw-control-middle" value="middle" @click="changeAdaptation"/>
+        <label for="sw-control-middle">中央显示</label>
         <div class="clear"></div>
       </div>
 
@@ -175,7 +184,7 @@
             $go('show', 'moveToLeft', 'moveFromRight', {
               id: msg.id
             })
-          }, 500)
+          }, 1000)
         }
       })
       xhr.send(file)

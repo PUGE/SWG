@@ -1069,3 +1069,290 @@
 [2019-03-24T18:23:50.924] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\qr.svg
 [2019-03-24T18:23:50.924] [DEBUG] default - 忽略文件: C:\Users\my\Documents\GitHub\SWG\client\src\resource\download.svg
 [2019-03-24T18:23:50.925] [INFO] main.js - Compile successfully, Use time: 311 msec!
+[2019-03-25T08:18:05.968] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-25T08:18:05.970] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-25T08:18:05.970] [INFO] main.js - 首次启动!
+[2019-03-25T08:18:05.970] [INFO] main.js - 生成版本号: xf3kqt746vm
+[2019-03-25T08:18:05.974] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T08:18:05.974] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T08:18:05.974] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T08:18:05.974] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-25T08:18:05.974] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-25T08:18:05.975] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-25T08:18:06.603] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-25T08:18:06.608] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-25T08:18:06.609] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-25T08:18:06.627] [INFO] main.js - 工程中包含多个页面!
+[2019-03-25T08:18:06.670] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-25T08:18:06.670] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-25T08:18:06.670] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-25T08:18:06.672] [INFO] main.js - 包含有页面切换动画!
+[2019-03-25T08:18:06.672] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-25T08:18:11.629] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-25T08:18:11.630] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-25T08:18:11.631] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-25T08:18:11.631] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-25T08:18:11.631] [DEBUG] main.js - 处理脚本: QR
+[2019-03-25T08:18:11.631] [DEBUG] main.js - 网络脚本: QR
+[2019-03-25T08:18:11.631] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-25T08:18:11.631] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-25T08:18:11.821] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-25T08:18:11.821] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-25T08:18:11.821] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-25T08:18:11.822] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-25T08:18:11.822] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-25T08:18:11.824] [INFO] main.js - Compile successfully, Use time: 5856 msec!
+[2019-03-25T08:18:11.825] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-25T08:18:11.826] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-25T08:18:11.826] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\qr.svg
+[2019-03-25T08:18:11.827] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\download.svg
+[2019-03-25T08:18:11.833] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-25T08:18:11.834] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-25T08:18:11.835] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-25T08:18:11.836] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\progress.svg
+[2019-03-25T08:19:35.681] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-25T08:19:35.683] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-25T08:19:35.683] [INFO] main.js - 首次启动!
+[2019-03-25T08:19:35.683] [INFO] main.js - 生成版本号: 46duxtfm8s
+[2019-03-25T08:19:35.685] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T08:19:35.685] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T08:19:35.686] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T08:19:35.686] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-25T08:19:35.686] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-25T08:19:35.686] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-25T08:19:35.842] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-25T08:19:35.843] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-25T08:19:35.843] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-25T08:19:35.857] [INFO] main.js - 工程中包含多个页面!
+[2019-03-25T08:19:35.858] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-25T08:19:35.858] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-25T08:19:35.858] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-25T08:19:35.859] [INFO] main.js - 包含有页面切换动画!
+[2019-03-25T08:19:35.859] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-25T08:19:36.638] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-25T08:19:36.638] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-25T08:19:36.639] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-25T08:19:36.639] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-25T08:19:36.639] [DEBUG] main.js - 处理脚本: QR
+[2019-03-25T08:19:36.639] [DEBUG] main.js - 网络脚本: QR
+[2019-03-25T08:19:36.639] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-25T08:19:36.639] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-25T08:19:36.805] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-25T08:19:36.806] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-25T08:19:36.806] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-25T08:19:36.806] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-25T08:19:36.806] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-25T08:19:36.808] [INFO] main.js - Compile successfully, Use time: 1127 msec!
+[2019-03-25T08:19:36.810] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-25T08:19:36.810] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-25T08:19:36.810] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-25T08:19:36.810] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-25T08:19:36.811] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\qr.svg
+[2019-03-25T08:19:36.812] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\progress.svg
+[2019-03-25T08:19:36.812] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-25T08:19:36.812] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\download.svg
+[2019-03-25T08:39:45.173] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-25T08:39:45.175] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-25T08:39:45.175] [INFO] main.js - 首次启动!
+[2019-03-25T08:39:45.175] [INFO] main.js - 生成版本号: 3ksi2o4ocwk
+[2019-03-25T08:39:45.187] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T08:39:45.187] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T08:39:45.188] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T08:39:45.188] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-25T08:39:45.188] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-25T08:39:45.188] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-25T08:39:45.412] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-25T08:39:45.413] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-25T08:39:45.413] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-25T08:39:45.428] [INFO] main.js - 工程中包含多个页面!
+[2019-03-25T08:39:45.429] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-25T08:39:45.429] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-25T08:39:45.429] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-25T08:39:45.431] [INFO] main.js - 包含有页面切换动画!
+[2019-03-25T08:39:45.431] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-25T08:39:46.494] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-25T08:39:46.495] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-25T08:39:46.495] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-25T08:39:46.495] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-25T08:39:46.495] [DEBUG] main.js - 处理脚本: QR
+[2019-03-25T08:39:46.495] [DEBUG] main.js - 网络脚本: QR
+[2019-03-25T08:39:46.495] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-25T08:39:46.496] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-25T08:39:46.686] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-25T08:39:46.686] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-25T08:39:46.686] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-25T08:39:46.687] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-25T08:39:46.687] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-25T08:39:46.692] [INFO] main.js - Compile successfully, Use time: 1519 msec!
+[2019-03-25T08:39:46.694] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-25T08:39:46.694] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-25T08:39:46.695] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-25T08:39:46.695] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-25T08:39:46.697] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\qr.svg
+[2019-03-25T08:39:46.697] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\download.svg
+[2019-03-25T08:39:46.697] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-25T08:39:46.697] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\progress.svg
+[2019-03-25T08:42:16.717] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-25T08:42:16.719] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-25T08:42:16.719] [INFO] main.js - 首次启动!
+[2019-03-25T08:42:16.719] [INFO] main.js - 生成版本号: mazggob2l5c
+[2019-03-25T08:42:16.722] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T08:42:16.722] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T08:42:16.722] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T08:42:16.722] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-25T08:42:16.723] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-25T08:42:16.723] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-25T08:42:16.877] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-25T08:42:16.878] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-25T08:42:16.878] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-25T08:42:16.898] [INFO] main.js - 工程中包含多个页面!
+[2019-03-25T08:42:16.899] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-25T08:42:16.899] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-25T08:42:16.899] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-25T08:42:16.900] [INFO] main.js - 包含有页面切换动画!
+[2019-03-25T08:42:16.900] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-25T08:42:17.677] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-25T08:42:17.677] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-25T08:42:17.678] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-25T08:42:17.678] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-25T08:42:17.678] [DEBUG] main.js - 处理脚本: QR
+[2019-03-25T08:42:17.678] [DEBUG] main.js - 网络脚本: QR
+[2019-03-25T08:42:17.678] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-25T08:42:17.678] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-25T08:42:17.846] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-25T08:42:17.846] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-25T08:42:17.847] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-25T08:42:17.847] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-25T08:42:17.847] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-25T08:42:17.849] [INFO] main.js - Compile successfully, Use time: 1132 msec!
+[2019-03-25T08:42:17.851] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-25T08:42:17.851] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-25T08:42:17.851] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-25T08:42:17.851] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-25T08:42:17.852] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\progress.svg
+[2019-03-25T08:42:17.852] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-25T08:42:17.853] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\qr.svg
+[2019-03-25T08:42:17.853] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\download.svg
+[2019-03-25T09:25:54.615] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-25T09:25:54.617] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-25T09:25:54.617] [INFO] main.js - 首次启动!
+[2019-03-25T09:25:54.617] [INFO] main.js - 生成版本号: i11o9gtvt5k
+[2019-03-25T09:25:54.620] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T09:25:54.620] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T09:25:54.620] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T09:25:54.620] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-25T09:25:54.621] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-25T09:25:54.621] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-25T09:25:54.804] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-25T09:25:54.805] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-25T09:25:54.806] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-25T09:25:54.821] [INFO] main.js - 工程中包含多个页面!
+[2019-03-25T09:25:54.822] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-25T09:25:54.822] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-25T09:25:54.823] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-25T09:25:54.824] [INFO] main.js - 包含有页面切换动画!
+[2019-03-25T09:25:54.824] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-25T09:25:55.673] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-25T09:25:55.673] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-25T09:25:55.674] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-25T09:25:55.674] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-25T09:25:55.674] [DEBUG] main.js - 处理脚本: QR
+[2019-03-25T09:25:55.674] [DEBUG] main.js - 网络脚本: QR
+[2019-03-25T09:25:55.674] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-25T09:25:55.674] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-25T09:25:55.848] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-25T09:25:55.849] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-25T09:25:55.849] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-25T09:25:55.849] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-25T09:25:55.849] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-25T09:25:55.851] [INFO] main.js - Compile successfully, Use time: 1236 msec!
+[2019-03-25T09:25:55.853] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-25T09:25:55.853] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-25T09:25:55.853] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-25T09:25:55.853] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-25T09:25:55.855] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\progress.svg
+[2019-03-25T09:25:55.855] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-25T09:25:55.855] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\qr.svg
+[2019-03-25T09:25:55.855] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\download.svg
+[2019-03-25T09:32:14.875] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-25T09:32:14.877] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-25T09:32:14.877] [INFO] main.js - 首次启动!
+[2019-03-25T09:32:14.877] [INFO] main.js - 生成版本号: rkmtmg5s99n
+[2019-03-25T09:32:14.880] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T09:32:14.880] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T09:32:14.881] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T09:32:14.881] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-25T09:32:14.881] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-25T09:32:14.881] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-25T09:32:15.054] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-25T09:32:15.055] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-25T09:32:15.056] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-25T09:32:15.071] [INFO] main.js - 工程中包含多个页面!
+[2019-03-25T09:32:15.072] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-25T09:32:15.073] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-25T09:32:15.073] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-25T09:32:15.074] [INFO] main.js - 包含有页面切换动画!
+[2019-03-25T09:32:15.074] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-25T09:32:15.859] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-25T09:32:15.860] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-25T09:32:15.860] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-25T09:32:15.860] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-25T09:32:15.860] [DEBUG] main.js - 处理脚本: QR
+[2019-03-25T09:32:15.860] [DEBUG] main.js - 网络脚本: QR
+[2019-03-25T09:32:15.860] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-25T09:32:15.861] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-25T09:32:16.037] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-25T09:32:16.037] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-25T09:32:16.038] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-25T09:32:16.038] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-25T09:32:16.038] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-25T09:32:16.040] [INFO] main.js - Compile successfully, Use time: 1165 msec!
+[2019-03-25T09:32:16.041] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-25T09:32:16.042] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-25T09:32:16.042] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-25T09:32:16.042] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-25T09:32:16.043] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-25T09:32:16.043] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\progress.svg
+[2019-03-25T09:32:16.043] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\download.svg
+[2019-03-25T09:32:16.043] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\qr.svg
+[2019-03-25T09:34:55.942] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-25T09:34:55.943] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-25T09:34:55.944] [INFO] main.js - 首次启动!
+[2019-03-25T09:34:55.944] [INFO] main.js - 生成版本号: uoe2zugv4n
+[2019-03-25T09:34:55.946] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T09:34:55.947] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T09:34:55.947] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T09:34:55.947] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-25T09:34:55.947] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-25T09:34:55.947] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-25T09:34:56.113] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-25T09:34:56.114] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-25T09:34:56.114] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-25T09:34:56.145] [INFO] main.js - 工程中包含多个页面!
+[2019-03-25T09:34:56.146] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-25T09:34:56.146] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-25T09:34:56.146] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-25T09:34:56.147] [INFO] main.js - 包含有页面切换动画!
+[2019-03-25T09:34:56.147] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-25T09:34:56.985] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-25T09:34:56.985] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-25T09:34:56.986] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-25T09:34:56.986] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-25T09:34:56.986] [DEBUG] main.js - 处理脚本: QR
+[2019-03-25T09:34:56.986] [DEBUG] main.js - 网络脚本: QR
+[2019-03-25T09:34:56.986] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-25T09:34:56.986] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-25T09:34:57.153] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-25T09:34:57.153] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-25T09:34:57.153] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-25T09:34:57.154] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-25T09:34:57.154] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-25T09:34:57.155] [INFO] main.js - Compile successfully, Use time: 1214 msec!
+[2019-03-25T09:34:57.157] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-25T09:34:57.158] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-25T09:34:57.158] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-25T09:34:57.158] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-25T09:34:57.159] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\progress.svg
+[2019-03-25T09:34:57.159] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\download.svg
+[2019-03-25T09:34:57.159] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-25T09:34:57.159] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\qr.svg
