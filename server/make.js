@@ -107,11 +107,30 @@ function make (query, fileName) {
       styleData += `<style type="text/css">\r\n      `
       // 判断适配方案
       const adaptation = query.adaptation
-      if (query.adaptation === 'real') {
+      if (adaptation === 'real') {
         outPut = realOutPut(fileName, psd.tree(), [], query)
-      } else if (adaptation) {
+      } else if (adaptation === 'ratio') {
         outPut = ratioOutPut(fileName, psd.tree(), [], query)
+      } else if (adaptation === 'levelRatio') {
+        outPut = ratioOutPut(fileName, psd.tree(), [], query)
+        let fileData = `
+          <script>
+            window.onload = function() {
+              var clientWidth = document.body.clientWidth
+              var clientHeight = document.body.clientHeight
+              var root = document.getElementById('swgRoot')
+              var rootWidth = parseFloat(root.getAttribute('width'))
+              var rootHeight = parseFloat(root.getAttribute('height'))
+              var WH = rootHeight / rootWidth
+              root.style.width = clientWidth + 'px'
+              root.style.height = clientWidth * WH + 'px'
+              root.style.opacity = 1
+            }
+          </script>
+        `
+        htmlTemple = htmlTemple.replace(`<!-- script-output -->`, fileData)
       }
+      // 判断
       domHtml += outPut.html
       styleData += outPut.style
       break

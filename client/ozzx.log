@@ -1930,3 +1930,44 @@
 [2019-03-25T14:02:16.309] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\qr.svg
 [2019-03-25T14:02:16.309] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\progress.svg
 [2019-03-25T14:02:16.309] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\download.svg
+[2019-03-25T16:29:22.999] [INFO] main.js - --------------------------- 开始编译 ---------------------------
+[2019-03-25T16:29:23.004] [INFO] main.js - 程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client
+[2019-03-25T16:29:23.004] [INFO] main.js - 首次启动!
+[2019-03-25T16:29:23.004] [INFO] main.js - 生成版本号: 02c02ywdvcjw
+[2019-03-25T16:29:23.010] [INFO] main.js - 清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T16:29:23.010] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T16:29:23.011] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static
+[2019-03-25T16:29:23.011] [INFO] main.js - 读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html
+[2019-03-25T16:29:23.011] [DEBUG] main.js - 读取网页标题: psd to html
+[2019-03-25T16:29:23.012] [DEBUG] main.js - 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}]
+[2019-03-25T16:29:23.394] [DEBUG] index.js - 页面中使用到的动画列表: [object Set]
+[2019-03-25T16:29:23.397] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-25T16:29:23.398] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource
+[2019-03-25T16:29:23.410] [INFO] main.js - 工程中包含多个页面!
+[2019-03-25T16:29:23.416] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-25T16:29:23.417] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css
+[2019-03-25T16:29:23.417] [INFO] main.js - 写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css
+[2019-03-25T16:29:23.418] [INFO] main.js - 包含有页面切换动画!
+[2019-03-25T16:29:23.418] [INFO] main.js - 动画列表: moveToLeft,moveFromRight
+[2019-03-25T16:29:25.891] [INFO] tool.js - 文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-25T16:29:25.891] [INFO] tool.js - 创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js
+[2019-03-25T16:29:25.892] [DEBUG] main.js - 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}]
+[2019-03-25T16:29:25.892] [DEBUG] main.js - 外部脚本数量: 1
+[2019-03-25T16:29:25.892] [DEBUG] main.js - 处理脚本: QR
+[2019-03-25T16:29:25.892] [DEBUG] main.js - 网络脚本: QR
+[2019-03-25T16:29:25.892] [DEBUG] main.js - 完成外部脚本引用处理!
+[2019-03-25T16:29:25.892] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-25T16:29:26.063] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-25T16:29:26.064] [DEBUG] main.js - 判断是否可以输出Html!
+[2019-03-25T16:29:26.064] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-25T16:29:26.064] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-25T16:29:26.064] [INFO] tool.js - 读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-25T16:29:26.066] [INFO] main.js - Compile successfully, Use time: 3067 msec!
+[2019-03-25T16:29:26.085] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg
+[2019-03-25T16:29:26.086] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg
+[2019-03-25T16:29:26.086] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg
+[2019-03-25T16:29:26.086] [INFO] tool.js - 读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css
+[2019-03-25T16:29:26.092] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\qr.svg
+[2019-03-25T16:29:26.094] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\progress.svg
+[2019-03-25T16:29:26.095] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css
+[2019-03-25T16:29:26.095] [INFO] tool.js - 写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\download.svg

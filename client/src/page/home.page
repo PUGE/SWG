@@ -19,6 +19,8 @@
         <label for="control-real">真实还原</label>
         <input type="radio" name="cu" id="control-ratio" value="ratio" @click="changeAdaptation()"/>
         <label for="control-ratio">适应屏幕</label>
+        <input type="radio" name="cu" id="control-level-ratio" value="levelRatio" @click="changeAdaptation()"/>
+        <label for="control-level-ratio">横向适应</label>
         <div class="clear"></div>
       </div>
 
