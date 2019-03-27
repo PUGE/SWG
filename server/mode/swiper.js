@@ -47,6 +47,8 @@ function animateOutPut (fileName, node, groupList, query) {
 
   // 初始化html存储字段
   let domHtml = ''
+  // 尾巴
+  let tail = '\r\n        </div>'
   // 初始化样式临时存储字段
   let styleData = ``
   // 文件缓存
@@ -104,7 +106,8 @@ function animateOutPut (fileName, node, groupList, query) {
     styleData = `.swg-${groupList.join('-')} {${styleList.join('; ')};}\r\n      `
     // 如果是切换页需要多包裹一层
     if (isSlide) {
-      domHtml = '\r\n        <div class="swiper-slide">\r\n        <div class="swiper-page swg-root">'
+      domHtml = '\r\n        <div class="swiper-slide">\r\n          <div class="swiper-page swg-root">'
+      tail += '\r\n        </div>\r\n        </div>'
     } else {
       domHtml = ''
     }
@@ -160,7 +163,7 @@ function animateOutPut (fileName, node, groupList, query) {
     styleData += `.swg-${groupListCopy.join('-')} {${styleList.join('; ')};}\r\n      `
     
   }
-  domHtml += `\r\n        </div>\r\n        </div>\r\n        </div>`
+  domHtml += tail
   return {
     html: domHtml,
     style: styleData

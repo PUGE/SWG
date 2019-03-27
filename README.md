@@ -20,4 +20,3 @@ Soulless Web Pages - PSD generates web pages
 2. psd文件画布超出情况下可能会出现问题
 
 待修复问题:
-1. 手机动画文件夹嵌套有问题
