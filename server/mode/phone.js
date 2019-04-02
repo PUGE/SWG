@@ -6,6 +6,8 @@ const { getRatio, isEmptyLayer, getLayerID, cacheFile }  = require('../lib/tool'
 function phoneOutPut (fileName, node, groupList, query) {
   // 当前节点的父节点
   const nodeParent = node.parent
+  // 根节点
+  const nodeRoot = node.root()
   // 当前节点的子节点列表
   const childrenNodeList = node.children()
 
@@ -52,7 +54,7 @@ function phoneOutPut (fileName, node, groupList, query) {
       `width: ${getRatio(node.width, nodeParent.width)}%`,
       `height: ${getRatio(node.height, nodeParent.height)}%`,
     )
-    const isBG = leftValue == 0  && topValue == 0 && rightValue == 0 && bottomValue == 0
+    const isBG = leftValue == 0  && topValue == 0 && rightValue == 0 && bottomValue == 0 && elementInfo.width == nodeRoot.width && elementInfo.height == nodeRoot.height
     const outPutData = getOutPut(node.export(), styleList, domHtml, groupList, fileTemp[layerId], itemIndex, query, isBG)
     styleList = outPutData[0]
     domHtml = outPutData[1] + '\r\n    '
@@ -108,7 +110,7 @@ function phoneOutPut (fileName, node, groupList, query) {
       `width: ${getRatio(elementInfo.width, node.parent.width)}%`,
       `height: ${getRatio(elementInfo.height, node.parent.height)}%`
     ]
-    const isBG = leftValue == 0  && topValue == 0 && rightValue == 0 && bottomValue == 0
+    const isBG = leftValue == 0  && topValue == 0 && rightValue == 0 && bottomValue == 0 && elementInfo.width == nodeRoot.width && elementInfo.height == nodeRoot.height
     const outPutData = getOutPut(elementInfo, styleList, domHtml, groupListCopy, fileTemp[layerId], ind, query, isBG)
     styleList = outPutData[0]
     // 如果是背景模式则需要封闭标签

@@ -4,6 +4,7 @@ const { isEmptyLayer, getLayerID, cacheFile }  = require('../lib/tool')
 
 function realOutPut (fileName, node, groupList, query) {
   const nodeParent = node.parent
+  const nodeRoot = node.root()
   const childrenNodeList = node.children()
   // 文件缓存
   let fileTemp = {}
@@ -90,7 +91,7 @@ function realOutPut (fileName, node, groupList, query) {
       `width: ${elementInfo.width}px`,
       `height: ${elementInfo.height}px`
     ]
-    const isBG = leftValue == 0  && topValue == 0 && rightValue == 0 && bottomValue == 0
+    const isBG = leftValue == 0  && topValue == 0 && rightValue == 0 && bottomValue == 0 && elementInfo.width == nodeRoot.width && elementInfo.height == nodeRoot.height
     const outPutData = getOutPut(elementInfo, styleList, domHtml, groupListCopy, fileTemp[layerId], ind, query, isBG)
     styleList = outPutData[0]
     // 如果是背景模式则需要封闭标签

@@ -3,11 +3,13 @@ const { getRatio, isEmptyLayer, getLayerID, cacheFile }  = require('../lib/tool'
 
 
 function getOutPut (elementInfo, styleList, domHtml, groupList, fileName, ind, node, query) {
+  // 根节点
+  const nodeRoot = node.root()
   // 是背景吗
   const WC = node.width  + node.left - node.right
   const HC = node.height + node.top - node.bottom
   // 是背景吗
-  const isBG = (WC == 0 && HC == 0)
+  const isBG = (WC == 0 && HC == 0 && nodeRoot.width == node.width && nodeRoot.height == node.height)
   // 判断是否 配置了输出文字 并且此图层是文字
   if (JSON.parse(query.outText) && elementInfo.text) {
     [styleList, domHtml] = textOutPut(elementInfo.text, styleList, domHtml, groupList)   
@@ -42,6 +44,8 @@ function animateOutPut (fileName, node, groupList, query) {
   console.log('处理模式: 场景动画')
   // 当前节点的父节点
   const nodeParent = node.parent
+  // 根节点
+  const nodeRoot = node.root()
   // 当前节点的子节点列表
   const childrenNodeList = node.children()
 
@@ -90,7 +94,7 @@ function animateOutPut (fileName, node, groupList, query) {
     const WC = node.width  + node.left - node.right
     const HC = node.height + node.top - node.bottom
     // 是背景吗
-    const isBG = (WC == 0 && HC == 0)
+    const isBG = (WC == 0 && HC == 0 && nodeRoot.width == node.width && nodeRoot.height == node.height)
     // 判断是否为切换页
     const isSlide = groupList.length === 1
     // 如果不是根节点 会有上下左右位置
