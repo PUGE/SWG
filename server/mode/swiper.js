@@ -20,18 +20,18 @@ function getOutPut (elementInfo, styleList, domHtml, groupList, fileName, ind, n
       if (arg[2] === undefined) arg[2] = 0
       // 判断输出图形的形式
       if (query.output === 'background') {
-        styleList.push(`background-image: url(./${fileName}.png)`)
+        styleList.push(`background-image: url(./img/${fileName}.png)`)
         domHtml += `\r\n          <div class="swg swg-${groupList.join('-')} layer-${groupList.length} item-${ind} ${isBG ? 'bg' : ''} ani" swiper-animate-effect="${arg[0]}" swiper-animate-duration="${arg[1]}s" swiper-animate-delay="${arg[2]}s"></div>`
       } else if (query.output === 'img') {
-        domHtml += `\r\n          <img class="swg swg-${groupList.join('-')} layer-${groupList.length} item-${ind} ${isBG ? 'bg' : ''} ani" swiper-animate-effect="${arg[0]}" swiper-animate-duration="${arg[1]}s" swiper-animate-delay="${arg[2]}s" src="./${fileName}.png" />`
+        domHtml += `\r\n          <img class="swg swg-${groupList.join('-')} layer-${groupList.length} item-${ind} ${isBG ? 'bg' : ''} ani" swiper-animate-effect="${arg[0]}" swiper-animate-duration="${arg[1]}s" swiper-animate-delay="${arg[2]}s" src="./img/${fileName}.png" />`
       }
     } else {
       // 判断输出图形的形式
       if (query.output === 'background') {
-        styleList.push(`background-image: url(./${fileName}.png)`)
+        styleList.push(`background-image: url(./img/${fileName}.png)`)
         domHtml += `\r\n          <div class="swg swg-${groupList.join('-')} layer-${groupList.length} item-${ind} ${isBG ? 'bg' : ''}"></div>`
       } else if (query.output === 'img') {
-        domHtml += `\r\n          <img class="swg swg-${groupList.join('-')} layer-${groupList.length} item-${ind} ${isBG ? 'bg' : ''}" src="./${fileName}.png" />`
+        domHtml += `\r\n          <img class="swg swg-${groupList.join('-')} layer-${groupList.length} item-${ind} ${isBG ? 'bg' : ''}" src="./img/${fileName}.png" />`
       }
     }
   }

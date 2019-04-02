@@ -9,10 +9,10 @@ function getOutPut (elementInfo, styleList, domHtml, groupList, fileName, ind, q
     } else { // 什么都不是那就输出成图片吧
       // 判断输出图形的形式
       if (query.output === 'background') {
-        styleList.push(`background-image: url(./${fileName}.png)`)
+        styleList.push(`background-image: url(./img/${fileName}.png)`)
         domHtml += `<div class="swg swg-${groupList.join('-')} item-${ind} ${isBG ? 'bg' : ''}">`
       } else if (query.output === 'img') {
-        domHtml += `<img class="swg swg-${groupList.join('-')} item-${ind} ${isBG ? 'bg' : ''}" src="./${fileName}.png" />\r\n    `
+        domHtml += `<img class="swg swg-${groupList.join('-')} item-${ind} ${isBG ? 'bg' : ''}" src="./img/${fileName}.png" />\r\n    `
       }
     }
     return [styleList, domHtml]

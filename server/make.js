@@ -89,6 +89,7 @@ function make (query, fileName) {
   let htmlTemple = temple
   creatDirIfNotExist('../public/temp')
   creatDirIfNotExist(`../public/temp/${fileName}`)
+  creatDirIfNotExist(`../public/temp/${fileName}/img`)
   // 读取图层
   const psd = PSD.fromFile(`../uploads/${fileName}`)
   psd.parse()
