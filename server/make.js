@@ -6,8 +6,7 @@ const { ratioOutPut }  = require('./mode/ratio')
 const { realOutPut }  = require('./mode/real')
 const { phoneOutPut }  = require('./mode/phone')
 const { animateOutPut }  = require('./mode/swiper')
-
-
+const { parallaxOutPut }  = require('./mode/parallax')
 
 let temple = `
 <!DOCTYPE html>
@@ -93,6 +92,7 @@ function make (query, fileName) {
   // 读取图层
   const psd = PSD.fromFile(`../uploads/${fileName}`)
   psd.parse()
+  psd.image.saveAsPng('./output.png')
 
   const treeLength = psd.tree().descendants().length
 
@@ -197,6 +197,34 @@ function make (query, fileName) {
       fileData += fs.readFileSync(`./code/phone/${query.adaptation}.temple`, 'utf8')
       htmlTemple = htmlTemple.replace(`<!-- script-output -->`, fileData)
       
+      break
+    }
+    // 视差滚动模式
+    case 'parallax': {
+      styleData += `<style type="text/css">\r\n      `
+      const outPut = parallaxOutPut(fileName, psd.tree(), [], query)
+      domHtml += outPut.html
+      styleData += outPut.style
+      // 手机页面有自己的js代码
+      styleData += `\r\n.bg{ position: fixed;background-size: 100%; }`
+      let fileData = `
+        <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+        <script>
+          window.onload = function() {
+            lax.setup() // init
+
+            const updateLax = () => {
+              lax.update(window.scrollY)
+              window.requestAnimationFrame(updateLax)
+            }
+
+            window.requestAnimationFrame(updateLax)
+            var root = document.getElementById('swgRoot')
+            root.style.opacity = 1
+          }
+        </script>
+      `
+      htmlTemple = htmlTemple.replace(`<!-- script-output -->`, fileData)
       break
     }
   }

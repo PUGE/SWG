@@ -10,17 +10,15 @@ for(var key in newPageFunction.template){var templateScript=newPageFunction.temp
 // 待修复,临时获取方式,这种方式获取到的dom不准确
 var domList=entryDom.getElementsByClassName('ox-'+key);if(domList.length!==1){console.error('我就说会有问题吧!');console.log(domList);}// 为模板注入运行环境
 templateScript.created.apply(assign(newPageFunction.template[key],{$el:domList[0].children[0],data:templateScript.data,activePage:window.ozzx.activePage,domList:window.ozzx.domList}));}}}// ozzx-name处理
-function pgNameHandler(dom){// 遍历每一个DOM节点
-for(var i=0;i<dom.children.length;i++){var tempDom=dom.children[i];// 判断是否存在@name属性
+function pgNameHandler(tempDom){// 判断是否存在@name属性
 var pgName=tempDom.attributes['@name'];if(pgName){// console.log(pgName.textContent)
 // 隐藏元素
 tempDom.hide=function(){this.style.display='none';};window.ozzx.domList[pgName.textContent]=tempDom;}// 判断是否有点击事件
 var clickFunc=tempDom.attributes['@click'];if(clickFunc){tempDom.onclick=function(event){var clickFor=this.attributes['@click'].textContent;// 判断页面是否有自己的方法
 var newPageFunction=window.ozzx.script[window.ozzx.activePage];// console.log(this.attributes)
 // 判断是否为模板
-var templateName=this.attributes['template'];// console.log(templateName)
-if(templateName){newPageFunction=newPageFunction.template[templateName.textContent];}// console.log(newPageFunction)
-// 取出参数
+var templateName=this.attributes['template'];if(templateName){// 如果模板注册到newPageFunction中，那么证明模板没有script那么直接使用eval执行
+if(newPageFunction.template){newPageFunction=newPageFunction.template[templateName.textContent];}else{eval(this.attributes['@click'].textContent);return;}}// 取出参数
 var parameterArr=[];var parameterList=clickFor.match(/[^\(\)]+(?=\))/g);if(parameterList&&parameterList.length>0){// 参数列表
 parameterArr=parameterList[0].split(',');// 进一步处理参数
 for(var i=0;i<parameterArr.length;i++){var parameterValue=parameterArr[i].replace(/(^\s*)|(\s*$)/g,"");// console.log(parameterValue)
@@ -34,7 +32,8 @@ if(newPageFunction[clickFor]){// 绑定window.ozzx对象
 // 待测试不知道这样合并会不会对其它地方造成影响
 newPageFunction.$el=this;newPageFunction.$event=event;newPageFunction.domList=window.ozzx.domList;newPageFunction[clickFor].apply(newPageFunction,parameterArr);}else{// 如果没有此方法则交给浏览器引擎尝试运行
 eval(this.attributes['@click'].textContent);}};}// 递归处理所有子Dom结点
-if(tempDom.children.length>0){pgNameHandler(tempDom);}}}// 便捷获取被命名的dom元素
+for(var i=0;i<tempDom.children.length;i++){var childrenDom=tempDom.children[i];// console.log(childrenDom)
+pgNameHandler(childrenDom);}}// 便捷获取被命名的dom元素
 function $dom(domName){return ozzx.domList[domName];}// 跳转到指定页面
 function $go(pageName,inAnimation,outAnimation,param){ozzx.state.animation={in:inAnimation,out:outAnimation};var paramString='';if(param&&_typeof(param)=='object'){paramString+='?';// 生成URL参数
 for(var paramKey in param){paramString+=paramKey+'='+param[paramKey]+'&';}// 去掉尾端的&
@@ -59,7 +58,7 @@ console.log('上传失败',result.status,result.statusText,result.response);}els
 var msg=JSON.parse(result.response);$dom('progressText').innerText="\u51C6\u5907\u5C31\u7EEA,\u5373\u5C06\u9884\u89C8\u9875\u9762!";setTimeout(function(){$go('show','moveToLeft','moveFromRight',{id:msg.id});},1000);}});xhr.send(file);},"changeAdaptation":function changeAdaptation(clear){console.log('更改模式');if(clear)this.hideModleControl();if(this.$el.checked){this.data.adaptation=this.$el.value;}},"changeSwitchMode":function changeSwitchMode(clear){console.log('更改切换模式');if(clear)this.hideModleControl();if(this.$el.checked){this.data.switchMode=this.$el.value;}},"changeOutPut":function changeOutPut(){if(this.$el.checked){this.data.output=this.$el.value;}},"changeOutText":function changeOutText(item){this.data[item]=!this.data[item];},"hideModleControl":function hideModleControl(){var modleControlList=document.getElementsByClassName('modle-control');for(var index=0;index<modleControlList.length;index++){var element=modleControlList[index];if(element.style){element.style.display='none';}}},"switchShow":function switchShow(name,defaultValue){this.data.mode=name;this.data.adaptation=defaultValue;this.hideModleControl();var activeList=document.getElementsByClassName(name+'-box');for(var ind=0;ind<activeList.length;ind++){var element=activeList[ind];element.style.display='block';}this.data.adaptation=defaultValue;document.getElementById('control-'+defaultValue).checked=true;}},"show":{"data":{},"created":function created(){// 获取url参数
 $dom('show').src='./temp/'+$tool.getQueryString('id');$dom('show').style.display='block';setTimeout(function(){new QRCode(document.getElementById("qr"),{text:"http://"+window.location.host+'/temp/'+$tool.getQueryString('id'),width:150,height:150,colorDark:"#000000",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.H});},500);},"down":function down(){var httpRequest=new XMLHttpRequest();httpRequest.open('GET','down?id='+$tool.getQueryString('id'),true);httpRequest.send();/**
        * 获取数据后的处理程序
-       */httpRequest.onreadystatechange=function(){if(httpRequest.readyState==4&&httpRequest.status==200){var res=JSON.parse(httpRequest.responseText);if(res.err===0){window.open("./temp/".concat($tool.getQueryString('id'),".zip"));}else{alert(res.message);}}};},"hideQR":function hideQR(){console.log(this);this.$el.style.display='none';},"qrCode":function qrCode(){$dom('qrBox').style.display='block';}}},tool:{},entry:"home",state:{}};// 便捷的获取工具方法
+       */httpRequest.onreadystatechange=function(){if(httpRequest.readyState==4&&httpRequest.status==200){var res=JSON.parse(httpRequest.responseText);if(res.err===0){window.open("./temp/".concat($tool.getQueryString('id'),".zip"));}else{alert(res.message);}}};},"hideQR":function hideQR(){console.log(this);this.$el.style.display='none';},"qrCode":function qrCode(){$dom('qrBox').style.display='block';}}},tool:{},entry:"home",state:{},global:{}};// 便捷的获取工具方法
 var $tool=ozzx.tool;var $data={};// 页面切换效果
 // 获取URL参数
 function getQueryString(newUrlParam,name){var reg=new RegExp("(^|&)"+name+"=([^&]*)(&|$)","i");var r=newUrlParam.match(reg);if(r!=null)return unescape(r[2]);return null;}// 无特效翻页

@@ -4,7 +4,7 @@ module.exports = {
   // 项目入口文件
   entry: "home",
   // 页面标题
-  title: 'psd to html',
+  title: 'psd转html',
   // 输出目录
   outFolder: "../public",
   // 资源目录

@@ -27,13 +27,18 @@ function getLayerID (layer) {
 
 // 缓存文件
 function cacheFile (layerId, element, fileTemp, groupList, fileName, compress) {
+  // console.log(element)
+  // for (let item in element) {
+  //   console.log(item)
+  // }
+  // console.log(element.toPng())
   if (fileTemp[layerId] === undefined) {
     fileTemp[layerId] = `${groupList.join('-')}`
     // 导出图片
     const imagePath = `../public/temp/${fileName}/img/${groupList.join('-')}.png`
-    if (element.layer.image && element.type === 'layer') {
+    if (element.isLayer) {
       console.log(`保存图片: ${imagePath}`)
-      element.layer.image.saveAsPng(imagePath).then((e) => {
+      element.saveAsPng(imagePath).then((e) => {
         console.log(`压缩图片: ${imagePath}`)
         // 判断是否开启压缩图片
         if (JSON.parse(compress)) {

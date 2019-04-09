@@ -1,14 +1,28 @@
 <template>
   <div class="home">
     <div class="control">
+      <div id="dnd">
+      <form enctype="multipart/form-data" method="post" @name="uploadBox">
+        <div class="dnd-container">
+          <div class="start" @name="stareIcon"></div>   
+          <div class="done" @name="doneIcon"></div>
+        </div>
+        <p>选择或者拖拽PSD文件 <a href="https://share.weiyun.com/59u3Glc" target="view_window">下载示例PDF</a></p>
+        <button class="dndAlternative" @click="uploadFile">选择</button>
+        <input type="file" name="upload" accept="*.psd" @name="uploadInput">
+      </form>
+    </div>
+    <div class="card-box">
       <div class="model-box card">
         <div class="title">生成模式</div>
         <input type="radio" name="rb" id="m1" @click="switchShow('currency', 'real')" checked/>
         <label for="m1">通用页面</label>
         <input type="radio" name="rb" id="m3" @click="switchShow('phone', 'centrality')" />
         <label for="m3">手机页面</label>
-        <input type="radio" name="rb" id="m5" @click="switchShow('swiper', 'centrality')"/>
-        <label for="m5">手机动画</label>
+        <input type="radio" name="rb" id="m4" @click="switchShow('swiper', 'centrality')"/>
+        <label for="m4">手机动画</label>
+        <input type="radio" name="rb" id="m5" @click="switchShow('parallax', 'centrality')"/>
+        <label for="m5">视差滚动</label>
         <div class="clear"></div>
       </div>
       
@@ -77,23 +91,13 @@
         <div class="title">音乐链接</div>
         <input type="text" id="musicSrcInput" value="https://cunchu.site/swg/bgm.mp3"/>
       </div>
-      
+
+      <div class="progress-box" @name="progress">
+        <img src="@&progress.svg&"/>
+        <div class="progress-text" @name="progressText"></div>
+      </div>
     </div>
-    <div id="dnd">
-      <form enctype="multipart/form-data" method="post" @name="uploadBox">
-        <div class="dnd-container">
-          <div class="start" @name="stareIcon"></div>   
-          <div class="done" @name="doneIcon"></div>
-        </div>
-        <p>选择或者拖拽PSD文件 (建议不要过大)</p>
-        <button class="dndAlternative" @click="uploadFile">选择</button>
-        <input type="file" name="upload" accept="*.psd" @name="uploadInput">
-      </form>
-    </div>
-    <div class="progress-box" @name="progress">
-      <img src="@&progress.svg&"/>
-      <div class="progress-text" @name="progressText"></div>
-    </div>
+    
     <div class="tips">系统不支持PS中的特殊效果,请在上传前将有特殊效果的图层合并为智能对象!</div>
   </div>
 </template>
@@ -293,6 +297,10 @@ body, html {
 .control {
   color: #8e44ad;
   padding: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  position: relative;
+  overflow: hidden;
 }
 
 .control .title {
@@ -301,6 +309,10 @@ body, html {
   margin-bottom: 10px;
   color: #333;
   border-bottom: 1px solid #ccc;
+}
+.card-box {
+  height: calc(100% - 256px);
+  overflow: auto;
 }
 .modle-control {
   display: none;
@@ -311,7 +323,7 @@ body, html {
 .tips {
   position: fixed;
   bottom: 0;
-  width: calc(100% - 20px);
+  width: calc(100% - 40px);
   padding: 0 10px;
   line-height: 30px;
   color: #999;
