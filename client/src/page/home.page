@@ -7,7 +7,7 @@
           <div class="start" @name="stareIcon"></div>   
           <div class="done" @name="doneIcon"></div>
         </div>
-        <p>选择或者拖拽PSD文件 <a href="https://share.weiyun.com/59u3Glc" target="view_window">下载示例PDF</a></p>
+        <p>选择或者拖拽PSD文件 <a href="https://share.weiyun.com/59u3Glc" target="view_window">下载示例PSD</a></p>
         <button class="dndAlternative" @click="uploadFile">选择</button>
         <input type="file" name="upload" accept="*.psd" @name="uploadInput">
       </form>

@@ -6,6 +6,8 @@
     <div class="qr-box" @name="qrBox" @click="hideQR">
       <div class="qr" id="qr"></div>
     </div>
+    <!-- 右侧控制栏 -->
+    <div class="control"></div>
   </div>
 </template>
 
@@ -27,6 +29,11 @@
           correctLevel : QRCode.CorrectLevel.H
         })
       }, 500)
+      // 绑定点击事件
+      document.getElementById('my-iframe').contentDocument.onclick = function () {
+        var sidebar = document.getElementById('sidebar');
+        if (sidebar.style.display == 'block')  sidebar.style.display = 'none';
+      }
     },
     down: () => {
       const httpRequest = new XMLHttpRequest()
@@ -102,5 +109,14 @@
   bottom: 60px;
   width: 45px;
   height: 45px;
+}
+// 右侧控制栏
+.control {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: white;
 }
 </style>

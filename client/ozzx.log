@@ -1,44 +1,44 @@
-15:31:43.002 DEBUG 获取到配置信息: 
-15:31:43.002 DEBUG {"outPut":{"minifyCss":true,"minifyJs":true,"outFileAddVersion":true},"root":"/src","entry":"home","title":"psd转html","outFolder":"../public","resourceFolder":"./src/resource","headList":[{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}],"scriptList":[{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}],"styleList":[{"name":"main","src":"./src/main.css"}],"pageList":[{"main":true,"isPage":true,"name":"home","src":"./src/page/home.page","temple":"<temple name=\"home\" src=\"./src/page/home.page\" isPage=\"true\"></temple>"},{"isPage":true,"name":"show","src":"./src/page/show.page","temple":"<temple name=\"show\" src=\"./src/page/show.page\" isPage=\"true\"></temple>"}],"dev":{"watcher":{"enable":true,"ignored":"./dist/*","depth":99},"outPut":{"minifyCss":false,"minifyJs":false,"outFileAddVersion":false},"serverPort":8001,"server":true,"autoReload":true},"build":{"outPut":{"minifyCss":true,"minifyJs":true,"outFileAddVersion":true}}} 
-15:31:43.002 INFO  --------------------------- 开始编译 --------------------------- 
-15:31:43.002 INFO  程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client 
-15:31:43.002 INFO  首次启动! 
-15:31:43.002 INFO  生成版本号: e6hdckrkf6 
-15:31:43.005 INFO  清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static 
-15:31:43.005 INFO  文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static 
-15:31:43.005 INFO  创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static 
-15:31:43.005 INFO  读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html 
-15:31:43.006 DEBUG 读取网页标题: psd转html 
-15:31:43.006 DEBUG 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}] 
-15:31:43.164 INFO  文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource 
-15:31:43.164 INFO  创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource 
-15:31:43.185 INFO  工程中包含多个页面! 
-15:31:43.186 INFO  文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css 
-15:31:43.186 INFO  创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css 
-15:31:43.186 INFO  写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css 
-15:31:43.187 INFO  包含有页面切换动画! 
-15:31:43.187 INFO  动画列表: moveToLeft,moveFromRight 
-15:31:44.027 INFO  文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js 
-15:31:44.027 INFO  创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js 
-15:31:44.028 DEBUG 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}] 
-15:31:44.028 DEBUG 外部脚本数量: 1 
-15:31:44.028 DEBUG 处理脚本: QR 
-15:31:44.028 DEBUG 网络脚本: QR 
-15:31:44.028 DEBUG 完成外部脚本引用处理! 
-15:31:44.028 DEBUG 判断是否可以输出Html! 
-15:31:44.028 DEBUG 还有没有经过处理的资源! 
-15:31:44.224 DEBUG 需要经过特殊处理的css: [[".ox-home .home ",".ox-home "],[".ox-show .show-box ",".ox-show "]] 
-15:31:44.224 INFO  读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css 
-15:31:44.225 DEBUG 判断是否可以输出Html! 
-15:31:44.225 DEBUG 准备输出html! 
-15:31:44.225 INFO  读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg 
-15:31:44.225 INFO  读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg 
-15:31:44.225 INFO  读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg 
-15:31:44.229 INFO  读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg 
-15:31:44.229 INFO  读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg 
-15:31:44.229 INFO  读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg 
-15:31:44.229 INFO  读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css 
-15:31:44.231 INFO  写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\qr.svg 
-15:31:44.231 INFO  写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css 
-15:31:44.231 INFO  写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\progress.svg 
-15:31:44.231 INFO  写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\download.svg 
+09:21:54.351 DEBUG 获取到配置信息: 
+09:21:54.351 DEBUG {"outPut":{"minifyCss":true,"minifyJs":true,"outFileAddVersion":true},"root":"/src","entry":"home","title":"psd转html","outFolder":"../public","resourceFolder":"./src/resource","headList":[{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}],"scriptList":[{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}],"styleList":[{"name":"main","src":"./src/main.css"}],"pageList":[{"main":true,"isPage":true,"name":"home","src":"./src/page/home.page","temple":"<temple name=\"home\" src=\"./src/page/home.page\" isPage=\"true\"></temple>"},{"isPage":true,"name":"show","src":"./src/page/show.page","temple":"<temple name=\"show\" src=\"./src/page/show.page\" isPage=\"true\"></temple>"}],"dev":{"watcher":{"enable":true,"ignored":"./dist/*","depth":99},"outPut":{"minifyCss":false,"minifyJs":false,"outFileAddVersion":false},"serverPort":8001,"server":true,"autoReload":true},"build":{"outPut":{"minifyCss":true,"minifyJs":true,"outFileAddVersion":true}}} 
+09:21:54.352 INFO  --------------------------- 开始编译 --------------------------- 
+09:21:54.352 INFO  程序运行目录: C:\Users\PG\Documents\GitHub\SWG\client 
+09:21:54.352 INFO  首次启动! 
+09:21:54.352 INFO  生成版本号: w6yic2e8og 
+09:21:54.354 INFO  清理资源文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static 
+09:21:54.354 INFO  文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static 
+09:21:54.355 INFO  创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static 
+09:21:54.355 INFO  读取模板文件: C:\Users\PG\Documents\GitHub\PG\index.html 
+09:21:54.355 DEBUG 读取网页标题: psd转html 
+09:21:54.355 DEBUG 处理页面源信息: [{"http-equiv":"content-type","content":"text/html; charset=UTF-8"},{"name":"viewport","content":"initial-scale=1,user-scalable=no,maximum-scale=1"}] 
+09:21:54.528 INFO  文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\resource 
+09:21:54.529 INFO  创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\resource 
+09:21:54.560 INFO  工程中包含多个页面! 
+09:21:54.561 INFO  文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\css 
+09:21:54.561 INFO  创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\css 
+09:21:54.561 INFO  写文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\ozzx.animation.css 
+09:21:54.562 INFO  包含有页面切换动画! 
+09:21:54.562 INFO  动画列表: moveToLeft,moveFromRight 
+09:21:55.508 INFO  文件夹不存在: C:\Users\PG\Documents\GitHub\SWG\public\static\js 
+09:21:55.508 INFO  创建文件夹: C:\Users\PG\Documents\GitHub\SWG\public\static\js 
+09:21:55.509 DEBUG 处理引用脚本: [{"name":"QR","src":"http://cunchu.site/swg/qrcode.min.js"}] 
+09:21:55.509 DEBUG 外部脚本数量: 1 
+09:21:55.509 DEBUG 处理脚本: QR 
+09:21:55.509 DEBUG 网络脚本: QR 
+09:21:55.509 DEBUG 完成外部脚本引用处理! 
+09:21:55.509 DEBUG 判断是否可以输出Html! 
+09:21:55.509 DEBUG 还有没有经过处理的资源! 
+09:21:55.709 DEBUG 需要经过特殊处理的css: [[".ox-home .home ",".ox-home "],[".ox-show .show-box ",".ox-show "]] 
+09:21:55.709 INFO  读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css 
+09:21:55.709 DEBUG 判断是否可以输出Html! 
+09:21:55.709 DEBUG 准备输出html! 
+09:21:55.710 INFO  读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg 
+09:21:55.710 INFO  读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg 
+09:21:55.710 INFO  读取文件: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg 
+09:21:55.715 INFO  读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\progress.svg 
+09:21:55.715 INFO  读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\download.svg 
+09:21:55.716 INFO  读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\resource\qr.svg 
+09:21:55.716 INFO  读取成功: C:\Users\PG\Documents\GitHub\SWG\client\src\main.css 
+09:21:55.719 INFO  写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\css\main.css 
+09:21:55.719 INFO  写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\download.svg 
+09:21:55.719 INFO  写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\qr.svg 
+09:21:55.720 INFO  写入文件: C:\Users\PG\Documents\GitHub\SWG\public\static\resource\progress.svg 
